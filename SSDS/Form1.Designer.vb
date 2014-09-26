@@ -24,18 +24,9 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBoxEntreprises = New System.Windows.Forms.GroupBox()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.NomENTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VilleENTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.StatutDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateCreationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SelectionEntrepriseBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SSDSDataSet = New SSDS.SSDSDataSet()
         Me.BoutonSupprimer = New System.Windows.Forms.Button()
         Me.BoutonModifier = New System.Windows.Forms.Button()
         Me.BoutonAjouter = New System.Windows.Forms.Button()
-        Me.SelectionEntrepriseBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SelectionEntrepriseBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BoutonDetailContacts = New System.Windows.Forms.Button()
         Me.BoutonDetailAnnuler = New System.Windows.Forms.Button()
@@ -77,23 +68,22 @@ Partial Class Form1
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.SelectionEntreprisesBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.SSDSDataSet = New SSDS.SSDSDataSet()
         Me.SelectionEntrepriseBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SelectionEntrepriseTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionEntrepriseTableAdapter()
-        Me.SelectionEntrepriseBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.NomENTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VilleENTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StatutDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DateCreationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBoxEntreprises.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SelectionEntrepriseBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SelectionEntrepriseBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SelectionEntrepriseBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.SelectionEntreprisesBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SelectionEntrepriseBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SelectionEntrepriseBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBoxEntreprises
@@ -104,62 +94,10 @@ Partial Class Form1
         Me.GroupBoxEntreprises.Controls.Add(Me.BoutonAjouter)
         Me.GroupBoxEntreprises.Location = New System.Drawing.Point(12, 12)
         Me.GroupBoxEntreprises.Name = "GroupBoxEntreprises"
-        Me.GroupBoxEntreprises.Size = New System.Drawing.Size(675, 111)
+        Me.GroupBoxEntreprises.Size = New System.Drawing.Size(675, 120)
         Me.GroupBoxEntreprises.TabIndex = 0
         Me.GroupBoxEntreprises.TabStop = False
         Me.GroupBoxEntreprises.Text = "Entreprises"
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.AllowUserToAddRows = False
-        Me.DataGridView2.AllowUserToDeleteRows = False
-        Me.DataGridView2.AutoGenerateColumns = False
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NomENTDataGridViewTextBoxColumn, Me.VilleENTDataGridViewTextBoxColumn, Me.StatutDataGridViewTextBoxColumn, Me.DateCreationDataGridViewTextBoxColumn})
-        Me.DataGridView2.DataSource = Me.SelectionEntrepriseBindingSource4
-        Me.DataGridView2.Location = New System.Drawing.Point(6, 19)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.ReadOnly = True
-        Me.DataGridView2.Size = New System.Drawing.Size(532, 81)
-        Me.DataGridView2.TabIndex = 4
-        '
-        'NomENTDataGridViewTextBoxColumn
-        '
-        Me.NomENTDataGridViewTextBoxColumn.DataPropertyName = "nomENT"
-        Me.NomENTDataGridViewTextBoxColumn.HeaderText = "nomENT"
-        Me.NomENTDataGridViewTextBoxColumn.Name = "NomENTDataGridViewTextBoxColumn"
-        Me.NomENTDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'VilleENTDataGridViewTextBoxColumn
-        '
-        Me.VilleENTDataGridViewTextBoxColumn.DataPropertyName = "villeENT"
-        Me.VilleENTDataGridViewTextBoxColumn.HeaderText = "villeENT"
-        Me.VilleENTDataGridViewTextBoxColumn.Name = "VilleENTDataGridViewTextBoxColumn"
-        Me.VilleENTDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'StatutDataGridViewTextBoxColumn
-        '
-        Me.StatutDataGridViewTextBoxColumn.DataPropertyName = "Statut"
-        Me.StatutDataGridViewTextBoxColumn.HeaderText = "Statut"
-        Me.StatutDataGridViewTextBoxColumn.Name = "StatutDataGridViewTextBoxColumn"
-        Me.StatutDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DateCreationDataGridViewTextBoxColumn
-        '
-        Me.DateCreationDataGridViewTextBoxColumn.DataPropertyName = "dateCreation"
-        Me.DateCreationDataGridViewTextBoxColumn.HeaderText = "dateCreation"
-        Me.DateCreationDataGridViewTextBoxColumn.Name = "DateCreationDataGridViewTextBoxColumn"
-        Me.DateCreationDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SelectionEntrepriseBindingSource3
-        '
-        Me.SelectionEntrepriseBindingSource3.DataMember = "SelectionEntreprise"
-        Me.SelectionEntrepriseBindingSource3.DataSource = Me.SSDSDataSet
-        '
-        'SSDSDataSet
-        '
-        Me.SSDSDataSet.DataSetName = "SSDSDataSet"
-        Me.SSDSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BoutonSupprimer
         '
@@ -577,18 +515,57 @@ Partial Class Form1
         Me.Button6.Text = "Fermer"
         Me.Button6.UseVisualStyleBackColor = True
         '
-        'SelectionEntreprisesBindingSource3
+        'DataGridView2
         '
-        Me.SelectionEntreprisesBindingSource3.DataMember = "SelectionEntreprises"
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.AutoGenerateColumns = False
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NomENTDataGridViewTextBoxColumn, Me.VilleENTDataGridViewTextBoxColumn, Me.StatutDataGridViewTextBoxColumn, Me.DateCreationDataGridViewTextBoxColumn})
+        Me.DataGridView2.DataSource = Me.SelectionEntrepriseBindingSource
+        Me.DataGridView2.Location = New System.Drawing.Point(9, 19)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.Size = New System.Drawing.Size(532, 92)
+        Me.DataGridView2.TabIndex = 4
+        '
+        'SSDSDataSet
+        '
+        Me.SSDSDataSet.DataSetName = "SSDSDataSet"
+        Me.SSDSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SelectionEntrepriseBindingSource
+        '
+        Me.SelectionEntrepriseBindingSource.DataMember = "SelectionEntreprise"
+        Me.SelectionEntrepriseBindingSource.DataSource = Me.SSDSDataSet
         '
         'SelectionEntrepriseTableAdapter
         '
         Me.SelectionEntrepriseTableAdapter.ClearBeforeFill = True
         '
-        'SelectionEntrepriseBindingSource4
+        'NomENTDataGridViewTextBoxColumn
         '
-        Me.SelectionEntrepriseBindingSource4.DataMember = "SelectionEntreprise"
-        Me.SelectionEntrepriseBindingSource4.DataSource = Me.SSDSDataSet
+        Me.NomENTDataGridViewTextBoxColumn.DataPropertyName = "nomENT"
+        Me.NomENTDataGridViewTextBoxColumn.HeaderText = "nomENT"
+        Me.NomENTDataGridViewTextBoxColumn.Name = "NomENTDataGridViewTextBoxColumn"
+        '
+        'VilleENTDataGridViewTextBoxColumn
+        '
+        Me.VilleENTDataGridViewTextBoxColumn.DataPropertyName = "villeENT"
+        Me.VilleENTDataGridViewTextBoxColumn.HeaderText = "villeENT"
+        Me.VilleENTDataGridViewTextBoxColumn.Name = "VilleENTDataGridViewTextBoxColumn"
+        '
+        'StatutDataGridViewTextBoxColumn
+        '
+        Me.StatutDataGridViewTextBoxColumn.DataPropertyName = "Statut"
+        Me.StatutDataGridViewTextBoxColumn.HeaderText = "Statut"
+        Me.StatutDataGridViewTextBoxColumn.Name = "StatutDataGridViewTextBoxColumn"
+        '
+        'DateCreationDataGridViewTextBoxColumn
+        '
+        Me.DateCreationDataGridViewTextBoxColumn.DataPropertyName = "dateCreation"
+        Me.DateCreationDataGridViewTextBoxColumn.HeaderText = "dateCreation"
+        Me.DateCreationDataGridViewTextBoxColumn.Name = "DateCreationDataGridViewTextBoxColumn"
         '
         'Form1
         '
@@ -603,20 +580,15 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.GroupBoxEntreprises.ResumeLayout(False)
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SelectionEntrepriseBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SelectionEntrepriseBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SelectionEntrepriseBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        CType(Me.SelectionEntreprisesBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SelectionEntrepriseBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SelectionEntrepriseBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -665,18 +637,13 @@ Partial Class Form1
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents SelectionEntreprisesBindingSource3 As System.Windows.Forms.BindingSource
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents SSDSDataSet As SSDS.SSDSDataSet
     Friend WithEvents SelectionEntrepriseBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SelectionEntrepriseTableAdapter As SSDS.SSDSDataSetTableAdapters.SelectionEntrepriseTableAdapter
-    Friend WithEvents SelectionEntrepriseBindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents SelectionEntrepriseBindingSource2 As System.Windows.Forms.BindingSource
-    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
     Friend WithEvents NomENTDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents VilleENTDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents StatutDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DateCreationDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents SelectionEntrepriseBindingSource3 As System.Windows.Forms.BindingSource
-    Friend WithEvents SSDSDataSet As SSDS.SSDSDataSet
-    Friend WithEvents SelectionEntrepriseBindingSource4 As System.Windows.Forms.BindingSource
 
 End Class
