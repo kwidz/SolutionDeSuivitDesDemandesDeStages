@@ -70,11 +70,35 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="Consultation des démarches.Designer.vb">
+      <DependentUpon>Consultation des démarches.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultation des démarches.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="GestionDesUtilisateurs.Designer.vb">
+      <DependentUpon>GestionDesUtilisateurs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GestionDesUtilisateurs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion des démarches.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion des démarches.Designer.vb">
+      <DependentUpon>Gestion des démarches.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion des contacts.Designer.vb">
+      <DependentUpon>Gestion des contacts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion des contacts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.vb">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -99,8 +123,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Consultation des démarches.resx">
+      <DependentUpon>Consultation des démarches.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionDesUtilisateurs.resx">
+      <DependentUpon>GestionDesUtilisateurs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion des démarches.resx">
+      <DependentUpon>Gestion des démarches.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion des contacts.resx">
+      <DependentUpon>Gestion des contacts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
