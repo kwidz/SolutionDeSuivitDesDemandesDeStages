@@ -22,32 +22,97 @@ Partial Class Consultation_des_démarches
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.dgvEtudiants = New System.Windows.Forms.DataGridView()
+        Me.NoUTILDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NomPrenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstActifDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DateCreationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ListerUserByAllNPABindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SSDSDataSet = New SSDS.SSDSDataSet()
         Me.Fermer = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.TextBoxNomEtu = New System.Windows.Forms.TextBox()
+        Me.TextBoxPrenomEtu = New System.Windows.Forms.TextBox()
+        Me.Actif = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Inactif = New System.Windows.Forms.RadioButton()
+        Me.Tous = New System.Windows.Forms.RadioButton()
+        Me.ListerUserByAllNPATableAdapter = New SSDS.SSDSDataSetTableAdapters.ListerUserByAllNPATableAdapter()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.dgvEtudiants, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ListerUserByAllNPABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.DataGridView1)
+        Me.GroupBox2.Controls.Add(Me.dgvEtudiants)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 110)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(520, 272)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Étudiants"
+        '
+        'dgvEtudiants
+        '
+        Me.dgvEtudiants.AllowUserToAddRows = False
+        Me.dgvEtudiants.AllowUserToDeleteRows = False
+        Me.dgvEtudiants.AutoGenerateColumns = False
+        Me.dgvEtudiants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEtudiants.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NoUTILDataGridViewTextBoxColumn, Me.NomPrenomDataGridViewTextBoxColumn, Me.EstActifDataGridViewCheckBoxColumn, Me.DateCreationDataGridViewTextBoxColumn})
+        Me.dgvEtudiants.DataSource = Me.ListerUserByAllNPABindingSource
+        Me.dgvEtudiants.Location = New System.Drawing.Point(14, 29)
+        Me.dgvEtudiants.MultiSelect = False
+        Me.dgvEtudiants.Name = "dgvEtudiants"
+        Me.dgvEtudiants.ReadOnly = True
+        Me.dgvEtudiants.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvEtudiants.Size = New System.Drawing.Size(490, 228)
+        Me.dgvEtudiants.TabIndex = 0
+        '
+        'NoUTILDataGridViewTextBoxColumn
+        '
+        Me.NoUTILDataGridViewTextBoxColumn.DataPropertyName = "noUTIL"
+        Me.NoUTILDataGridViewTextBoxColumn.HeaderText = "noUTIL"
+        Me.NoUTILDataGridViewTextBoxColumn.Name = "NoUTILDataGridViewTextBoxColumn"
+        Me.NoUTILDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NoUTILDataGridViewTextBoxColumn.Visible = False
+        '
+        'NomPrenomDataGridViewTextBoxColumn
+        '
+        Me.NomPrenomDataGridViewTextBoxColumn.DataPropertyName = "nomPrenom"
+        Me.NomPrenomDataGridViewTextBoxColumn.HeaderText = "nomPrenom"
+        Me.NomPrenomDataGridViewTextBoxColumn.Name = "NomPrenomDataGridViewTextBoxColumn"
+        Me.NomPrenomDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EstActifDataGridViewCheckBoxColumn
+        '
+        Me.EstActifDataGridViewCheckBoxColumn.DataPropertyName = "estActif"
+        Me.EstActifDataGridViewCheckBoxColumn.HeaderText = "estActif"
+        Me.EstActifDataGridViewCheckBoxColumn.Name = "EstActifDataGridViewCheckBoxColumn"
+        Me.EstActifDataGridViewCheckBoxColumn.ReadOnly = True
+        '
+        'DateCreationDataGridViewTextBoxColumn
+        '
+        Me.DateCreationDataGridViewTextBoxColumn.DataPropertyName = "dateCreation"
+        Me.DateCreationDataGridViewTextBoxColumn.HeaderText = "dateCreation"
+        Me.DateCreationDataGridViewTextBoxColumn.Name = "DateCreationDataGridViewTextBoxColumn"
+        Me.DateCreationDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ListerUserByAllNPABindingSource
+        '
+        Me.ListerUserByAllNPABindingSource.DataMember = "ListerUserByAllNPA"
+        Me.ListerUserByAllNPABindingSource.DataSource = Me.SSDSDataSet
+        '
+        'SSDSDataSet
+        '
+        Me.SSDSDataSet.DataSetName = "SSDSDataSet"
+        Me.SSDSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Fermer
         '
@@ -76,39 +141,38 @@ Partial Class Consultation_des_démarches
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Prénom:"
         '
-        'TextBox1
+        'TextBoxNomEtu
         '
-        Me.TextBox1.Location = New System.Drawing.Point(63, 22)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(136, 20)
-        Me.TextBox1.TabIndex = 2
+        Me.TextBoxNomEtu.Location = New System.Drawing.Point(63, 22)
+        Me.TextBoxNomEtu.Name = "TextBoxNomEtu"
+        Me.TextBoxNomEtu.Size = New System.Drawing.Size(136, 20)
+        Me.TextBoxNomEtu.TabIndex = 2
         '
-        'TextBox2
+        'TextBoxPrenomEtu
         '
-        Me.TextBox2.Location = New System.Drawing.Point(63, 51)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(136, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.TextBoxPrenomEtu.Location = New System.Drawing.Point(63, 51)
+        Me.TextBoxPrenomEtu.Name = "TextBoxPrenomEtu"
+        Me.TextBoxPrenomEtu.Size = New System.Drawing.Size(136, 20)
+        Me.TextBoxPrenomEtu.TabIndex = 3
         '
-        'RadioButton1
+        'Actif
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(229, 21)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(51, 17)
-        Me.RadioButton1.TabIndex = 4
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Actifs"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.Actif.AutoSize = True
+        Me.Actif.Location = New System.Drawing.Point(229, 21)
+        Me.Actif.Name = "Actif"
+        Me.Actif.Size = New System.Drawing.Size(51, 17)
+        Me.Actif.TabIndex = 4
+        Me.Actif.Text = "Actifs"
+        Me.Actif.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.RadioButton3)
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.Inactif)
+        Me.GroupBox1.Controls.Add(Me.Tous)
+        Me.GroupBox1.Controls.Add(Me.Actif)
+        Me.GroupBox1.Controls.Add(Me.TextBoxPrenomEtu)
+        Me.GroupBox1.Controls.Add(Me.TextBoxNomEtu)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
@@ -117,28 +181,6 @@ Partial Class Consultation_des_démarches
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Recherche"
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(360, 22)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(49, 17)
-        Me.RadioButton2.TabIndex = 5
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Tous"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'RadioButton3
-        '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(295, 21)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(59, 17)
-        Me.RadioButton3.TabIndex = 6
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Inactifs"
-        Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -149,13 +191,31 @@ Partial Class Consultation_des_démarches
         Me.Button1.Text = "Rechercher"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'Inactif
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(14, 29)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(490, 228)
-        Me.DataGridView1.TabIndex = 0
+        Me.Inactif.AutoSize = True
+        Me.Inactif.Location = New System.Drawing.Point(295, 21)
+        Me.Inactif.Name = "Inactif"
+        Me.Inactif.Size = New System.Drawing.Size(59, 17)
+        Me.Inactif.TabIndex = 6
+        Me.Inactif.Text = "Inactifs"
+        Me.Inactif.UseVisualStyleBackColor = True
+        '
+        'Tous
+        '
+        Me.Tous.AutoSize = True
+        Me.Tous.Checked = True
+        Me.Tous.Location = New System.Drawing.Point(360, 22)
+        Me.Tous.Name = "Tous"
+        Me.Tous.Size = New System.Drawing.Size(49, 17)
+        Me.Tous.TabIndex = 5
+        Me.Tous.TabStop = True
+        Me.Tous.Text = "Tous"
+        Me.Tous.UseVisualStyleBackColor = True
+        '
+        'ListerUserByAllNPATableAdapter
+        '
+        Me.ListerUserByAllNPATableAdapter.ClearBeforeFill = True
         '
         'Consultation_des_démarches
         '
@@ -168,9 +228,11 @@ Partial Class Consultation_des_démarches
         Me.Name = "Consultation_des_démarches"
         Me.Text = "Consultation des démarches"
         Me.GroupBox2.ResumeLayout(False)
+        CType(Me.dgvEtudiants, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ListerUserByAllNPABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -178,12 +240,26 @@ Partial Class Consultation_des_démarches
     Friend WithEvents Fermer As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
+    Friend WithEvents TextBoxNomEtu As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxPrenomEtu As System.Windows.Forms.TextBox
+    Friend WithEvents Actif As System.Windows.Forms.RadioButton
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Inactif As System.Windows.Forms.RadioButton
+    Friend WithEvents Tous As System.Windows.Forms.RadioButton
+    Friend WithEvents dgvEtudiants As System.Windows.Forms.DataGridView
+    Friend WithEvents CourielUTILDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NomUTILDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PrenomUTILDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents MdpUTILDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DateModifDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DateSuppressionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NoTYPUTILDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents SSDSDataSet As SSDS.SSDSDataSet
+    Friend WithEvents NoUTILDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NomPrenomDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents EstActifDataGridViewCheckBoxColumn As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents DateCreationDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ListerUserByAllNPABindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ListerUserByAllNPATableAdapter As SSDS.SSDSDataSetTableAdapters.ListerUserByAllNPATableAdapter
 End Class

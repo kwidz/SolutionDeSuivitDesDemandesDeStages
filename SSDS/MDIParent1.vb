@@ -2,6 +2,7 @@
 
 Public Class MDIParent1
 
+    Private user As Integer = 1
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewWindowToolStripMenuItem.Click
         ' Créez une nouvelle instance du formulaire enfant.
         Dim ChildForm As New System.Windows.Forms.Form
@@ -106,7 +107,7 @@ Public Class MDIParent1
             End If
         Next
 
-        Dim ChildForm As New GestionDesDemarches
+        Dim ChildForm As New GestionDesDemarches(user)
         ChildForm.MdiParent = Me
         ChildForm.Show()
     End Sub

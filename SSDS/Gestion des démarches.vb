@@ -1,19 +1,19 @@
 ﻿Imports SSDS.SSDSDataSetTableAdapters
 
 Public Class GestionDesDemarches
-
+    Private user As Integer
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Me.Close()
     End Sub
 
-    Private Sub FillToolStripButton_Click(sender As Object, e As EventArgs)
-        Try
-            Me.SelectionEntrepriseTableAdapter.Fill(Me.SSDSDataSet.SelectionEntreprise)
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
+    'Private Sub FillToolStripButton_Click(sender As Object, e As EventArgs)
+    '    Try
+    '        Me.SelectionEntrepriseTableAdapter.Fill(Me.SSDSDataSet.SelectionEntreprise)
+    '    Catch ex As System.Exception
+    '        System.Windows.Forms.MessageBox.Show(ex.Message)
+    '    End Try
 
-    End Sub
+    'End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: cette ligne de code charge les données dans la table 'SSDSDataSet.SelectionContact'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
@@ -23,17 +23,18 @@ Public Class GestionDesDemarches
         'TODO: cette ligne de code charge les données dans la table 'SSDSDataSet.SelectionStatutENT'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
         Me.SelectionStatutENTTableAdapter.Fill(Me.SSDSDataSet.SelectionStatutENT)
         'TODO: cette ligne de code charge les données dans la table 'SSDSDataSet.SelectionEntreprise'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
-        Me.SelectionEntrepriseTableAdapter.Fill(Me.SSDSDataSet.SelectionEntreprise)
+        'Me.SelectionEntrepriseTableAdapter.Fill(Me.SSDSDataSet.SelectionEntreprise)
         'TODO: cette ligne de code charge les données dans la table 'SSDSDataSet.SelectionEntreprise'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
-        Me.SelectionEntrepriseTableAdapter.Fill(Me.SSDSDataSet.SelectionEntreprise)
+        'Me.SelectionEntrepriseTableAdapter.Fill(Me.SSDSDataSet.SelectionEntreprise)
         'TODO: cette ligne de code charge les données dans la table 'SSDSDataSet.SelectionEntreprise'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
-        Me.SelectionEntrepriseTableAdapter.Fill(Me.SSDSDataSet.SelectionEntreprise)
+        'Me.SelectionEntrepriseTableAdapter.Fill(Me.SSDSDataSet.SelectionEntreprise)
         'TODO: cette ligne de code charge les données dans la table 'SSDSDataSet.SelectionEntreprise'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
-        Me.SelectionEntrepriseTableAdapter.Fill(Me.SSDSDataSet.SelectionEntreprise)
+        'Me.SelectionEntrepriseTableAdapter.Fill(Me.SSDSDataSet.SelectionEntreprise)
         'TODO: cette ligne de code charge les données dans la table 'SSDSDataSet.SelectionEntreprise'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
-        Me.SelectionEntrepriseTableAdapter.Fill(Me.SSDSDataSet.SelectionEntreprise)
+        'Me.SelectionEntrepriseTableAdapter.Fill(Me.SSDSDataSet.SelectionEntreprise)
         'TODO: cette ligne de code charge les données dans la table 'SSDSDataSet.SelectionEntreprise'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
-        Me.SelectionEntrepriseTableAdapter.Fill(Me.SSDSDataSet.SelectionEntreprise)
+        'Me.SelectionEntrepriseTableAdapter.Fill(Me.SSDSDataSet.SelectionEntreprise)
+
 
     End Sub
 
@@ -78,7 +79,7 @@ Public Class GestionDesDemarches
         Dim dtDemarches As DataTable
 
         If dgvEntreprises.SelectedRows.Count > 0 Then
-            dtDemarches = taDemarches.GetData(dgvDemarches.SelectedRows(0).Cells(0).Value)
+            dtDemarches = taDemarches.GetData(dgvEntreprises.SelectedRows(0).Cells(0).Value)
             If dtDemarches.Rows.Count > 0 Then
 
                 DateDem.Text = dtDemarches.Rows(0)("dateDEM")
@@ -98,4 +99,14 @@ Public Class GestionDesDemarches
 
         End If
     End Sub
+
+    Public Sub New(pVariable As Integer)
+        InitializeComponent()
+        user = pVariable
+        dgvEntreprises.DataSource = (SelectionEntrepriseTableAdapter.GetData(user))
+
+    End Sub
+
+
+
 End Class

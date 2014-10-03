@@ -22,55 +22,78 @@ Partial Class GestionDesUtilisateurs
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Rechercher = New System.Windows.Forms.Button()
+        Me.Inactifs = New System.Windows.Forms.RadioButton()
+        Me.Tous = New System.Windows.Forms.RadioButton()
+        Me.Actifs = New System.Windows.Forms.RadioButton()
+        Me.Type = New System.Windows.Forms.ComboBox()
+        Me.SSDSDataSet = New SSDS.SSDSDataSet()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBoxPrenom = New System.Windows.Forms.TextBox()
+        Me.TextBoxNom = New System.Windows.Forms.TextBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.CheckBoxDetailActif = New System.Windows.Forms.CheckBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.DateCreation = New System.Windows.Forms.Label()
+        Me.DerniereModification = New System.Windows.Forms.Label()
+        Me.ComboBoxDetailType = New System.Windows.Forms.ComboBox()
+        Me.REFTypeUtilisateurBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.TextBoxDetailNom = New System.Windows.Forms.TextBox()
+        Me.TextBoxDetailPrenom = New System.Windows.Forms.TextBox()
+        Me.TextBoxDetailCouriel = New System.Windows.Forms.TextBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.dgvEtudiants = New System.Windows.Forms.DataGridView()
+        Me.NoUTILDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NomPrenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NomTYPUTILlDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstActifDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DateCreationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ListerUserByAllNPAWithTypeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ListerUserByAllNPAWithTypeTableAdapter = New SSDS.SSDSDataSetTableAdapters.ListerUserByAllNPAWithTypeTableAdapter()
+        Me.SSDSDataSet1 = New SSDS.SSDSDataSet()
+        Me.SelectionRefTypUtilWithTousBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SelectionRefTypUtilWithTousTableAdapter = New SSDS.SSDSDataSetTableAdapters.selectionRefTypUtilWithTousTableAdapter()
+        Me.SSDSDataSet2 = New SSDS.SSDSDataSet()
+        Me.REFTypeUtilisateurBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.REF_TypeUtilisateurTableAdapter = New SSDS.SSDSDataSetTableAdapters.REF_TypeUtilisateurTableAdapter()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.REFTypeUtilisateurBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvEtudiants, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ListerUserByAllNPAWithTypeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SSDSDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SelectionRefTypUtilWithTousBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SSDSDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.REFTypeUtilisateurBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.RadioButton3)
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.Rechercher)
+        Me.GroupBox1.Controls.Add(Me.Inactifs)
+        Me.GroupBox1.Controls.Add(Me.Tous)
+        Me.GroupBox1.Controls.Add(Me.Actifs)
+        Me.GroupBox1.Controls.Add(Me.Type)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.TextBoxPrenom)
+        Me.GroupBox1.Controls.Add(Me.TextBoxNom)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(611, 80)
@@ -78,72 +101,62 @@ Partial Class GestionDesUtilisateurs
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Recherche"
         '
-        'GroupBox2
+        'Rechercher
         '
-        Me.GroupBox2.Controls.Add(Me.CheckBox1)
-        Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.ComboBox2)
-        Me.GroupBox2.Controls.Add(Me.Button7)
-        Me.GroupBox2.Controls.Add(Me.Button6)
-        Me.GroupBox2.Controls.Add(Me.TextBox5)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
-        Me.GroupBox2.Controls.Add(Me.TextBox3)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 289)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(611, 133)
-        Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Détails"
+        Me.Rechercher.Location = New System.Drawing.Point(499, 15)
+        Me.Rechercher.Name = "Rechercher"
+        Me.Rechercher.Size = New System.Drawing.Size(101, 23)
+        Me.Rechercher.TabIndex = 9
+        Me.Rechercher.Text = "Rechercher"
+        Me.Rechercher.UseVisualStyleBackColor = True
         '
-        'GroupBox3
+        'Inactifs
         '
-        Me.GroupBox3.Controls.Add(Me.Button5)
-        Me.GroupBox3.Controls.Add(Me.Button4)
-        Me.GroupBox3.Controls.Add(Me.Button3)
-        Me.GroupBox3.Controls.Add(Me.DataGridView1)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 98)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(611, 168)
-        Me.GroupBox3.TabIndex = 1
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Résultats"
+        Me.Inactifs.AutoSize = True
+        Me.Inactifs.Location = New System.Drawing.Point(290, 18)
+        Me.Inactifs.Name = "Inactifs"
+        Me.Inactifs.Size = New System.Drawing.Size(59, 17)
+        Me.Inactifs.TabIndex = 8
+        Me.Inactifs.Text = "Inactifs"
+        Me.Inactifs.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'Tous
         '
-        Me.TextBox1.Location = New System.Drawing.Point(72, 20)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(128, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.Tous.AutoSize = True
+        Me.Tous.Checked = True
+        Me.Tous.Location = New System.Drawing.Point(355, 18)
+        Me.Tous.Name = "Tous"
+        Me.Tous.Size = New System.Drawing.Size(49, 17)
+        Me.Tous.TabIndex = 7
+        Me.Tous.TabStop = True
+        Me.Tous.Text = "Tous"
+        Me.Tous.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'Actifs
         '
-        Me.TextBox2.Location = New System.Drawing.Point(72, 46)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(128, 20)
-        Me.TextBox2.TabIndex = 1
+        Me.Actifs.AutoSize = True
+        Me.Actifs.Location = New System.Drawing.Point(233, 18)
+        Me.Actifs.Name = "Actifs"
+        Me.Actifs.Size = New System.Drawing.Size(51, 17)
+        Me.Actifs.TabIndex = 6
+        Me.Actifs.Text = "Actifs"
+        Me.Actifs.UseVisualStyleBackColor = True
         '
-        'Label1
+        'Type
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(230, 49)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(34, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Type:"
+        Me.Type.DataSource = Me.SelectionRefTypUtilWithTousBindingSource
+        Me.Type.DisplayMember = "nomTYPUTILl"
+        Me.Type.FormattingEnabled = True
+        Me.Type.Location = New System.Drawing.Point(270, 45)
+        Me.Type.Name = "Type"
+        Me.Type.Size = New System.Drawing.Size(121, 21)
+        Me.Type.TabIndex = 5
+        Me.Type.ValueMember = "noTYPUTIL"
         '
-        'Label2
+        'SSDSDataSet
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(17, 49)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(49, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Prénom: "
+        Me.SSDSDataSet.DataSetName = "SSDSDataSet"
+        Me.SSDSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label3
         '
@@ -154,191 +167,69 @@ Partial Class GestionDesUtilisateurs
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Nom:"
         '
-        'ComboBox1
+        'Label2
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(270, 45)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 5
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(17, 49)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(49, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Prénom: "
         '
-        'RadioButton1
+        'Label1
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(233, 18)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(51, 17)
-        Me.RadioButton1.TabIndex = 6
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Actifs"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(230, 49)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(34, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Type:"
         '
-        'RadioButton2
+        'TextBoxPrenom
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(355, 18)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(49, 17)
-        Me.RadioButton2.TabIndex = 7
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Tous"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.TextBoxPrenom.Location = New System.Drawing.Point(72, 46)
+        Me.TextBoxPrenom.Name = "TextBoxPrenom"
+        Me.TextBoxPrenom.Size = New System.Drawing.Size(128, 20)
+        Me.TextBoxPrenom.TabIndex = 1
         '
-        'RadioButton3
+        'TextBoxNom
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(290, 18)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(59, 17)
-        Me.RadioButton3.TabIndex = 8
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Inactifs"
-        Me.RadioButton3.UseVisualStyleBackColor = True
+        Me.TextBoxNom.Location = New System.Drawing.Point(72, 20)
+        Me.TextBoxNom.Name = "TextBoxNom"
+        Me.TextBoxNom.Size = New System.Drawing.Size(128, 20)
+        Me.TextBoxNom.TabIndex = 0
         '
-        'Button1
+        'GroupBox2
         '
-        Me.Button1.Location = New System.Drawing.Point(499, 15)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(101, 23)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Rechercher"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.GroupBox2.Controls.Add(Me.CheckBoxDetailActif)
+        Me.GroupBox2.Controls.Add(Me.Label9)
+        Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Controls.Add(Me.DateCreation)
+        Me.GroupBox2.Controls.Add(Me.DerniereModification)
+        Me.GroupBox2.Controls.Add(Me.ComboBoxDetailType)
+        Me.GroupBox2.Controls.Add(Me.Button7)
+        Me.GroupBox2.Controls.Add(Me.Button6)
+        Me.GroupBox2.Controls.Add(Me.TextBoxDetailNom)
+        Me.GroupBox2.Controls.Add(Me.TextBoxDetailPrenom)
+        Me.GroupBox2.Controls.Add(Me.TextBoxDetailCouriel)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 289)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(611, 133)
+        Me.GroupBox2.TabIndex = 1
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Détails"
         '
-        'DataGridView1
+        'CheckBoxDetailActif
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 19)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(487, 143)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(511, 436)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(101, 23)
-        Me.Button2.TabIndex = 10
-        Me.Button2.Text = "Fermer"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(499, 77)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(101, 23)
-        Me.Button3.TabIndex = 11
-        Me.Button3.Text = "Supprimer"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(499, 48)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(101, 23)
-        Me.Button4.TabIndex = 12
-        Me.Button4.Text = "Modifier"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(499, 19)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(101, 23)
-        Me.Button5.TabIndex = 13
-        Me.Button5.Text = "Ajouter"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(72, 71)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(231, 20)
-        Me.TextBox3.TabIndex = 1
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(72, 45)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(231, 20)
-        Me.TextBox4.TabIndex = 2
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(72, 19)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(231, 20)
-        Me.TextBox5.TabIndex = 3
-        '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(499, 48)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(101, 23)
-        Me.Button6.TabIndex = 13
-        Me.Button6.Text = "Annuler"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(499, 19)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(101, 23)
-        Me.Button7.TabIndex = 14
-        Me.Button7.Text = "Sauvegarder"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(372, 18)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 15
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(332, 105)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(109, 13)
-        Me.Label4.TabIndex = 16
-        Me.Label4.Text = "Dernière modification:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(69, 105)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(89, 13)
-        Me.Label5.TabIndex = 17
-        Me.Label5.Text = "Date de création:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(332, 21)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(34, 13)
-        Me.Label6.TabIndex = 18
-        Me.Label6.Text = "Type:"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(24, 74)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(42, 13)
-        Me.Label7.TabIndex = 19
-        Me.Label7.Text = "Couriel:"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(17, 48)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(49, 13)
-        Me.Label8.TabIndex = 20
-        Me.Label8.Text = "Prénom: "
+        Me.CheckBoxDetailActif.AutoSize = True
+        Me.CheckBoxDetailActif.Location = New System.Drawing.Point(335, 54)
+        Me.CheckBoxDetailActif.Name = "CheckBoxDetailActif"
+        Me.CheckBoxDetailActif.Size = New System.Drawing.Size(47, 17)
+        Me.CheckBoxDetailActif.TabIndex = 22
+        Me.CheckBoxDetailActif.Text = "Actif"
+        Me.CheckBoxDetailActif.UseVisualStyleBackColor = True
         '
         'Label9
         '
@@ -349,15 +240,243 @@ Partial Class GestionDesUtilisateurs
         Me.Label9.TabIndex = 21
         Me.Label9.Text = "Nom:"
         '
-        'CheckBox1
+        'Label8
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(335, 54)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(47, 17)
-        Me.CheckBox1.TabIndex = 22
-        Me.CheckBox1.Text = "Actif"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(17, 48)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(49, 13)
+        Me.Label8.TabIndex = 20
+        Me.Label8.Text = "Prénom: "
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(24, 74)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(42, 13)
+        Me.Label7.TabIndex = 19
+        Me.Label7.Text = "Couriel:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(332, 21)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(34, 13)
+        Me.Label6.TabIndex = 18
+        Me.Label6.Text = "Type:"
+        '
+        'DateCreation
+        '
+        Me.DateCreation.AutoSize = True
+        Me.DateCreation.Location = New System.Drawing.Point(69, 105)
+        Me.DateCreation.Name = "DateCreation"
+        Me.DateCreation.Size = New System.Drawing.Size(89, 13)
+        Me.DateCreation.TabIndex = 17
+        Me.DateCreation.Text = "Date de création:"
+        '
+        'DerniereModification
+        '
+        Me.DerniereModification.AutoSize = True
+        Me.DerniereModification.Location = New System.Drawing.Point(332, 105)
+        Me.DerniereModification.Name = "DerniereModification"
+        Me.DerniereModification.Size = New System.Drawing.Size(109, 13)
+        Me.DerniereModification.TabIndex = 16
+        Me.DerniereModification.Text = "Dernière modification:"
+        '
+        'ComboBoxDetailType
+        '
+        Me.ComboBoxDetailType.DataSource = Me.REFTypeUtilisateurBindingSource
+        Me.ComboBoxDetailType.DisplayMember = "nomTYPUTILl"
+        Me.ComboBoxDetailType.FormattingEnabled = True
+        Me.ComboBoxDetailType.Location = New System.Drawing.Point(372, 18)
+        Me.ComboBoxDetailType.Name = "ComboBoxDetailType"
+        Me.ComboBoxDetailType.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBoxDetailType.TabIndex = 15
+        Me.ComboBoxDetailType.ValueMember = "noTYPUTIL"
+        '
+        'REFTypeUtilisateurBindingSource1
+        '
+        Me.REFTypeUtilisateurBindingSource1.DataMember = "REF_TypeUtilisateur"
+        Me.REFTypeUtilisateurBindingSource1.DataSource = Me.SSDSDataSet
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(499, 19)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(101, 23)
+        Me.Button7.TabIndex = 14
+        Me.Button7.Text = "Sauvegarder"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(499, 48)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(101, 23)
+        Me.Button6.TabIndex = 13
+        Me.Button6.Text = "Annuler"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'TextBoxDetailNom
+        '
+        Me.TextBoxDetailNom.Location = New System.Drawing.Point(72, 19)
+        Me.TextBoxDetailNom.Name = "TextBoxDetailNom"
+        Me.TextBoxDetailNom.Size = New System.Drawing.Size(231, 20)
+        Me.TextBoxDetailNom.TabIndex = 3
+        '
+        'TextBoxDetailPrenom
+        '
+        Me.TextBoxDetailPrenom.Location = New System.Drawing.Point(72, 45)
+        Me.TextBoxDetailPrenom.Name = "TextBoxDetailPrenom"
+        Me.TextBoxDetailPrenom.Size = New System.Drawing.Size(231, 20)
+        Me.TextBoxDetailPrenom.TabIndex = 2
+        '
+        'TextBoxDetailCouriel
+        '
+        Me.TextBoxDetailCouriel.Location = New System.Drawing.Point(72, 71)
+        Me.TextBoxDetailCouriel.Name = "TextBoxDetailCouriel"
+        Me.TextBoxDetailCouriel.Size = New System.Drawing.Size(231, 20)
+        Me.TextBoxDetailCouriel.TabIndex = 1
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Button5)
+        Me.GroupBox3.Controls.Add(Me.Button4)
+        Me.GroupBox3.Controls.Add(Me.Button3)
+        Me.GroupBox3.Controls.Add(Me.dgvEtudiants)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 98)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(611, 168)
+        Me.GroupBox3.TabIndex = 1
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Résultats"
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(499, 19)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(101, 23)
+        Me.Button5.TabIndex = 13
+        Me.Button5.Text = "Ajouter"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(499, 48)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(101, 23)
+        Me.Button4.TabIndex = 12
+        Me.Button4.Text = "Modifier"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(499, 77)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(101, 23)
+        Me.Button3.TabIndex = 11
+        Me.Button3.Text = "Supprimer"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'dgvEtudiants
+        '
+        Me.dgvEtudiants.AllowUserToAddRows = False
+        Me.dgvEtudiants.AllowUserToDeleteRows = False
+        Me.dgvEtudiants.AllowUserToOrderColumns = True
+        Me.dgvEtudiants.AutoGenerateColumns = False
+        Me.dgvEtudiants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEtudiants.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NoUTILDataGridViewTextBoxColumn, Me.NomPrenomDataGridViewTextBoxColumn, Me.NomTYPUTILlDataGridViewTextBoxColumn, Me.EstActifDataGridViewCheckBoxColumn, Me.DateCreationDataGridViewTextBoxColumn})
+        Me.dgvEtudiants.DataSource = Me.ListerUserByAllNPAWithTypeBindingSource
+        Me.dgvEtudiants.Location = New System.Drawing.Point(6, 19)
+        Me.dgvEtudiants.Name = "dgvEtudiants"
+        Me.dgvEtudiants.ReadOnly = True
+        Me.dgvEtudiants.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvEtudiants.Size = New System.Drawing.Size(487, 143)
+        Me.dgvEtudiants.TabIndex = 0
+        '
+        'NoUTILDataGridViewTextBoxColumn
+        '
+        Me.NoUTILDataGridViewTextBoxColumn.DataPropertyName = "noUTIL"
+        Me.NoUTILDataGridViewTextBoxColumn.HeaderText = "noUTIL"
+        Me.NoUTILDataGridViewTextBoxColumn.Name = "NoUTILDataGridViewTextBoxColumn"
+        Me.NoUTILDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NoUTILDataGridViewTextBoxColumn.Visible = False
+        '
+        'NomPrenomDataGridViewTextBoxColumn
+        '
+        Me.NomPrenomDataGridViewTextBoxColumn.DataPropertyName = "nomPrenom"
+        Me.NomPrenomDataGridViewTextBoxColumn.HeaderText = "nomPrenom"
+        Me.NomPrenomDataGridViewTextBoxColumn.Name = "NomPrenomDataGridViewTextBoxColumn"
+        Me.NomPrenomDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NomTYPUTILlDataGridViewTextBoxColumn
+        '
+        Me.NomTYPUTILlDataGridViewTextBoxColumn.DataPropertyName = "nomTYPUTILl"
+        Me.NomTYPUTILlDataGridViewTextBoxColumn.HeaderText = "nomTYPUTILl"
+        Me.NomTYPUTILlDataGridViewTextBoxColumn.Name = "NomTYPUTILlDataGridViewTextBoxColumn"
+        Me.NomTYPUTILlDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EstActifDataGridViewCheckBoxColumn
+        '
+        Me.EstActifDataGridViewCheckBoxColumn.DataPropertyName = "estActif"
+        Me.EstActifDataGridViewCheckBoxColumn.HeaderText = "estActif"
+        Me.EstActifDataGridViewCheckBoxColumn.Name = "EstActifDataGridViewCheckBoxColumn"
+        Me.EstActifDataGridViewCheckBoxColumn.ReadOnly = True
+        '
+        'DateCreationDataGridViewTextBoxColumn
+        '
+        Me.DateCreationDataGridViewTextBoxColumn.DataPropertyName = "dateCreation"
+        Me.DateCreationDataGridViewTextBoxColumn.HeaderText = "dateCreation"
+        Me.DateCreationDataGridViewTextBoxColumn.Name = "DateCreationDataGridViewTextBoxColumn"
+        Me.DateCreationDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ListerUserByAllNPAWithTypeBindingSource
+        '
+        Me.ListerUserByAllNPAWithTypeBindingSource.DataMember = "ListerUserByAllNPAWithType"
+        Me.ListerUserByAllNPAWithTypeBindingSource.DataSource = Me.SSDSDataSet
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(511, 436)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(101, 23)
+        Me.Button2.TabIndex = 10
+        Me.Button2.Text = "Fermer"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'ListerUserByAllNPAWithTypeTableAdapter
+        '
+        Me.ListerUserByAllNPAWithTypeTableAdapter.ClearBeforeFill = True
+        '
+        'SSDSDataSet1
+        '
+        Me.SSDSDataSet1.DataSetName = "SSDSDataSet"
+        Me.SSDSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SelectionRefTypUtilWithTousBindingSource
+        '
+        Me.SelectionRefTypUtilWithTousBindingSource.DataMember = "selectionRefTypUtilWithTous"
+        Me.SelectionRefTypUtilWithTousBindingSource.DataSource = Me.SSDSDataSet1
+        '
+        'SelectionRefTypUtilWithTousTableAdapter
+        '
+        Me.SelectionRefTypUtilWithTousTableAdapter.ClearBeforeFill = True
+        '
+        'SSDSDataSet2
+        '
+        Me.SSDSDataSet2.DataSetName = "SSDSDataSet"
+        Me.SSDSDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'REFTypeUtilisateurBindingSource
+        '
+        Me.REFTypeUtilisateurBindingSource.DataMember = "REF_TypeUtilisateur"
+        Me.REFTypeUtilisateurBindingSource.DataSource = Me.SSDSDataSet2
+        '
+        'REF_TypeUtilisateurTableAdapter
+        '
+        Me.REF_TypeUtilisateurTableAdapter.ClearBeforeFill = True
         '
         'GestionDesUtilisateurs
         '
@@ -372,42 +491,64 @@ Partial Class GestionDesUtilisateurs
         Me.Text = "Gestion des utilisateurs"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.REFTypeUtilisateurBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvEtudiants, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ListerUserByAllNPAWithTypeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SSDSDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SelectionRefTypUtilWithTousBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SSDSDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.REFTypeUtilisateurBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Rechercher As System.Windows.Forms.Button
+    Friend WithEvents Inactifs As System.Windows.Forms.RadioButton
+    Friend WithEvents Tous As System.Windows.Forms.RadioButton
+    Friend WithEvents Actifs As System.Windows.Forms.RadioButton
+    Friend WithEvents Type As System.Windows.Forms.ComboBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxPrenom As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxNom As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvEtudiants As System.Windows.Forms.DataGridView
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBoxDetailActif As System.Windows.Forms.CheckBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents DateCreation As System.Windows.Forms.Label
+    Friend WithEvents DerniereModification As System.Windows.Forms.Label
+    Friend WithEvents ComboBoxDetailType As System.Windows.Forms.ComboBox
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxDetailNom As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxDetailPrenom As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxDetailCouriel As System.Windows.Forms.TextBox
+    Friend WithEvents SSDSDataSet As SSDS.SSDSDataSet
+    Friend WithEvents NoUTILDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NomPrenomDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NomTYPUTILlDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents EstActifDataGridViewCheckBoxColumn As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents DateCreationDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ListerUserByAllNPAWithTypeBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ListerUserByAllNPAWithTypeTableAdapter As SSDS.SSDSDataSetTableAdapters.ListerUserByAllNPAWithTypeTableAdapter
+    Friend WithEvents REFTypeUtilisateurBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents SSDSDataSet1 As SSDS.SSDSDataSet
+    Friend WithEvents SelectionRefTypUtilWithTousBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents SelectionRefTypUtilWithTousTableAdapter As SSDS.SSDSDataSetTableAdapters.selectionRefTypUtilWithTousTableAdapter
+    Friend WithEvents SSDSDataSet2 As SSDS.SSDSDataSet
+    Friend WithEvents REFTypeUtilisateurBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents REF_TypeUtilisateurTableAdapter As SSDS.SSDSDataSetTableAdapters.REF_TypeUtilisateurTableAdapter
 End Class

@@ -22,30 +22,41 @@ Partial Class Gestion_des_contacts
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.dgvContacts = New System.Windows.Forms.DataGridView()
+        Me.dateModification = New System.Windows.Forms.GroupBox()
+        Me.dateCreation = New System.Windows.Forms.Label()
+        Me.dateModif = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.TextBoxDescription = New System.Windows.Forms.RichTextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBoxPrenom = New System.Windows.Forms.TextBox()
+        Me.TextTitre = New System.Windows.Forms.TextBox()
+        Me.TextBoxTelephone = New System.Windows.Forms.TextBox()
+        Me.TextBoxCouriel = New System.Windows.Forms.TextBox()
+        Me.TextBoxNom = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BoutonFermer = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.NoCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NomCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrenomCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TitreCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelephoneCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SelectionContactPourGestionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SSDSDataSet = New SSDS.SSDSDataSet()
+        Me.SelectionContactPourGestionTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionContactPourGestionTableAdapter()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
+        CType(Me.dgvContacts, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dateModification.SuspendLayout()
+        CType(Me.SelectionContactPourGestionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -53,7 +64,7 @@ Partial Class Gestion_des_contacts
         Me.GroupBox1.Controls.Add(Me.Button3)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.DataGridView1)
+        Me.GroupBox1.Controls.Add(Me.dgvContacts)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(681, 151)
@@ -88,36 +99,61 @@ Partial Class Gestion_des_contacts
         Me.Button1.Text = "Ajouter"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dgvContacts
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 17)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(524, 128)
-        Me.DataGridView1.TabIndex = 0
+        Me.dgvContacts.AllowUserToAddRows = False
+        Me.dgvContacts.AllowUserToDeleteRows = False
+        Me.dgvContacts.AutoGenerateColumns = False
+        Me.dgvContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvContacts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NoCONDataGridViewTextBoxColumn, Me.NomCONDataGridViewTextBoxColumn, Me.PrenomCONDataGridViewTextBoxColumn, Me.TitreCONDataGridViewTextBoxColumn, Me.TelephoneCONDataGridViewTextBoxColumn})
+        Me.dgvContacts.DataSource = Me.SelectionContactPourGestionBindingSource
+        Me.dgvContacts.Location = New System.Drawing.Point(6, 17)
+        Me.dgvContacts.Name = "dgvContacts"
+        Me.dgvContacts.ReadOnly = True
+        Me.dgvContacts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvContacts.Size = New System.Drawing.Size(524, 128)
+        Me.dgvContacts.TabIndex = 0
         '
-        'GroupBox2
+        'dateModification
         '
-        Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.RichTextBox1)
-        Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.TextBox5)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
-        Me.GroupBox2.Controls.Add(Me.TextBox3)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
-        Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 169)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(681, 216)
-        Me.GroupBox2.TabIndex = 0
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Détail du contact"
+        Me.dateModification.Controls.Add(Me.dateCreation)
+        Me.dateModification.Controls.Add(Me.dateModif)
+        Me.dateModification.Controls.Add(Me.Label6)
+        Me.dateModification.Controls.Add(Me.TextBoxDescription)
+        Me.dateModification.Controls.Add(Me.Label5)
+        Me.dateModification.Controls.Add(Me.Label4)
+        Me.dateModification.Controls.Add(Me.Label3)
+        Me.dateModification.Controls.Add(Me.Label2)
+        Me.dateModification.Controls.Add(Me.TextBoxPrenom)
+        Me.dateModification.Controls.Add(Me.TextTitre)
+        Me.dateModification.Controls.Add(Me.TextBoxTelephone)
+        Me.dateModification.Controls.Add(Me.TextBoxCouriel)
+        Me.dateModification.Controls.Add(Me.TextBoxNom)
+        Me.dateModification.Controls.Add(Me.Label1)
+        Me.dateModification.Location = New System.Drawing.Point(12, 169)
+        Me.dateModification.Name = "dateModification"
+        Me.dateModification.Size = New System.Drawing.Size(681, 216)
+        Me.dateModification.TabIndex = 0
+        Me.dateModification.TabStop = False
+        Me.dateModification.Text = "Détail du contact"
+        '
+        'dateCreation
+        '
+        Me.dateCreation.AutoSize = True
+        Me.dateCreation.Location = New System.Drawing.Point(76, 200)
+        Me.dateCreation.Name = "dateCreation"
+        Me.dateCreation.Size = New System.Drawing.Size(89, 13)
+        Me.dateCreation.TabIndex = 13
+        Me.dateCreation.Text = "Date de création:"
+        '
+        'dateModif
+        '
+        Me.dateModif.AutoSize = True
+        Me.dateModif.Location = New System.Drawing.Point(350, 200)
+        Me.dateModif.Name = "dateModif"
+        Me.dateModif.Size = New System.Drawing.Size(110, 13)
+        Me.dateModif.TabIndex = 12
+        Me.dateModif.Text = "Dernière Modification:"
         '
         'Label6
         '
@@ -128,13 +164,13 @@ Partial Class Gestion_des_contacts
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Desciption:"
         '
-        'RichTextBox1
+        'TextBoxDescription
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(6, 141)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(524, 33)
-        Me.RichTextBox1.TabIndex = 10
-        Me.RichTextBox1.Text = ""
+        Me.TextBoxDescription.Location = New System.Drawing.Point(6, 141)
+        Me.TextBoxDescription.Name = "TextBoxDescription"
+        Me.TextBoxDescription.Size = New System.Drawing.Size(524, 33)
+        Me.TextBoxDescription.TabIndex = 10
+        Me.TextBoxDescription.Text = ""
         '
         'Label5
         '
@@ -172,40 +208,40 @@ Partial Class Gestion_des_contacts
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Couriel:"
         '
-        'TextBox5
+        'TextBoxPrenom
         '
-        Me.TextBox5.Location = New System.Drawing.Point(79, 65)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(186, 20)
-        Me.TextBox5.TabIndex = 5
+        Me.TextBoxPrenom.Location = New System.Drawing.Point(79, 65)
+        Me.TextBoxPrenom.Name = "TextBoxPrenom"
+        Me.TextBoxPrenom.Size = New System.Drawing.Size(186, 20)
+        Me.TextBoxPrenom.TabIndex = 5
         '
-        'TextBox4
+        'TextTitre
         '
-        Me.TextBox4.Location = New System.Drawing.Point(79, 91)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(186, 20)
-        Me.TextBox4.TabIndex = 4
+        Me.TextTitre.Location = New System.Drawing.Point(79, 91)
+        Me.TextTitre.Name = "TextTitre"
+        Me.TextTitre.Size = New System.Drawing.Size(186, 20)
+        Me.TextTitre.TabIndex = 4
         '
-        'TextBox3
+        'TextBoxTelephone
         '
-        Me.TextBox3.Location = New System.Drawing.Point(395, 35)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(135, 20)
-        Me.TextBox3.TabIndex = 3
+        Me.TextBoxTelephone.Location = New System.Drawing.Point(395, 35)
+        Me.TextBoxTelephone.Name = "TextBoxTelephone"
+        Me.TextBoxTelephone.Size = New System.Drawing.Size(135, 20)
+        Me.TextBoxTelephone.TabIndex = 3
         '
-        'TextBox2
+        'TextBoxCouriel
         '
-        Me.TextBox2.Location = New System.Drawing.Point(395, 65)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(135, 20)
-        Me.TextBox2.TabIndex = 2
+        Me.TextBoxCouriel.Location = New System.Drawing.Point(395, 65)
+        Me.TextBoxCouriel.Name = "TextBoxCouriel"
+        Me.TextBoxCouriel.Size = New System.Drawing.Size(135, 20)
+        Me.TextBoxCouriel.TabIndex = 2
         '
-        'TextBox1
+        'TextBoxNom
         '
-        Me.TextBox1.Location = New System.Drawing.Point(79, 39)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(186, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.TextBoxNom.Location = New System.Drawing.Point(79, 39)
+        Me.TextBoxNom.Name = "TextBoxNom"
+        Me.TextBoxNom.Size = New System.Drawing.Size(186, 20)
+        Me.TextBoxNom.TabIndex = 1
         '
         'Label1
         '
@@ -225,23 +261,55 @@ Partial Class Gestion_des_contacts
         Me.BoutonFermer.Text = "Fermer"
         Me.BoutonFermer.UseVisualStyleBackColor = True
         '
-        'Label7
+        'NoCONDataGridViewTextBoxColumn
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(350, 200)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(110, 13)
-        Me.Label7.TabIndex = 12
-        Me.Label7.Text = "Dernière Modification:"
+        Me.NoCONDataGridViewTextBoxColumn.DataPropertyName = "noCON"
+        Me.NoCONDataGridViewTextBoxColumn.HeaderText = "noCON"
+        Me.NoCONDataGridViewTextBoxColumn.Name = "NoCONDataGridViewTextBoxColumn"
+        Me.NoCONDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NoCONDataGridViewTextBoxColumn.Visible = False
         '
-        'Label8
+        'NomCONDataGridViewTextBoxColumn
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(76, 200)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(89, 13)
-        Me.Label8.TabIndex = 13
-        Me.Label8.Text = "Date de création:"
+        Me.NomCONDataGridViewTextBoxColumn.DataPropertyName = "nomCON"
+        Me.NomCONDataGridViewTextBoxColumn.HeaderText = "nomCON"
+        Me.NomCONDataGridViewTextBoxColumn.Name = "NomCONDataGridViewTextBoxColumn"
+        Me.NomCONDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PrenomCONDataGridViewTextBoxColumn
+        '
+        Me.PrenomCONDataGridViewTextBoxColumn.DataPropertyName = "prenomCON"
+        Me.PrenomCONDataGridViewTextBoxColumn.HeaderText = "prenomCON"
+        Me.PrenomCONDataGridViewTextBoxColumn.Name = "PrenomCONDataGridViewTextBoxColumn"
+        Me.PrenomCONDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TitreCONDataGridViewTextBoxColumn
+        '
+        Me.TitreCONDataGridViewTextBoxColumn.DataPropertyName = "titreCON"
+        Me.TitreCONDataGridViewTextBoxColumn.HeaderText = "titreCON"
+        Me.TitreCONDataGridViewTextBoxColumn.Name = "TitreCONDataGridViewTextBoxColumn"
+        Me.TitreCONDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TelephoneCONDataGridViewTextBoxColumn
+        '
+        Me.TelephoneCONDataGridViewTextBoxColumn.DataPropertyName = "telephoneCON"
+        Me.TelephoneCONDataGridViewTextBoxColumn.HeaderText = "telephoneCON"
+        Me.TelephoneCONDataGridViewTextBoxColumn.Name = "TelephoneCONDataGridViewTextBoxColumn"
+        Me.TelephoneCONDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SelectionContactPourGestionBindingSource
+        '
+        Me.SelectionContactPourGestionBindingSource.DataMember = "SelectionContactPourGestion"
+        Me.SelectionContactPourGestionBindingSource.DataSource = Me.SSDSDataSet
+        '
+        'SSDSDataSet
+        '
+        Me.SSDSDataSet.DataSetName = "SSDSDataSet"
+        Me.SSDSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'SelectionContactPourGestionTableAdapter
+        '
+        Me.SelectionContactPourGestionTableAdapter.ClearBeforeFill = True
         '
         'Gestion_des_contacts
         '
@@ -249,36 +317,46 @@ Partial Class Gestion_des_contacts
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(705, 426)
         Me.Controls.Add(Me.BoutonFermer)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.dateModification)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Gestion_des_contacts"
         Me.Text = "Gestion_des_contacts"
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        CType(Me.dgvContacts, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.dateModification.ResumeLayout(False)
+        Me.dateModification.PerformLayout()
+        CType(Me.SelectionContactPourGestionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvContacts As System.Windows.Forms.DataGridView
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents dateModification As System.Windows.Forms.GroupBox
     Friend WithEvents BoutonFermer As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxPrenom As System.Windows.Forms.TextBox
+    Friend WithEvents TextTitre As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxTelephone As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxCouriel As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxNom As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents TextBoxDescription As System.Windows.Forms.RichTextBox
+    Friend WithEvents dateCreation As System.Windows.Forms.Label
+    Friend WithEvents dateModif As System.Windows.Forms.Label
+    Friend WithEvents SSDSDataSet As SSDS.SSDSDataSet
+    Friend WithEvents SelectionContactPourGestionBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents SelectionContactPourGestionTableAdapter As SSDS.SSDSDataSetTableAdapters.SelectionContactPourGestionTableAdapter
+    Friend WithEvents NoCONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NomCONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PrenomCONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TitreCONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TelephoneCONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
