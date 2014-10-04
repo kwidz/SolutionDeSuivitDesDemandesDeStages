@@ -70,6 +70,7 @@ Partial Class Connection
         '
         Me.Pass.Location = New System.Drawing.Point(36, 121)
         Me.Pass.Name = "Pass"
+        Me.Pass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.Pass.Size = New System.Drawing.Size(213, 20)
         Me.Pass.TabIndex = 1
         '

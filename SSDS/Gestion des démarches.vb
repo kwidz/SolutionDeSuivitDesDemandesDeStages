@@ -2,6 +2,7 @@
 
 Public Class GestionDesDemarches
     Private user As Integer
+    Private nonEtudiant As Boolean
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Me.Close()
     End Sub
@@ -100,8 +101,22 @@ Public Class GestionDesDemarches
         End If
     End Sub
 
-    Public Sub New(pVariable As Integer)
+    Public Sub New(pVariable As Integer, nonEtu As Boolean)
         InitializeComponent()
+        nonEtudiant = nonEtu
+        If (nonEtudiant) Then
+            BoutonAjouter.Hide()
+            BoutonModifier.Hide()
+            BoutonSupprimer.Hide()
+            BoutonDetailAnnuler.Hide()
+            BoutonDetailSauvegarder.Hide()
+            AjouterDemarche.Hide()
+            ModifierDemarche.Hide()
+            SupprimerDemarche.Hide()
+            SauvegarderDemarche.Hide()
+            AnnulerDemarche.Hide()
+
+        End If
         user = pVariable
         dgvEntreprises.DataSource = (SelectionEntrepriseTableAdapter.GetData(user))
 
@@ -111,7 +126,7 @@ Public Class GestionDesDemarches
 
     Private Sub BoutonDetailContacts_Click(sender As Object, e As EventArgs) Handles BoutonDetailContacts.Click
         Try
-            Dim dial As New Gestion_des_contacts(dgvEntreprises.SelectedRows(0).Cells(0).Value)
+            Dim dial As New Gestion_des_contacts(dgvEntreprises.SelectedRows(0).Cells(0).Value, nonEtudiant)
             dial.Show()
         Catch
             MsgBox("Il n'y a pas d'entreprise de séléctionnée")

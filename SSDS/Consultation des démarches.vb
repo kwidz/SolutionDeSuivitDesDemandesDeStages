@@ -22,7 +22,7 @@
 
 
     Private Sub dgvEtudiants_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEtudiants.CellClick
-        Dim dial As New GestionDesDemarches(dgvEtudiants.SelectedRows(0).Cells(0).Value)
+        Dim dial As New GestionDesDemarches(dgvEtudiants.SelectedRows(0).Cells(0).Value, True)
         dial.Show()
 
 

@@ -5,6 +5,7 @@ Public Class MDIParent1
     Private user As Integer
     Private prof As Boolean = False
     Private coordinateur As Boolean = False
+    Private nonEtudiant = False
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewWindowToolStripMenuItem.Click
         ' Créez une nouvelle instance du formulaire enfant.
         Dim ChildForm As New System.Windows.Forms.Form
@@ -94,7 +95,7 @@ Public Class MDIParent1
             End If
         Next
 
-        Dim ChildForm As New Gestion_des_contacts(user)
+        Dim ChildForm As New Gestion_des_contacts(user, nonEtudiant)
         ChildForm.MdiParent = Me
         ChildForm.Show()
 
@@ -109,7 +110,7 @@ Public Class MDIParent1
             End If
         Next
 
-        Dim ChildForm As New GestionDesDemarches(user)
+        Dim ChildForm As New GestionDesDemarches(user, nonEtudiant)
         ChildForm.MdiParent = Me
         ChildForm.Show()
     End Sub
@@ -152,9 +153,6 @@ Public Class MDIParent1
             pass = InputConnect.Pass.Text
             Utilisateur = InputConnect.User.Text
             dtUser = taUser.GetData(Utilisateur, pass)
-            If (InputConnect.DialogResult = Windows.Forms.DialogResult.Cancel) Then
-                End
-            End If
             If (dtUser.Rows.Count = 0) Then
                 MsgBox("Mauvaise Combinaison Mot de passe / utilisateur")
             Else
@@ -167,11 +165,13 @@ Public Class MDIParent1
         If (dtUser.Rows(0)("noTYPUTIL") = 1) Then
             coordinateur = True
             GestionDesDémarchesToolStripMenuItem.Visible = False
+            nonEtudiant = True
 
         ElseIf (dtUser.Rows(0)("noTYPUTIL") = 3) Then
             prof = True
             GestionDesDémarchesToolStripMenuItem.Visible = False
             GestionDesUtilisateursToolStripMenuItem.Visible = False
+            nonEtudiant = True
         Else
             GestionDesUtilisateursToolStripMenuItem.Visible = False
             ConsultationDesDémarchesToolStripMenuItem.Visible = False

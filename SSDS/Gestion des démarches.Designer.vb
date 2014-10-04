@@ -60,9 +60,9 @@ Partial Class GestionDesDemarches
         Me.TextBoxDetailCodePEntreprise = New System.Windows.Forms.TextBox()
         Me.TextBoxDetailNomEntreprise = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.SupprimerDemarche = New System.Windows.Forms.Button()
+        Me.ModifierDemarche = New System.Windows.Forms.Button()
+        Me.AjouterDemarche = New System.Windows.Forms.Button()
         Me.dgvDemarches = New System.Windows.Forms.DataGridView()
         Me.NoDEMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateDEMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -75,8 +75,8 @@ Partial Class GestionDesDemarches
         Me.DerniereModificationDem = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.DescriptionDem = New System.Windows.Forms.RichTextBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.AnnulerDemarche = New System.Windows.Forms.Button()
+        Me.SauvegarderDemarche = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TypeDem = New System.Windows.Forms.ComboBox()
         Me.SelectionTypeDEMBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -454,9 +454,9 @@ Partial Class GestionDesDemarches
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.Button2)
-        Me.GroupBox2.Controls.Add(Me.Button3)
+        Me.GroupBox2.Controls.Add(Me.SupprimerDemarche)
+        Me.GroupBox2.Controls.Add(Me.ModifierDemarche)
+        Me.GroupBox2.Controls.Add(Me.AjouterDemarche)
         Me.GroupBox2.Controls.Add(Me.dgvDemarches)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 346)
         Me.GroupBox2.Name = "GroupBox2"
@@ -465,32 +465,32 @@ Partial Class GestionDesDemarches
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Démarches"
         '
-        'Button1
+        'SupprimerDemarche
         '
-        Me.Button1.Location = New System.Drawing.Point(568, 84)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(85, 23)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Supprimer"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.SupprimerDemarche.Location = New System.Drawing.Point(568, 84)
+        Me.SupprimerDemarche.Name = "SupprimerDemarche"
+        Me.SupprimerDemarche.Size = New System.Drawing.Size(85, 23)
+        Me.SupprimerDemarche.TabIndex = 6
+        Me.SupprimerDemarche.Text = "Supprimer"
+        Me.SupprimerDemarche.UseVisualStyleBackColor = True
         '
-        'Button2
+        'ModifierDemarche
         '
-        Me.Button2.Location = New System.Drawing.Point(568, 55)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(85, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Modifier"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ModifierDemarche.Location = New System.Drawing.Point(568, 55)
+        Me.ModifierDemarche.Name = "ModifierDemarche"
+        Me.ModifierDemarche.Size = New System.Drawing.Size(85, 23)
+        Me.ModifierDemarche.TabIndex = 5
+        Me.ModifierDemarche.Text = "Modifier"
+        Me.ModifierDemarche.UseVisualStyleBackColor = True
         '
-        'Button3
+        'AjouterDemarche
         '
-        Me.Button3.Location = New System.Drawing.Point(568, 26)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(85, 23)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "Ajouter"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.AjouterDemarche.Location = New System.Drawing.Point(568, 26)
+        Me.AjouterDemarche.Name = "AjouterDemarche"
+        Me.AjouterDemarche.Size = New System.Drawing.Size(85, 23)
+        Me.AjouterDemarche.TabIndex = 4
+        Me.AjouterDemarche.Text = "Ajouter"
+        Me.AjouterDemarche.UseVisualStyleBackColor = True
         '
         'dgvDemarches
         '
@@ -555,8 +555,8 @@ Partial Class GestionDesDemarches
         Me.GroupBox3.Controls.Add(Me.DerniereModificationDem)
         Me.GroupBox3.Controls.Add(Me.Label16)
         Me.GroupBox3.Controls.Add(Me.DescriptionDem)
-        Me.GroupBox3.Controls.Add(Me.Button4)
-        Me.GroupBox3.Controls.Add(Me.Button5)
+        Me.GroupBox3.Controls.Add(Me.AnnulerDemarche)
+        Me.GroupBox3.Controls.Add(Me.SauvegarderDemarche)
         Me.GroupBox3.Controls.Add(Me.Label13)
         Me.GroupBox3.Controls.Add(Me.TypeDem)
         Me.GroupBox3.Controls.Add(Me.ContactDem)
@@ -605,23 +605,23 @@ Partial Class GestionDesDemarches
         Me.DescriptionDem.TabIndex = 23
         Me.DescriptionDem.Text = ""
         '
-        'Button4
+        'AnnulerDemarche
         '
-        Me.Button4.Location = New System.Drawing.Point(568, 47)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(85, 23)
-        Me.Button4.TabIndex = 22
-        Me.Button4.Text = "Annuler"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.AnnulerDemarche.Location = New System.Drawing.Point(568, 47)
+        Me.AnnulerDemarche.Name = "AnnulerDemarche"
+        Me.AnnulerDemarche.Size = New System.Drawing.Size(85, 23)
+        Me.AnnulerDemarche.TabIndex = 22
+        Me.AnnulerDemarche.Text = "Annuler"
+        Me.AnnulerDemarche.UseVisualStyleBackColor = True
         '
-        'Button5
+        'SauvegarderDemarche
         '
-        Me.Button5.Location = New System.Drawing.Point(568, 18)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(85, 23)
-        Me.Button5.TabIndex = 21
-        Me.Button5.Text = "Sauvegarder"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.SauvegarderDemarche.Location = New System.Drawing.Point(568, 18)
+        Me.SauvegarderDemarche.Name = "SauvegarderDemarche"
+        Me.SauvegarderDemarche.Size = New System.Drawing.Size(85, 23)
+        Me.SauvegarderDemarche.TabIndex = 21
+        Me.SauvegarderDemarche.Text = "Sauvegarder"
+        Me.SauvegarderDemarche.UseVisualStyleBackColor = True
         '
         'Label13
         '
@@ -781,17 +781,17 @@ Partial Class GestionDesDemarches
     Friend WithEvents txtDateCreationEntreprise As System.Windows.Forms.Label
     Friend WithEvents txtDateModificationEntreprise As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents SupprimerDemarche As System.Windows.Forms.Button
+    Friend WithEvents ModifierDemarche As System.Windows.Forms.Button
+    Friend WithEvents AjouterDemarche As System.Windows.Forms.Button
     Friend WithEvents dgvDemarches As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents DateCreationDem As System.Windows.Forms.Label
     Friend WithEvents DerniereModificationDem As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents DescriptionDem As System.Windows.Forms.RichTextBox
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents AnnulerDemarche As System.Windows.Forms.Button
+    Friend WithEvents SauvegarderDemarche As System.Windows.Forms.Button
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents TypeDem As System.Windows.Forms.ComboBox
     Friend WithEvents ContactDem As System.Windows.Forms.ComboBox

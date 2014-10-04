@@ -2,8 +2,17 @@
 
     Private noEntreprise As Integer
 
-    Sub New(noE As Integer)
+    Sub New(noE As Integer, nonEtudiant As Boolean)
         InitializeComponent()
+        If (nonEtudiant) Then
+            AjouterContact.Hide()
+            ModifierContact.Hide()
+            SauvegarderContact.Hide()
+            AnnulerContact.Hide()
+            SupprimerContact.Hide()
+
+        End If
+
         noEntreprise = noE
         dgvContacts.DataSource = SelectionContactPourGestionTableAdapter.GetData(noEntreprise)
     End Sub

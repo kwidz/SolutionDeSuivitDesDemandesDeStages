@@ -24,9 +24,9 @@ Partial Class Gestion_des_contacts
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ModifierContact = New System.Windows.Forms.Button()
+        Me.SupprimerContact = New System.Windows.Forms.Button()
+        Me.AjouterContact = New System.Windows.Forms.Button()
         Me.dgvContacts = New System.Windows.Forms.DataGridView()
         Me.NoCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NomCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -52,6 +52,8 @@ Partial Class Gestion_des_contacts
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BoutonFermer = New System.Windows.Forms.Button()
         Me.SelectionContactPourGestionTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionContactPourGestionTableAdapter()
+        Me.AnnulerContact = New System.Windows.Forms.Button()
+        Me.SauvegarderContact = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvContacts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SelectionContactPourGestionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,9 +63,9 @@ Partial Class Gestion_des_contacts
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button3)
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.ModifierContact)
+        Me.GroupBox1.Controls.Add(Me.SupprimerContact)
+        Me.GroupBox1.Controls.Add(Me.AjouterContact)
         Me.GroupBox1.Controls.Add(Me.dgvContacts)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
@@ -72,32 +74,32 @@ Partial Class Gestion_des_contacts
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Contacts"
         '
-        'Button3
+        'ModifierContact
         '
-        Me.Button3.Location = New System.Drawing.Point(570, 46)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Modifier"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.ModifierContact.Location = New System.Drawing.Point(558, 46)
+        Me.ModifierContact.Name = "ModifierContact"
+        Me.ModifierContact.Size = New System.Drawing.Size(87, 23)
+        Me.ModifierContact.TabIndex = 3
+        Me.ModifierContact.Text = "Modifier"
+        Me.ModifierContact.UseVisualStyleBackColor = True
         '
-        'Button2
+        'SupprimerContact
         '
-        Me.Button2.Location = New System.Drawing.Point(570, 75)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Supprimer"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.SupprimerContact.Location = New System.Drawing.Point(558, 75)
+        Me.SupprimerContact.Name = "SupprimerContact"
+        Me.SupprimerContact.Size = New System.Drawing.Size(87, 23)
+        Me.SupprimerContact.TabIndex = 2
+        Me.SupprimerContact.Text = "Supprimer"
+        Me.SupprimerContact.UseVisualStyleBackColor = True
         '
-        'Button1
+        'AjouterContact
         '
-        Me.Button1.Location = New System.Drawing.Point(570, 17)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Ajouter"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.AjouterContact.Location = New System.Drawing.Point(558, 17)
+        Me.AjouterContact.Name = "AjouterContact"
+        Me.AjouterContact.Size = New System.Drawing.Size(87, 23)
+        Me.AjouterContact.TabIndex = 1
+        Me.AjouterContact.Text = "Ajouter"
+        Me.AjouterContact.UseVisualStyleBackColor = True
         '
         'dgvContacts
         '
@@ -162,6 +164,8 @@ Partial Class Gestion_des_contacts
         '
         'dateModification
         '
+        Me.dateModification.Controls.Add(Me.AnnulerContact)
+        Me.dateModification.Controls.Add(Me.SauvegarderContact)
         Me.dateModification.Controls.Add(Me.dateCreation)
         Me.dateModification.Controls.Add(Me.dateModif)
         Me.dateModification.Controls.Add(Me.Label6)
@@ -311,6 +315,24 @@ Partial Class Gestion_des_contacts
         '
         Me.SelectionContactPourGestionTableAdapter.ClearBeforeFill = True
         '
+        'AnnulerContact
+        '
+        Me.AnnulerContact.Location = New System.Drawing.Point(558, 48)
+        Me.AnnulerContact.Name = "AnnulerContact"
+        Me.AnnulerContact.Size = New System.Drawing.Size(87, 23)
+        Me.AnnulerContact.TabIndex = 4
+        Me.AnnulerContact.Text = "Annuler"
+        Me.AnnulerContact.UseVisualStyleBackColor = True
+        '
+        'SauvegarderContact
+        '
+        Me.SauvegarderContact.Location = New System.Drawing.Point(558, 19)
+        Me.SauvegarderContact.Name = "SauvegarderContact"
+        Me.SauvegarderContact.Size = New System.Drawing.Size(87, 23)
+        Me.SauvegarderContact.TabIndex = 5
+        Me.SauvegarderContact.Text = "Sauvegarder"
+        Me.SauvegarderContact.UseVisualStyleBackColor = True
+        '
         'Gestion_des_contacts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -332,9 +354,9 @@ Partial Class Gestion_des_contacts
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents dgvContacts As System.Windows.Forms.DataGridView
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents ModifierContact As System.Windows.Forms.Button
+    Friend WithEvents SupprimerContact As System.Windows.Forms.Button
+    Friend WithEvents AjouterContact As System.Windows.Forms.Button
     Friend WithEvents dateModification As System.Windows.Forms.GroupBox
     Friend WithEvents BoutonFermer As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
@@ -359,4 +381,6 @@ Partial Class Gestion_des_contacts
     Friend WithEvents PrenomCONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TitreCONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TelephoneCONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents AnnulerContact As System.Windows.Forms.Button
+    Friend WithEvents SauvegarderContact As System.Windows.Forms.Button
 End Class
