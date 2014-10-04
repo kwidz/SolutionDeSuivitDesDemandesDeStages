@@ -28,7 +28,7 @@ Public Class GestionDesUtilisateurs
             End If
         End If
         dgvEtudiants.DataSource = ListerUserByAllNPAWithTypeTableAdapter.GetData(TextBoxNom.Text, TextBoxPrenom.Text, bouton, Type.SelectedValue)
-
+        gbResultats.Text = "Résultats (" + CStr(dgvEtudiants.Rows.Count) + ")"
     End Sub
 
     Private Sub dgvEtudiants_SelectionChanged(sender As Object, e As EventArgs) Handles dgvEtudiants.SelectionChanged

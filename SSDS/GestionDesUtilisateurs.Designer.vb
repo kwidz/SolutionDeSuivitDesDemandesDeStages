@@ -29,12 +29,14 @@ Partial Class GestionDesUtilisateurs
         Me.Tous = New System.Windows.Forms.RadioButton()
         Me.Actifs = New System.Windows.Forms.RadioButton()
         Me.Type = New System.Windows.Forms.ComboBox()
-        Me.SSDSDataSet = New SSDS.SSDSDataSet()
+        Me.SelectionRefTypUtilWithTousBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SSDSDataSet1 = New SSDS.SSDSDataSet()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBoxPrenom = New System.Windows.Forms.TextBox()
         Me.TextBoxNom = New System.Windows.Forms.TextBox()
+        Me.SSDSDataSet = New SSDS.SSDSDataSet()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.CheckBoxDetailActif = New System.Windows.Forms.CheckBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -44,13 +46,15 @@ Partial Class GestionDesUtilisateurs
         Me.DateCreation = New System.Windows.Forms.Label()
         Me.DerniereModification = New System.Windows.Forms.Label()
         Me.ComboBoxDetailType = New System.Windows.Forms.ComboBox()
-        Me.REFTypeUtilisateurBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.REFTypeUtilisateurBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SSDSDataSet2 = New SSDS.SSDSDataSet()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.TextBoxDetailNom = New System.Windows.Forms.TextBox()
         Me.TextBoxDetailPrenom = New System.Windows.Forms.TextBox()
         Me.TextBoxDetailCouriel = New System.Windows.Forms.TextBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.REFTypeUtilisateurBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.gbResultats = New System.Windows.Forms.GroupBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -63,23 +67,19 @@ Partial Class GestionDesUtilisateurs
         Me.ListerUserByAllNPAWithTypeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ListerUserByAllNPAWithTypeTableAdapter = New SSDS.SSDSDataSetTableAdapters.ListerUserByAllNPAWithTypeTableAdapter()
-        Me.SSDSDataSet1 = New SSDS.SSDSDataSet()
-        Me.SelectionRefTypUtilWithTousBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SelectionRefTypUtilWithTousTableAdapter = New SSDS.SSDSDataSetTableAdapters.selectionRefTypUtilWithTousTableAdapter()
-        Me.SSDSDataSet2 = New SSDS.SSDSDataSet()
-        Me.REFTypeUtilisateurBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.REF_TypeUtilisateurTableAdapter = New SSDS.SSDSDataSetTableAdapters.REF_TypeUtilisateurTableAdapter()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.SelectionRefTypUtilWithTousBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SSDSDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.REFTypeUtilisateurBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SSDSDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.REFTypeUtilisateurBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox3.SuspendLayout()
+        Me.gbResultats.SuspendLayout()
         CType(Me.dgvEtudiants, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ListerUserByAllNPAWithTypeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SSDSDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SelectionRefTypUtilWithTousBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SSDSDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.REFTypeUtilisateurBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -153,10 +153,15 @@ Partial Class GestionDesUtilisateurs
         Me.Type.TabIndex = 5
         Me.Type.ValueMember = "noTYPUTIL"
         '
-        'SSDSDataSet
+        'SelectionRefTypUtilWithTousBindingSource
         '
-        Me.SSDSDataSet.DataSetName = "SSDSDataSet"
-        Me.SSDSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.SelectionRefTypUtilWithTousBindingSource.DataMember = "selectionRefTypUtilWithTous"
+        Me.SelectionRefTypUtilWithTousBindingSource.DataSource = Me.SSDSDataSet1
+        '
+        'SSDSDataSet1
+        '
+        Me.SSDSDataSet1.DataSetName = "SSDSDataSet"
+        Me.SSDSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label3
         '
@@ -198,6 +203,11 @@ Partial Class GestionDesUtilisateurs
         Me.TextBoxNom.Name = "TextBoxNom"
         Me.TextBoxNom.Size = New System.Drawing.Size(128, 20)
         Me.TextBoxNom.TabIndex = 0
+        '
+        'SSDSDataSet
+        '
+        Me.SSDSDataSet.DataSetName = "SSDSDataSet"
+        Me.SSDSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GroupBox2
         '
@@ -296,10 +306,15 @@ Partial Class GestionDesUtilisateurs
         Me.ComboBoxDetailType.TabIndex = 15
         Me.ComboBoxDetailType.ValueMember = "noTYPUTIL"
         '
-        'REFTypeUtilisateurBindingSource1
+        'REFTypeUtilisateurBindingSource
         '
-        Me.REFTypeUtilisateurBindingSource1.DataMember = "REF_TypeUtilisateur"
-        Me.REFTypeUtilisateurBindingSource1.DataSource = Me.SSDSDataSet
+        Me.REFTypeUtilisateurBindingSource.DataMember = "REF_TypeUtilisateur"
+        Me.REFTypeUtilisateurBindingSource.DataSource = Me.SSDSDataSet2
+        '
+        'SSDSDataSet2
+        '
+        Me.SSDSDataSet2.DataSetName = "SSDSDataSet"
+        Me.SSDSDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Button7
         '
@@ -340,18 +355,23 @@ Partial Class GestionDesUtilisateurs
         Me.TextBoxDetailCouriel.Size = New System.Drawing.Size(231, 20)
         Me.TextBoxDetailCouriel.TabIndex = 1
         '
-        'GroupBox3
+        'REFTypeUtilisateurBindingSource1
         '
-        Me.GroupBox3.Controls.Add(Me.Button5)
-        Me.GroupBox3.Controls.Add(Me.Button4)
-        Me.GroupBox3.Controls.Add(Me.Button3)
-        Me.GroupBox3.Controls.Add(Me.dgvEtudiants)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 98)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(611, 168)
-        Me.GroupBox3.TabIndex = 1
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Résultats"
+        Me.REFTypeUtilisateurBindingSource1.DataMember = "REF_TypeUtilisateur"
+        Me.REFTypeUtilisateurBindingSource1.DataSource = Me.SSDSDataSet
+        '
+        'gbResultats
+        '
+        Me.gbResultats.Controls.Add(Me.Button5)
+        Me.gbResultats.Controls.Add(Me.Button4)
+        Me.gbResultats.Controls.Add(Me.Button3)
+        Me.gbResultats.Controls.Add(Me.dgvEtudiants)
+        Me.gbResultats.Location = New System.Drawing.Point(12, 98)
+        Me.gbResultats.Name = "gbResultats"
+        Me.gbResultats.Size = New System.Drawing.Size(611, 168)
+        Me.gbResultats.TabIndex = 1
+        Me.gbResultats.TabStop = False
+        Me.gbResultats.Text = "Résultats"
         '
         'Button5
         '
@@ -450,29 +470,9 @@ Partial Class GestionDesUtilisateurs
         '
         Me.ListerUserByAllNPAWithTypeTableAdapter.ClearBeforeFill = True
         '
-        'SSDSDataSet1
-        '
-        Me.SSDSDataSet1.DataSetName = "SSDSDataSet"
-        Me.SSDSDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'SelectionRefTypUtilWithTousBindingSource
-        '
-        Me.SelectionRefTypUtilWithTousBindingSource.DataMember = "selectionRefTypUtilWithTous"
-        Me.SelectionRefTypUtilWithTousBindingSource.DataSource = Me.SSDSDataSet1
-        '
         'SelectionRefTypUtilWithTousTableAdapter
         '
         Me.SelectionRefTypUtilWithTousTableAdapter.ClearBeforeFill = True
-        '
-        'SSDSDataSet2
-        '
-        Me.SSDSDataSet2.DataSetName = "SSDSDataSet"
-        Me.SSDSDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'REFTypeUtilisateurBindingSource
-        '
-        Me.REFTypeUtilisateurBindingSource.DataMember = "REF_TypeUtilisateur"
-        Me.REFTypeUtilisateurBindingSource.DataSource = Me.SSDSDataSet2
         '
         'REF_TypeUtilisateurTableAdapter
         '
@@ -484,24 +484,24 @@ Partial Class GestionDesUtilisateurs
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(639, 471)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.gbResultats)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button2)
         Me.Name = "GestionDesUtilisateurs"
         Me.Text = "Gestion des utilisateurs"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.SelectionRefTypUtilWithTousBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SSDSDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.REFTypeUtilisateurBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SSDSDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.REFTypeUtilisateurBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox3.ResumeLayout(False)
+        Me.gbResultats.ResumeLayout(False)
         CType(Me.dgvEtudiants, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ListerUserByAllNPAWithTypeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SSDSDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SelectionRefTypUtilWithTousBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SSDSDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.REFTypeUtilisateurBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -517,7 +517,7 @@ Partial Class GestionDesUtilisateurs
     Friend WithEvents TextBoxPrenom As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxNom As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents gbResultats As System.Windows.Forms.GroupBox
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button

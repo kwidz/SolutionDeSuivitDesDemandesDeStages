@@ -58,6 +58,7 @@ Public Class GestionDesDemarches
                 txtDateModificationEntreprise.Text = "Dernière Modification:" + dtEntreprises.Rows(0)("dateModification")
                 dgvDemarches.DataSource = SelectionDemarchesByIdTableAdapter.GetData(dgvEntreprises.SelectedRows(0).Cells(0).Value)
                 ComboBoxDetailStatutEntreprise.SelectedValue = dtEntreprises.Rows(0)("statut")
+                GroupBoxDemarches.Text = "Démarches (" + CStr(dgvEntreprises.SelectedRows(0).Cells(1).Value) + ") (" + CStr(dgvDemarches.Rows.Count) + ")"
             End If
         Else
             TextBoxDetailCourielEntreprise.Text = ""
@@ -119,6 +120,12 @@ Public Class GestionDesDemarches
         End If
         user = pVariable
         dgvEntreprises.DataSource = (SelectionEntrepriseTableAdapter.GetData(user))
+        GroupBoxEntreprises.Text = "Entreprises (" + CStr(dgvEntreprises.Rows.Count) + ")"
+
+        Dim taNomEtudiant As New SSDSDataSetTableAdapters.SelectionNomPrenomEtudiantByIdTableAdapter
+        Dim dtNomEtudiant As DataTable
+        dtNomEtudiant = taNomEtudiant.GetData(user)
+        Me.Text = "Gestion des démarches (" + dtNomEtudiant.Rows(0)(0) + ")"
 
     End Sub
 
@@ -132,4 +139,6 @@ Public Class GestionDesDemarches
             MsgBox("Il n'y a pas d'entreprise de séléctionnée")
         End Try
     End Sub
+
+
 End Class

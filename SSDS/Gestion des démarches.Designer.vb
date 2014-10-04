@@ -59,7 +59,7 @@ Partial Class GestionDesDemarches
         Me.TextBoxDetailVilleEntreprise = New System.Windows.Forms.TextBox()
         Me.TextBoxDetailCodePEntreprise = New System.Windows.Forms.TextBox()
         Me.TextBoxDetailNomEntreprise = New System.Windows.Forms.TextBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.GroupBoxDemarches = New System.Windows.Forms.GroupBox()
         Me.SupprimerDemarche = New System.Windows.Forms.Button()
         Me.ModifierDemarche = New System.Windows.Forms.Button()
         Me.AjouterDemarche = New System.Windows.Forms.Button()
@@ -99,7 +99,7 @@ Partial Class GestionDesDemarches
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SelectionStatutENTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
+        Me.GroupBoxDemarches.SuspendLayout()
         CType(Me.dgvDemarches, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SelectionDemarchesByIdBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -452,18 +452,18 @@ Partial Class GestionDesDemarches
         Me.TextBoxDetailNomEntreprise.Size = New System.Drawing.Size(255, 20)
         Me.TextBoxDetailNomEntreprise.TabIndex = 0
         '
-        'GroupBox2
+        'GroupBoxDemarches
         '
-        Me.GroupBox2.Controls.Add(Me.SupprimerDemarche)
-        Me.GroupBox2.Controls.Add(Me.ModifierDemarche)
-        Me.GroupBox2.Controls.Add(Me.AjouterDemarche)
-        Me.GroupBox2.Controls.Add(Me.dgvDemarches)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 346)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(675, 132)
-        Me.GroupBox2.TabIndex = 2
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Démarches"
+        Me.GroupBoxDemarches.Controls.Add(Me.SupprimerDemarche)
+        Me.GroupBoxDemarches.Controls.Add(Me.ModifierDemarche)
+        Me.GroupBoxDemarches.Controls.Add(Me.AjouterDemarche)
+        Me.GroupBoxDemarches.Controls.Add(Me.dgvDemarches)
+        Me.GroupBoxDemarches.Location = New System.Drawing.Point(12, 346)
+        Me.GroupBoxDemarches.Name = "GroupBoxDemarches"
+        Me.GroupBoxDemarches.Size = New System.Drawing.Size(675, 132)
+        Me.GroupBoxDemarches.TabIndex = 2
+        Me.GroupBoxDemarches.TabStop = False
+        Me.GroupBoxDemarches.Text = "Démarches"
         '
         'SupprimerDemarche
         '
@@ -730,7 +730,7 @@ Partial Class GestionDesDemarches
         Me.ClientSize = New System.Drawing.Size(699, 668)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBoxDemarches)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBoxEntreprises)
         Me.Name = "GestionDesDemarches"
@@ -743,7 +743,7 @@ Partial Class GestionDesDemarches
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SelectionStatutENTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBoxDemarches.ResumeLayout(False)
         CType(Me.dgvDemarches, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SelectionDemarchesByIdBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
@@ -780,7 +780,7 @@ Partial Class GestionDesDemarches
     Friend WithEvents BoutonDetailSauvegarder As System.Windows.Forms.Button
     Friend WithEvents txtDateCreationEntreprise As System.Windows.Forms.Label
     Friend WithEvents txtDateModificationEntreprise As System.Windows.Forms.Label
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBoxDemarches As System.Windows.Forms.GroupBox
     Friend WithEvents SupprimerDemarche As System.Windows.Forms.Button
     Friend WithEvents ModifierDemarche As System.Windows.Forms.Button
     Friend WithEvents AjouterDemarche As System.Windows.Forms.Button

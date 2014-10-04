@@ -14,7 +14,12 @@
         End If
 
         noEntreprise = noE
+        Dim taNomEntreprise As New SSDSDataSetTableAdapters.SelectionNomEntrepriseByIdTableAdapter
+        Dim dtNomEntreprise As DataTable
+        dtNomEntreprise = taNomEntreprise.GetData(noEntreprise)
+        Me.Text = "Gestion des contacts (" + dtNomEntreprise.Rows(0)(0) + ")"
         dgvContacts.DataSource = SelectionContactPourGestionTableAdapter.GetData(noEntreprise)
+        GbContacts.Text = "Contacts (" + CStr(dgvContacts.Rows.Count) + ")"
     End Sub
 
     Private Sub BoutonFermer_Click(sender As Object, e As EventArgs) Handles BoutonFermer.Click

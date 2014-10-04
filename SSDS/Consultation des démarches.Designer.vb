@@ -23,7 +23,7 @@ Partial Class Consultation_des_démarches
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.GBEtudiants = New System.Windows.Forms.GroupBox()
         Me.dgvEtudiants = New System.Windows.Forms.DataGridView()
         Me.NoUTILDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NomPrenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,22 +42,22 @@ Partial Class Consultation_des_démarches
         Me.Inactif = New System.Windows.Forms.RadioButton()
         Me.Tous = New System.Windows.Forms.RadioButton()
         Me.ListerUserByAllNPATableAdapter = New SSDS.SSDSDataSetTableAdapters.ListerUserByAllNPATableAdapter()
-        Me.GroupBox2.SuspendLayout()
+        Me.GBEtudiants.SuspendLayout()
         CType(Me.dgvEtudiants, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ListerUserByAllNPABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'GroupBox2
+        'GBEtudiants
         '
-        Me.GroupBox2.Controls.Add(Me.dgvEtudiants)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 110)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(520, 272)
-        Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Étudiants"
+        Me.GBEtudiants.Controls.Add(Me.dgvEtudiants)
+        Me.GBEtudiants.Location = New System.Drawing.Point(12, 110)
+        Me.GBEtudiants.Name = "GBEtudiants"
+        Me.GBEtudiants.Size = New System.Drawing.Size(520, 272)
+        Me.GBEtudiants.TabIndex = 1
+        Me.GBEtudiants.TabStop = False
+        Me.GBEtudiants.Text = "Étudiants"
         '
         'dgvEtudiants
         '
@@ -223,11 +223,11 @@ Partial Class Consultation_des_démarches
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(543, 427)
         Me.Controls.Add(Me.Fermer)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GBEtudiants)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Consultation_des_démarches"
         Me.Text = "Consultation des démarches"
-        Me.GroupBox2.ResumeLayout(False)
+        Me.GBEtudiants.ResumeLayout(False)
         CType(Me.dgvEtudiants, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ListerUserByAllNPABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -236,7 +236,7 @@ Partial Class Consultation_des_démarches
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents GBEtudiants As System.Windows.Forms.GroupBox
     Friend WithEvents Fermer As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label

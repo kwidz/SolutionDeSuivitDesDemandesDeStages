@@ -17,7 +17,10 @@
             End If
         End If
         dgvEtudiants.DataSource = ListerUserByAllNPATableAdapter.GetData(TextBoxNomEtu.Text, TextBoxPrenomEtu.Text, bouton)
-
+        Dim tacompteur As New SSDSDataSetTableAdapters.compterUserConsultationDemarchesTableAdapter
+        Dim dtcompteur As DataTable
+        dtcompteur = tacompteur.GetData(TextBoxNomEtu.Text, TextBoxPrenomEtu.Text, bouton)
+        GBEtudiants.Text = "Étudiants (" + CStr(dtcompteur.Rows(0)(0)) + ") - Sélectionner un étudiant pour voir ses démarches"
     End Sub
 
 

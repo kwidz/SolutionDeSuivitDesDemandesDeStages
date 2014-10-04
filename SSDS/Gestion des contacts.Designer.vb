@@ -23,7 +23,7 @@ Partial Class Gestion_des_contacts
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GbContacts = New System.Windows.Forms.GroupBox()
         Me.ModifierContact = New System.Windows.Forms.Button()
         Me.SupprimerContact = New System.Windows.Forms.Button()
         Me.AjouterContact = New System.Windows.Forms.Button()
@@ -36,6 +36,8 @@ Partial Class Gestion_des_contacts
         Me.SelectionContactPourGestionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SSDSDataSet = New SSDS.SSDSDataSet()
         Me.dateModification = New System.Windows.Forms.GroupBox()
+        Me.AnnulerContact = New System.Windows.Forms.Button()
+        Me.SauvegarderContact = New System.Windows.Forms.Button()
         Me.dateCreation = New System.Windows.Forms.Label()
         Me.dateModif = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -52,27 +54,25 @@ Partial Class Gestion_des_contacts
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BoutonFermer = New System.Windows.Forms.Button()
         Me.SelectionContactPourGestionTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionContactPourGestionTableAdapter()
-        Me.AnnulerContact = New System.Windows.Forms.Button()
-        Me.SauvegarderContact = New System.Windows.Forms.Button()
-        Me.GroupBox1.SuspendLayout()
+        Me.GbContacts.SuspendLayout()
         CType(Me.dgvContacts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SelectionContactPourGestionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dateModification.SuspendLayout()
         Me.SuspendLayout()
         '
-        'GroupBox1
+        'GbContacts
         '
-        Me.GroupBox1.Controls.Add(Me.ModifierContact)
-        Me.GroupBox1.Controls.Add(Me.SupprimerContact)
-        Me.GroupBox1.Controls.Add(Me.AjouterContact)
-        Me.GroupBox1.Controls.Add(Me.dgvContacts)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(681, 151)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Contacts"
+        Me.GbContacts.Controls.Add(Me.ModifierContact)
+        Me.GbContacts.Controls.Add(Me.SupprimerContact)
+        Me.GbContacts.Controls.Add(Me.AjouterContact)
+        Me.GbContacts.Controls.Add(Me.dgvContacts)
+        Me.GbContacts.Location = New System.Drawing.Point(12, 12)
+        Me.GbContacts.Name = "GbContacts"
+        Me.GbContacts.Size = New System.Drawing.Size(681, 151)
+        Me.GbContacts.TabIndex = 0
+        Me.GbContacts.TabStop = False
+        Me.GbContacts.Text = "Contacts"
         '
         'ModifierContact
         '
@@ -186,6 +186,24 @@ Partial Class Gestion_des_contacts
         Me.dateModification.TabIndex = 0
         Me.dateModification.TabStop = False
         Me.dateModification.Text = "Détail du contact"
+        '
+        'AnnulerContact
+        '
+        Me.AnnulerContact.Location = New System.Drawing.Point(558, 48)
+        Me.AnnulerContact.Name = "AnnulerContact"
+        Me.AnnulerContact.Size = New System.Drawing.Size(87, 23)
+        Me.AnnulerContact.TabIndex = 4
+        Me.AnnulerContact.Text = "Annuler"
+        Me.AnnulerContact.UseVisualStyleBackColor = True
+        '
+        'SauvegarderContact
+        '
+        Me.SauvegarderContact.Location = New System.Drawing.Point(558, 19)
+        Me.SauvegarderContact.Name = "SauvegarderContact"
+        Me.SauvegarderContact.Size = New System.Drawing.Size(87, 23)
+        Me.SauvegarderContact.TabIndex = 5
+        Me.SauvegarderContact.Text = "Sauvegarder"
+        Me.SauvegarderContact.UseVisualStyleBackColor = True
         '
         'dateCreation
         '
@@ -315,24 +333,6 @@ Partial Class Gestion_des_contacts
         '
         Me.SelectionContactPourGestionTableAdapter.ClearBeforeFill = True
         '
-        'AnnulerContact
-        '
-        Me.AnnulerContact.Location = New System.Drawing.Point(558, 48)
-        Me.AnnulerContact.Name = "AnnulerContact"
-        Me.AnnulerContact.Size = New System.Drawing.Size(87, 23)
-        Me.AnnulerContact.TabIndex = 4
-        Me.AnnulerContact.Text = "Annuler"
-        Me.AnnulerContact.UseVisualStyleBackColor = True
-        '
-        'SauvegarderContact
-        '
-        Me.SauvegarderContact.Location = New System.Drawing.Point(558, 19)
-        Me.SauvegarderContact.Name = "SauvegarderContact"
-        Me.SauvegarderContact.Size = New System.Drawing.Size(87, 23)
-        Me.SauvegarderContact.TabIndex = 5
-        Me.SauvegarderContact.Text = "Sauvegarder"
-        Me.SauvegarderContact.UseVisualStyleBackColor = True
-        '
         'Gestion_des_contacts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -340,10 +340,10 @@ Partial Class Gestion_des_contacts
         Me.ClientSize = New System.Drawing.Size(705, 426)
         Me.Controls.Add(Me.BoutonFermer)
         Me.Controls.Add(Me.dateModification)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.GbContacts)
         Me.Name = "Gestion_des_contacts"
         Me.Text = "Gestion_des_contacts"
-        Me.GroupBox1.ResumeLayout(False)
+        Me.GbContacts.ResumeLayout(False)
         CType(Me.dgvContacts, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SelectionContactPourGestionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -352,7 +352,7 @@ Partial Class Gestion_des_contacts
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents GbContacts As System.Windows.Forms.GroupBox
     Friend WithEvents dgvContacts As System.Windows.Forms.DataGridView
     Friend WithEvents ModifierContact As System.Windows.Forms.Button
     Friend WithEvents SupprimerContact As System.Windows.Forms.Button
