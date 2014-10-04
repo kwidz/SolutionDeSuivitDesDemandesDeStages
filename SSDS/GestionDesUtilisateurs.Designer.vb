@@ -146,6 +146,7 @@ Partial Class GestionDesUtilisateurs
         '
         Me.Type.DataSource = Me.SelectionRefTypUtilWithTousBindingSource
         Me.Type.DisplayMember = "nomTYPUTILl"
+        Me.Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Type.FormattingEnabled = True
         Me.Type.Location = New System.Drawing.Point(270, 45)
         Me.Type.Name = "Type"
@@ -299,6 +300,7 @@ Partial Class GestionDesUtilisateurs
         '
         Me.ComboBoxDetailType.DataSource = Me.REFTypeUtilisateurBindingSource
         Me.ComboBoxDetailType.DisplayMember = "nomTYPUTILl"
+        Me.ComboBoxDetailType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxDetailType.FormattingEnabled = True
         Me.ComboBoxDetailType.Location = New System.Drawing.Point(372, 18)
         Me.ComboBoxDetailType.Name = "ComboBoxDetailType"
@@ -338,6 +340,7 @@ Partial Class GestionDesUtilisateurs
         '
         Me.TextBoxDetailNom.Location = New System.Drawing.Point(72, 19)
         Me.TextBoxDetailNom.Name = "TextBoxDetailNom"
+        Me.TextBoxDetailNom.ReadOnly = True
         Me.TextBoxDetailNom.Size = New System.Drawing.Size(231, 20)
         Me.TextBoxDetailNom.TabIndex = 3
         '
@@ -345,6 +348,7 @@ Partial Class GestionDesUtilisateurs
         '
         Me.TextBoxDetailPrenom.Location = New System.Drawing.Point(72, 45)
         Me.TextBoxDetailPrenom.Name = "TextBoxDetailPrenom"
+        Me.TextBoxDetailPrenom.ReadOnly = True
         Me.TextBoxDetailPrenom.Size = New System.Drawing.Size(231, 20)
         Me.TextBoxDetailPrenom.TabIndex = 2
         '
@@ -352,6 +356,7 @@ Partial Class GestionDesUtilisateurs
         '
         Me.TextBoxDetailCouriel.Location = New System.Drawing.Point(72, 71)
         Me.TextBoxDetailCouriel.Name = "TextBoxDetailCouriel"
+        Me.TextBoxDetailCouriel.ReadOnly = True
         Me.TextBoxDetailCouriel.Size = New System.Drawing.Size(231, 20)
         Me.TextBoxDetailCouriel.TabIndex = 1
         '

@@ -318,6 +318,7 @@ Partial Class GestionDesDemarches
         '
         Me.ComboBoxDetailStatutEntreprise.DataSource = Me.SelectionStatutENTBindingSource
         Me.ComboBoxDetailStatutEntreprise.DisplayMember = "nomSTAENT"
+        Me.ComboBoxDetailStatutEntreprise.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxDetailStatutEntreprise.FormattingEnabled = True
         Me.ComboBoxDetailStatutEntreprise.Location = New System.Drawing.Point(419, 19)
         Me.ComboBoxDetailStatutEntreprise.Name = "ComboBoxDetailStatutEntreprise"
@@ -406,6 +407,7 @@ Partial Class GestionDesDemarches
         '
         Me.TextBoxDetailDescriptionEntreprise.Location = New System.Drawing.Point(90, 123)
         Me.TextBoxDetailDescriptionEntreprise.Name = "TextBoxDetailDescriptionEntreprise"
+        Me.TextBoxDetailDescriptionEntreprise.ReadOnly = True
         Me.TextBoxDetailDescriptionEntreprise.Size = New System.Drawing.Size(448, 42)
         Me.TextBoxDetailDescriptionEntreprise.TabIndex = 2
         Me.TextBoxDetailDescriptionEntreprise.Text = ""
@@ -414,6 +416,7 @@ Partial Class GestionDesDemarches
         '
         Me.TextBoxDetailCourielEntreprise.Location = New System.Drawing.Point(419, 71)
         Me.TextBoxDetailCourielEntreprise.Name = "TextBoxDetailCourielEntreprise"
+        Me.TextBoxDetailCourielEntreprise.ReadOnly = True
         Me.TextBoxDetailCourielEntreprise.Size = New System.Drawing.Size(119, 20)
         Me.TextBoxDetailCourielEntreprise.TabIndex = 6
         '
@@ -421,6 +424,7 @@ Partial Class GestionDesDemarches
         '
         Me.TextBoxDetailTelephoneEntreprise.Location = New System.Drawing.Point(419, 45)
         Me.TextBoxDetailTelephoneEntreprise.Name = "TextBoxDetailTelephoneEntreprise"
+        Me.TextBoxDetailTelephoneEntreprise.ReadOnly = True
         Me.TextBoxDetailTelephoneEntreprise.Size = New System.Drawing.Size(119, 20)
         Me.TextBoxDetailTelephoneEntreprise.TabIndex = 5
         '
@@ -428,6 +432,7 @@ Partial Class GestionDesDemarches
         '
         Me.TextBoxDetailAdresseEntreprise.Location = New System.Drawing.Point(91, 45)
         Me.TextBoxDetailAdresseEntreprise.Name = "TextBoxDetailAdresseEntreprise"
+        Me.TextBoxDetailAdresseEntreprise.ReadOnly = True
         Me.TextBoxDetailAdresseEntreprise.Size = New System.Drawing.Size(255, 20)
         Me.TextBoxDetailAdresseEntreprise.TabIndex = 4
         '
@@ -435,6 +440,7 @@ Partial Class GestionDesDemarches
         '
         Me.TextBoxDetailVilleEntreprise.Location = New System.Drawing.Point(91, 71)
         Me.TextBoxDetailVilleEntreprise.Name = "TextBoxDetailVilleEntreprise"
+        Me.TextBoxDetailVilleEntreprise.ReadOnly = True
         Me.TextBoxDetailVilleEntreprise.Size = New System.Drawing.Size(255, 20)
         Me.TextBoxDetailVilleEntreprise.TabIndex = 3
         '
@@ -442,6 +448,7 @@ Partial Class GestionDesDemarches
         '
         Me.TextBoxDetailCodePEntreprise.Location = New System.Drawing.Point(91, 97)
         Me.TextBoxDetailCodePEntreprise.Name = "TextBoxDetailCodePEntreprise"
+        Me.TextBoxDetailCodePEntreprise.ReadOnly = True
         Me.TextBoxDetailCodePEntreprise.Size = New System.Drawing.Size(255, 20)
         Me.TextBoxDetailCodePEntreprise.TabIndex = 2
         '
@@ -449,6 +456,7 @@ Partial Class GestionDesDemarches
         '
         Me.TextBoxDetailNomEntreprise.Location = New System.Drawing.Point(91, 19)
         Me.TextBoxDetailNomEntreprise.Name = "TextBoxDetailNomEntreprise"
+        Me.TextBoxDetailNomEntreprise.ReadOnly = True
         Me.TextBoxDetailNomEntreprise.Size = New System.Drawing.Size(255, 20)
         Me.TextBoxDetailNomEntreprise.TabIndex = 0
         '
@@ -601,6 +609,7 @@ Partial Class GestionDesDemarches
         '
         Me.DescriptionDem.Location = New System.Drawing.Point(6, 85)
         Me.DescriptionDem.Name = "DescriptionDem"
+        Me.DescriptionDem.ReadOnly = True
         Me.DescriptionDem.Size = New System.Drawing.Size(534, 42)
         Me.DescriptionDem.TabIndex = 23
         Me.DescriptionDem.Text = ""
@@ -636,6 +645,7 @@ Partial Class GestionDesDemarches
         '
         Me.TypeDem.DataSource = Me.SelectionTypeDEMBindingSource
         Me.TypeDem.DisplayMember = "nomTYPDEM"
+        Me.TypeDem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.TypeDem.FormattingEnabled = True
         Me.TypeDem.Location = New System.Drawing.Point(343, 49)
         Me.TypeDem.Name = "TypeDem"
@@ -657,6 +667,7 @@ Partial Class GestionDesDemarches
         '
         Me.ContactDem.DataSource = Me.SelectionContactBindingSource
         Me.ContactDem.DisplayMember = "nomCON"
+        Me.ContactDem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ContactDem.FormattingEnabled = True
         Me.ContactDem.Location = New System.Drawing.Point(343, 22)
         Me.ContactDem.Name = "ContactDem"

@@ -236,6 +236,7 @@ Partial Class Gestion_des_contacts
         '
         Me.TextBoxDescription.Location = New System.Drawing.Point(6, 141)
         Me.TextBoxDescription.Name = "TextBoxDescription"
+        Me.TextBoxDescription.ReadOnly = True
         Me.TextBoxDescription.Size = New System.Drawing.Size(524, 33)
         Me.TextBoxDescription.TabIndex = 10
         Me.TextBoxDescription.Text = ""
@@ -280,6 +281,7 @@ Partial Class Gestion_des_contacts
         '
         Me.TextBoxPrenom.Location = New System.Drawing.Point(79, 65)
         Me.TextBoxPrenom.Name = "TextBoxPrenom"
+        Me.TextBoxPrenom.ReadOnly = True
         Me.TextBoxPrenom.Size = New System.Drawing.Size(186, 20)
         Me.TextBoxPrenom.TabIndex = 5
         '
@@ -287,6 +289,7 @@ Partial Class Gestion_des_contacts
         '
         Me.TextTitre.Location = New System.Drawing.Point(79, 91)
         Me.TextTitre.Name = "TextTitre"
+        Me.TextTitre.ReadOnly = True
         Me.TextTitre.Size = New System.Drawing.Size(186, 20)
         Me.TextTitre.TabIndex = 4
         '
@@ -294,6 +297,7 @@ Partial Class Gestion_des_contacts
         '
         Me.TextBoxTelephone.Location = New System.Drawing.Point(395, 35)
         Me.TextBoxTelephone.Name = "TextBoxTelephone"
+        Me.TextBoxTelephone.ReadOnly = True
         Me.TextBoxTelephone.Size = New System.Drawing.Size(135, 20)
         Me.TextBoxTelephone.TabIndex = 3
         '
@@ -301,6 +305,7 @@ Partial Class Gestion_des_contacts
         '
         Me.TextBoxCouriel.Location = New System.Drawing.Point(395, 65)
         Me.TextBoxCouriel.Name = "TextBoxCouriel"
+        Me.TextBoxCouriel.ReadOnly = True
         Me.TextBoxCouriel.Size = New System.Drawing.Size(135, 20)
         Me.TextBoxCouriel.TabIndex = 2
         '
@@ -308,6 +313,7 @@ Partial Class Gestion_des_contacts
         '
         Me.TextBoxNom.Location = New System.Drawing.Point(79, 39)
         Me.TextBoxNom.Name = "TextBoxNom"
+        Me.TextBoxNom.ReadOnly = True
         Me.TextBoxNom.Size = New System.Drawing.Size(186, 20)
         Me.TextBoxNom.TabIndex = 1
         '

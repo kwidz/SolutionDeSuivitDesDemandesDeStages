@@ -141,4 +141,7 @@ Public Class GestionDesDemarches
     End Sub
 
 
+    Private Sub dgvEntreprises_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEntreprises.CellContentClick
+
+    End Sub
 End Class
