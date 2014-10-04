@@ -1,5 +1,13 @@
 ﻿Public Class Gestion_des_contacts
 
+    Private noEntreprise As Integer
+
+    Sub New(noE As Integer)
+        InitializeComponent()
+        noEntreprise = noE
+        dgvContacts.DataSource = SelectionContactPourGestionTableAdapter.GetData(noEntreprise)
+    End Sub
+
     Private Sub BoutonFermer_Click(sender As Object, e As EventArgs) Handles BoutonFermer.Click
         Me.Close()
     End Sub
@@ -7,7 +15,7 @@
 
     Private Sub Gestion_des_contacts_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: cette ligne de code charge les données dans la table 'SSDSDataSet.SelectionContactPourGestion'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
-        Me.SelectionContactPourGestionTableAdapter.Fill(Me.SSDSDataSet.SelectionContactPourGestion)
+        'Me.SelectionContactPourGestionTableAdapter.Fill(Me.SSDSDataSet.SelectionContactPourGestion)
 
     End Sub
 

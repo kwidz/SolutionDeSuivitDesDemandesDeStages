@@ -29,6 +29,8 @@ Partial Class MDIParent1
         Me.FileMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GestionDesDémarchesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GestionDesUtilisateursToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowsMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CascadeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -45,10 +47,7 @@ Partial Class MDIParent1
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.GestionDesContacts = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GestionDesDémarchesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultationDesDémarchesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GestionDesUtilisateursToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -74,15 +73,27 @@ Partial Class MDIParent1
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
         Me.ExitToolStripMenuItem.Text = "&Quitter"
         '
         'EditMenu
         '
-        Me.EditMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GestionDesContacts, Me.GestionDesDémarchesToolStripMenuItem, Me.ConsultationDesDémarchesToolStripMenuItem, Me.GestionDesUtilisateursToolStripMenuItem})
+        Me.EditMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GestionDesDémarchesToolStripMenuItem, Me.ConsultationDesDémarchesToolStripMenuItem, Me.GestionDesUtilisateursToolStripMenuItem})
         Me.EditMenu.Name = "EditMenu"
         Me.EditMenu.Size = New System.Drawing.Size(81, 20)
         Me.EditMenu.Text = "&Formulaires"
+        '
+        'GestionDesDémarchesToolStripMenuItem
+        '
+        Me.GestionDesDémarchesToolStripMenuItem.Name = "GestionDesDémarchesToolStripMenuItem"
+        Me.GestionDesDémarchesToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
+        Me.GestionDesDémarchesToolStripMenuItem.Text = "Gestion des démarches"
+        '
+        'GestionDesUtilisateursToolStripMenuItem
+        '
+        Me.GestionDesUtilisateursToolStripMenuItem.Name = "GestionDesUtilisateursToolStripMenuItem"
+        Me.GestionDesUtilisateursToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
+        Me.GestionDesUtilisateursToolStripMenuItem.Text = "Gestion des Utilisateurs"
         '
         'WindowsMenu
         '
@@ -183,29 +194,11 @@ Partial Class MDIParent1
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(27, 17)
         Me.ToolStripStatusLabel.Text = "État"
         '
-        'GestionDesContacts
-        '
-        Me.GestionDesContacts.Name = "GestionDesContacts"
-        Me.GestionDesContacts.Size = New System.Drawing.Size(227, 22)
-        Me.GestionDesContacts.Text = "Gestion des contacts"
-        '
-        'GestionDesDémarchesToolStripMenuItem
-        '
-        Me.GestionDesDémarchesToolStripMenuItem.Name = "GestionDesDémarchesToolStripMenuItem"
-        Me.GestionDesDémarchesToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
-        Me.GestionDesDémarchesToolStripMenuItem.Text = "Gestion des démarches"
-        '
         'ConsultationDesDémarchesToolStripMenuItem
         '
         Me.ConsultationDesDémarchesToolStripMenuItem.Name = "ConsultationDesDémarchesToolStripMenuItem"
         Me.ConsultationDesDémarchesToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
         Me.ConsultationDesDémarchesToolStripMenuItem.Text = "Consultation des démarches "
-        '
-        'GestionDesUtilisateursToolStripMenuItem
-        '
-        Me.GestionDesUtilisateursToolStripMenuItem.Name = "GestionDesUtilisateursToolStripMenuItem"
-        Me.GestionDesUtilisateursToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
-        Me.GestionDesUtilisateursToolStripMenuItem.Text = "Gestion des Utilisateurs"
         '
         'MDIParent1
         '
@@ -247,9 +240,8 @@ Partial Class MDIParent1
     Friend WithEvents FileMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuStrip As System.Windows.Forms.MenuStrip
     Friend WithEvents EditMenu As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents GestionDesContacts As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GestionDesDémarchesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ConsultationDesDémarchesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GestionDesUtilisateursToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ConsultationDesDémarchesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

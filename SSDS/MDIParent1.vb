@@ -2,7 +2,9 @@
 
 Public Class MDIParent1
 
-    Private user As Integer = 1
+    Private user As Integer
+    Private prof As Boolean = False
+    Private coordinateur As Boolean = False
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewWindowToolStripMenuItem.Click
         ' Créez une nouvelle instance du formulaire enfant.
         Dim ChildForm As New System.Windows.Forms.Form
@@ -84,7 +86,7 @@ Public Class MDIParent1
 
     End Sub
 
-    Private Sub GestionDesContacts_Click(sender As Object, e As EventArgs) Handles GestionDesContacts.Click
+    Private Sub GestionDesContacts_Click(sender As Object, e As EventArgs)
         For Each f As Form In Application.OpenForms
             If TypeOf f Is Gestion_des_contacts Then
                 f.Activate()
@@ -92,7 +94,7 @@ Public Class MDIParent1
             End If
         Next
 
-        Dim ChildForm As New Gestion_des_contacts
+        Dim ChildForm As New Gestion_des_contacts(user)
         ChildForm.MdiParent = Me
         ChildForm.Show()
 
@@ -136,5 +138,43 @@ Public Class MDIParent1
         Dim ChildForm As New GestionDesUtilisateurs
         ChildForm.MdiParent = Me
         ChildForm.Show()
+    End Sub
+
+    Private Sub MDIParent1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim InputConnect As Connection
+        Dim pass As String = ""
+        Dim Utilisateur As String = ""
+        Dim taUser As New SSDSDataSetTableAdapters.compterUsersTableAdapter
+        Dim dtUser As DataTable
+        While (1)
+            InputConnect = New Connection
+            InputConnect.ShowDialog()
+            pass = InputConnect.Pass.Text
+            Utilisateur = InputConnect.User.Text
+            dtUser = taUser.GetData(Utilisateur, pass)
+            If (InputConnect.DialogResult = Windows.Forms.DialogResult.Cancel) Then
+                End
+            End If
+            If (dtUser.Rows.Count = 0) Then
+                MsgBox("Mauvaise Combinaison Mot de passe / utilisateur")
+            Else
+                Exit While
+            End If
+
+        End While
+        dtUser = taUser.GetData(Utilisateur, pass)
+        user = dtUser.Rows(0)("noUtil")
+        If (dtUser.Rows(0)("noTYPUTIL") = 1) Then
+            coordinateur = True
+            GestionDesDémarchesToolStripMenuItem.Visible = False
+
+        ElseIf (dtUser.Rows(0)("noTYPUTIL") = 3) Then
+            prof = True
+            GestionDesDémarchesToolStripMenuItem.Visible = False
+            GestionDesUtilisateursToolStripMenuItem.Visible = False
+        Else
+            GestionDesUtilisateursToolStripMenuItem.Visible = False
+            ConsultationDesDémarchesToolStripMenuItem.Visible = False
+        End If
     End Sub
 End Class

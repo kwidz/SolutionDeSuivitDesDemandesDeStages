@@ -28,6 +28,13 @@ Partial Class Gestion_des_contacts
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.dgvContacts = New System.Windows.Forms.DataGridView()
+        Me.NoCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NomCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrenomCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TitreCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelephoneCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SelectionContactPourGestionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SSDSDataSet = New SSDS.SSDSDataSet()
         Me.dateModification = New System.Windows.Forms.GroupBox()
         Me.dateCreation = New System.Windows.Forms.Label()
         Me.dateModif = New System.Windows.Forms.Label()
@@ -44,19 +51,12 @@ Partial Class Gestion_des_contacts
         Me.TextBoxNom = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BoutonFermer = New System.Windows.Forms.Button()
-        Me.NoCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NomCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PrenomCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TitreCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelephoneCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SelectionContactPourGestionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SSDSDataSet = New SSDS.SSDSDataSet()
         Me.SelectionContactPourGestionTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionContactPourGestionTableAdapter()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvContacts, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.dateModification.SuspendLayout()
         CType(Me.SelectionContactPourGestionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dateModification.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -113,6 +113,52 @@ Partial Class Gestion_des_contacts
         Me.dgvContacts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvContacts.Size = New System.Drawing.Size(524, 128)
         Me.dgvContacts.TabIndex = 0
+        '
+        'NoCONDataGridViewTextBoxColumn
+        '
+        Me.NoCONDataGridViewTextBoxColumn.DataPropertyName = "noCON"
+        Me.NoCONDataGridViewTextBoxColumn.HeaderText = "noCON"
+        Me.NoCONDataGridViewTextBoxColumn.Name = "NoCONDataGridViewTextBoxColumn"
+        Me.NoCONDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NoCONDataGridViewTextBoxColumn.Visible = False
+        '
+        'NomCONDataGridViewTextBoxColumn
+        '
+        Me.NomCONDataGridViewTextBoxColumn.DataPropertyName = "nomCON"
+        Me.NomCONDataGridViewTextBoxColumn.HeaderText = "nomCON"
+        Me.NomCONDataGridViewTextBoxColumn.Name = "NomCONDataGridViewTextBoxColumn"
+        Me.NomCONDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PrenomCONDataGridViewTextBoxColumn
+        '
+        Me.PrenomCONDataGridViewTextBoxColumn.DataPropertyName = "prenomCON"
+        Me.PrenomCONDataGridViewTextBoxColumn.HeaderText = "prenomCON"
+        Me.PrenomCONDataGridViewTextBoxColumn.Name = "PrenomCONDataGridViewTextBoxColumn"
+        Me.PrenomCONDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TitreCONDataGridViewTextBoxColumn
+        '
+        Me.TitreCONDataGridViewTextBoxColumn.DataPropertyName = "titreCON"
+        Me.TitreCONDataGridViewTextBoxColumn.HeaderText = "titreCON"
+        Me.TitreCONDataGridViewTextBoxColumn.Name = "TitreCONDataGridViewTextBoxColumn"
+        Me.TitreCONDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TelephoneCONDataGridViewTextBoxColumn
+        '
+        Me.TelephoneCONDataGridViewTextBoxColumn.DataPropertyName = "telephoneCON"
+        Me.TelephoneCONDataGridViewTextBoxColumn.HeaderText = "telephoneCON"
+        Me.TelephoneCONDataGridViewTextBoxColumn.Name = "TelephoneCONDataGridViewTextBoxColumn"
+        Me.TelephoneCONDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SelectionContactPourGestionBindingSource
+        '
+        Me.SelectionContactPourGestionBindingSource.DataMember = "SelectionContactPourGestion"
+        Me.SelectionContactPourGestionBindingSource.DataSource = Me.SSDSDataSet
+        '
+        'SSDSDataSet
+        '
+        Me.SSDSDataSet.DataSetName = "SSDSDataSet"
+        Me.SSDSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'dateModification
         '
@@ -261,52 +307,6 @@ Partial Class Gestion_des_contacts
         Me.BoutonFermer.Text = "Fermer"
         Me.BoutonFermer.UseVisualStyleBackColor = True
         '
-        'NoCONDataGridViewTextBoxColumn
-        '
-        Me.NoCONDataGridViewTextBoxColumn.DataPropertyName = "noCON"
-        Me.NoCONDataGridViewTextBoxColumn.HeaderText = "noCON"
-        Me.NoCONDataGridViewTextBoxColumn.Name = "NoCONDataGridViewTextBoxColumn"
-        Me.NoCONDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NoCONDataGridViewTextBoxColumn.Visible = False
-        '
-        'NomCONDataGridViewTextBoxColumn
-        '
-        Me.NomCONDataGridViewTextBoxColumn.DataPropertyName = "nomCON"
-        Me.NomCONDataGridViewTextBoxColumn.HeaderText = "nomCON"
-        Me.NomCONDataGridViewTextBoxColumn.Name = "NomCONDataGridViewTextBoxColumn"
-        Me.NomCONDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PrenomCONDataGridViewTextBoxColumn
-        '
-        Me.PrenomCONDataGridViewTextBoxColumn.DataPropertyName = "prenomCON"
-        Me.PrenomCONDataGridViewTextBoxColumn.HeaderText = "prenomCON"
-        Me.PrenomCONDataGridViewTextBoxColumn.Name = "PrenomCONDataGridViewTextBoxColumn"
-        Me.PrenomCONDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TitreCONDataGridViewTextBoxColumn
-        '
-        Me.TitreCONDataGridViewTextBoxColumn.DataPropertyName = "titreCON"
-        Me.TitreCONDataGridViewTextBoxColumn.HeaderText = "titreCON"
-        Me.TitreCONDataGridViewTextBoxColumn.Name = "TitreCONDataGridViewTextBoxColumn"
-        Me.TitreCONDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TelephoneCONDataGridViewTextBoxColumn
-        '
-        Me.TelephoneCONDataGridViewTextBoxColumn.DataPropertyName = "telephoneCON"
-        Me.TelephoneCONDataGridViewTextBoxColumn.HeaderText = "telephoneCON"
-        Me.TelephoneCONDataGridViewTextBoxColumn.Name = "TelephoneCONDataGridViewTextBoxColumn"
-        Me.TelephoneCONDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SelectionContactPourGestionBindingSource
-        '
-        Me.SelectionContactPourGestionBindingSource.DataMember = "SelectionContactPourGestion"
-        Me.SelectionContactPourGestionBindingSource.DataSource = Me.SSDSDataSet
-        '
-        'SSDSDataSet
-        '
-        Me.SSDSDataSet.DataSetName = "SSDSDataSet"
-        Me.SSDSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'SelectionContactPourGestionTableAdapter
         '
         Me.SelectionContactPourGestionTableAdapter.ClearBeforeFill = True
@@ -323,10 +323,10 @@ Partial Class Gestion_des_contacts
         Me.Text = "Gestion_des_contacts"
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.dgvContacts, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.dateModification.ResumeLayout(False)
-        Me.dateModification.PerformLayout()
         CType(Me.SelectionContactPourGestionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.dateModification.ResumeLayout(False)
+        Me.dateModification.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

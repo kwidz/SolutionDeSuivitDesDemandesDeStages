@@ -109,4 +109,12 @@ Public Class GestionDesDemarches
 
 
 
+    Private Sub BoutonDetailContacts_Click(sender As Object, e As EventArgs) Handles BoutonDetailContacts.Click
+        Try
+            Dim dial As New Gestion_des_contacts(dgvEntreprises.SelectedRows(0).Cells(0).Value)
+            dial.Show()
+        Catch
+            MsgBox("Il n'y a pas d'entreprise de séléctionnée")
+        End Try
+    End Sub
 End Class
