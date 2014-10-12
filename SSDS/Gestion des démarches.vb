@@ -80,8 +80,8 @@ Public Class GestionDesDemarches
         Dim taDemarches As New SSDSDataSetTableAdapters.SelectionDemarchesById2TableAdapter
         Dim dtDemarches As DataTable
 
-        If dgvEntreprises.SelectedRows.Count > 0 Then
-            dtDemarches = taDemarches.GetData(dgvEntreprises.SelectedRows(0).Cells(0).Value)
+        If dgvDemarches.SelectedRows.Count > 0 Then
+            dtDemarches = taDemarches.GetData(dgvDemarches.SelectedRows(0).Cells(0).Value)
             If dtDemarches.Rows.Count > 0 Then
 
                 DateDem.Text = dtDemarches.Rows(0)("dateDEM")
@@ -90,6 +90,7 @@ Public Class GestionDesDemarches
                 DerniereModificationDem.Text = "Dernière Modification : " + dtDemarches.Rows(0)("dateModification")
                 ContactDem.SelectedValue = dtDemarches.Rows(0)("noCON")
                 TypeDem.SelectedValue = dtDemarches.Rows(0)("noTYPDEM")
+
 
             End If
         Else
@@ -142,6 +143,10 @@ Public Class GestionDesDemarches
 
 
     Private Sub dgvEntreprises_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEntreprises.CellContentClick
+
+    End Sub
+
+    Private Sub BoutonDetailSauvegarder_Click(sender As Object, e As EventArgs) Handles BoutonDetailSauvegarder.Click
 
     End Sub
 End Class
