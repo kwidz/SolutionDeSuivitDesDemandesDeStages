@@ -192,7 +192,7 @@ Partial Class Gestion_des_contacts
         Me.AnnulerContact.Location = New System.Drawing.Point(558, 48)
         Me.AnnulerContact.Name = "AnnulerContact"
         Me.AnnulerContact.Size = New System.Drawing.Size(87, 23)
-        Me.AnnulerContact.TabIndex = 4
+        Me.AnnulerContact.TabIndex = 8
         Me.AnnulerContact.Text = "Annuler"
         Me.AnnulerContact.UseVisualStyleBackColor = True
         '
@@ -201,7 +201,7 @@ Partial Class Gestion_des_contacts
         Me.SauvegarderContact.Location = New System.Drawing.Point(558, 19)
         Me.SauvegarderContact.Name = "SauvegarderContact"
         Me.SauvegarderContact.Size = New System.Drawing.Size(87, 23)
-        Me.SauvegarderContact.TabIndex = 5
+        Me.SauvegarderContact.TabIndex = 7
         Me.SauvegarderContact.Text = "Sauvegarder"
         Me.SauvegarderContact.UseVisualStyleBackColor = True
         '
@@ -236,9 +236,8 @@ Partial Class Gestion_des_contacts
         '
         Me.TextBoxDescription.Location = New System.Drawing.Point(6, 141)
         Me.TextBoxDescription.Name = "TextBoxDescription"
-        Me.TextBoxDescription.ReadOnly = True
         Me.TextBoxDescription.Size = New System.Drawing.Size(524, 33)
-        Me.TextBoxDescription.TabIndex = 10
+        Me.TextBoxDescription.TabIndex = 6
         Me.TextBoxDescription.Text = ""
         '
         'Label5
@@ -281,39 +280,34 @@ Partial Class Gestion_des_contacts
         '
         Me.TextBoxPrenom.Location = New System.Drawing.Point(79, 65)
         Me.TextBoxPrenom.Name = "TextBoxPrenom"
-        Me.TextBoxPrenom.ReadOnly = True
         Me.TextBoxPrenom.Size = New System.Drawing.Size(186, 20)
-        Me.TextBoxPrenom.TabIndex = 5
+        Me.TextBoxPrenom.TabIndex = 2
         '
         'TextTitre
         '
         Me.TextTitre.Location = New System.Drawing.Point(79, 91)
         Me.TextTitre.Name = "TextTitre"
-        Me.TextTitre.ReadOnly = True
         Me.TextTitre.Size = New System.Drawing.Size(186, 20)
-        Me.TextTitre.TabIndex = 4
+        Me.TextTitre.TabIndex = 3
         '
         'TextBoxTelephone
         '
         Me.TextBoxTelephone.Location = New System.Drawing.Point(395, 35)
         Me.TextBoxTelephone.Name = "TextBoxTelephone"
-        Me.TextBoxTelephone.ReadOnly = True
         Me.TextBoxTelephone.Size = New System.Drawing.Size(135, 20)
-        Me.TextBoxTelephone.TabIndex = 3
+        Me.TextBoxTelephone.TabIndex = 4
         '
         'TextBoxCouriel
         '
         Me.TextBoxCouriel.Location = New System.Drawing.Point(395, 65)
         Me.TextBoxCouriel.Name = "TextBoxCouriel"
-        Me.TextBoxCouriel.ReadOnly = True
         Me.TextBoxCouriel.Size = New System.Drawing.Size(135, 20)
-        Me.TextBoxCouriel.TabIndex = 2
+        Me.TextBoxCouriel.TabIndex = 5
         '
         'TextBoxNom
         '
         Me.TextBoxNom.Location = New System.Drawing.Point(79, 39)
         Me.TextBoxNom.Name = "TextBoxNom"
-        Me.TextBoxNom.ReadOnly = True
         Me.TextBoxNom.Size = New System.Drawing.Size(186, 20)
         Me.TextBoxNom.TabIndex = 1
         '

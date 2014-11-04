@@ -53,7 +53,7 @@ Partial Class Connection
         Me.OK_Button.Location = New System.Drawing.Point(3, 3)
         Me.OK_Button.Name = "OK_Button"
         Me.OK_Button.Size = New System.Drawing.Size(67, 23)
-        Me.OK_Button.TabIndex = 0
+        Me.OK_Button.TabIndex = 3
         Me.OK_Button.Text = "OK"
         '
         'Cancel_Button
@@ -63,7 +63,7 @@ Partial Class Connection
         Me.Cancel_Button.Location = New System.Drawing.Point(76, 3)
         Me.Cancel_Button.Name = "Cancel_Button"
         Me.Cancel_Button.Size = New System.Drawing.Size(67, 23)
-        Me.Cancel_Button.TabIndex = 1
+        Me.Cancel_Button.TabIndex = 4
         Me.Cancel_Button.Text = "Annuler"
         '
         'Pass
@@ -72,14 +72,14 @@ Partial Class Connection
         Me.Pass.Name = "Pass"
         Me.Pass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.Pass.Size = New System.Drawing.Size(213, 20)
-        Me.Pass.TabIndex = 1
+        Me.Pass.TabIndex = 2
         '
         'User
         '
         Me.User.Location = New System.Drawing.Point(36, 52)
         Me.User.Name = "User"
         Me.User.Size = New System.Drawing.Size(213, 20)
-        Me.User.TabIndex = 2
+        Me.User.TabIndex = 1
         '
         'Label1
         '

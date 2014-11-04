@@ -73,7 +73,7 @@ Partial Class Consultation_des_démarches
         Me.dgvEtudiants.ReadOnly = True
         Me.dgvEtudiants.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvEtudiants.Size = New System.Drawing.Size(490, 228)
-        Me.dgvEtudiants.TabIndex = 0
+        Me.dgvEtudiants.TabIndex = 8
         '
         'NoUTILDataGridViewTextBoxColumn
         '
@@ -119,7 +119,7 @@ Partial Class Consultation_des_démarches
         Me.Fermer.Location = New System.Drawing.Point(457, 392)
         Me.Fermer.Name = "Fermer"
         Me.Fermer.Size = New System.Drawing.Size(75, 23)
-        Me.Fermer.TabIndex = 2
+        Me.Fermer.TabIndex = 9
         Me.Fermer.Text = "Fermer"
         Me.Fermer.UseVisualStyleBackColor = True
         '
@@ -197,7 +197,7 @@ Partial Class Consultation_des_démarches
         Me.Inactif.Location = New System.Drawing.Point(295, 21)
         Me.Inactif.Name = "Inactif"
         Me.Inactif.Size = New System.Drawing.Size(59, 17)
-        Me.Inactif.TabIndex = 6
+        Me.Inactif.TabIndex = 5
         Me.Inactif.Text = "Inactifs"
         Me.Inactif.UseVisualStyleBackColor = True
         '
@@ -208,7 +208,7 @@ Partial Class Consultation_des_démarches
         Me.Tous.Location = New System.Drawing.Point(360, 22)
         Me.Tous.Name = "Tous"
         Me.Tous.Size = New System.Drawing.Size(49, 17)
-        Me.Tous.TabIndex = 5
+        Me.Tous.TabIndex = 6
         Me.Tous.TabStop = True
         Me.Tous.Text = "Tous"
         Me.Tous.UseVisualStyleBackColor = True

@@ -106,7 +106,7 @@ Partial Class GestionDesUtilisateurs
         Me.Rechercher.Location = New System.Drawing.Point(499, 15)
         Me.Rechercher.Name = "Rechercher"
         Me.Rechercher.Size = New System.Drawing.Size(101, 23)
-        Me.Rechercher.TabIndex = 9
+        Me.Rechercher.TabIndex = 7
         Me.Rechercher.Text = "Rechercher"
         Me.Rechercher.UseVisualStyleBackColor = True
         '
@@ -116,7 +116,7 @@ Partial Class GestionDesUtilisateurs
         Me.Inactifs.Location = New System.Drawing.Point(290, 18)
         Me.Inactifs.Name = "Inactifs"
         Me.Inactifs.Size = New System.Drawing.Size(59, 17)
-        Me.Inactifs.TabIndex = 8
+        Me.Inactifs.TabIndex = 4
         Me.Inactifs.Text = "Inactifs"
         Me.Inactifs.UseVisualStyleBackColor = True
         '
@@ -127,7 +127,7 @@ Partial Class GestionDesUtilisateurs
         Me.Tous.Location = New System.Drawing.Point(355, 18)
         Me.Tous.Name = "Tous"
         Me.Tous.Size = New System.Drawing.Size(49, 17)
-        Me.Tous.TabIndex = 7
+        Me.Tous.TabIndex = 5
         Me.Tous.TabStop = True
         Me.Tous.Text = "Tous"
         Me.Tous.UseVisualStyleBackColor = True
@@ -138,7 +138,7 @@ Partial Class GestionDesUtilisateurs
         Me.Actifs.Location = New System.Drawing.Point(233, 18)
         Me.Actifs.Name = "Actifs"
         Me.Actifs.Size = New System.Drawing.Size(51, 17)
-        Me.Actifs.TabIndex = 6
+        Me.Actifs.TabIndex = 3
         Me.Actifs.Text = "Actifs"
         Me.Actifs.UseVisualStyleBackColor = True
         '
@@ -151,7 +151,7 @@ Partial Class GestionDesUtilisateurs
         Me.Type.Location = New System.Drawing.Point(270, 45)
         Me.Type.Name = "Type"
         Me.Type.Size = New System.Drawing.Size(121, 21)
-        Me.Type.TabIndex = 5
+        Me.Type.TabIndex = 6
         Me.Type.ValueMember = "noTYPUTIL"
         '
         'SelectionRefTypUtilWithTousBindingSource
@@ -196,14 +196,14 @@ Partial Class GestionDesUtilisateurs
         Me.TextBoxPrenom.Location = New System.Drawing.Point(72, 46)
         Me.TextBoxPrenom.Name = "TextBoxPrenom"
         Me.TextBoxPrenom.Size = New System.Drawing.Size(128, 20)
-        Me.TextBoxPrenom.TabIndex = 1
+        Me.TextBoxPrenom.TabIndex = 2
         '
         'TextBoxNom
         '
         Me.TextBoxNom.Location = New System.Drawing.Point(72, 20)
         Me.TextBoxNom.Name = "TextBoxNom"
         Me.TextBoxNom.Size = New System.Drawing.Size(128, 20)
-        Me.TextBoxNom.TabIndex = 0
+        Me.TextBoxNom.TabIndex = 1
         '
         'SSDSDataSet
         '
@@ -238,7 +238,7 @@ Partial Class GestionDesUtilisateurs
         Me.CheckBoxDetailActif.Location = New System.Drawing.Point(335, 54)
         Me.CheckBoxDetailActif.Name = "CheckBoxDetailActif"
         Me.CheckBoxDetailActif.Size = New System.Drawing.Size(47, 17)
-        Me.CheckBoxDetailActif.TabIndex = 22
+        Me.CheckBoxDetailActif.TabIndex = 24
         Me.CheckBoxDetailActif.Text = "Actif"
         Me.CheckBoxDetailActif.UseVisualStyleBackColor = True
         '
@@ -305,7 +305,7 @@ Partial Class GestionDesUtilisateurs
         Me.ComboBoxDetailType.Location = New System.Drawing.Point(372, 18)
         Me.ComboBoxDetailType.Name = "ComboBoxDetailType"
         Me.ComboBoxDetailType.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBoxDetailType.TabIndex = 15
+        Me.ComboBoxDetailType.TabIndex = 23
         Me.ComboBoxDetailType.ValueMember = "noTYPUTIL"
         '
         'REFTypeUtilisateurBindingSource
@@ -323,7 +323,7 @@ Partial Class GestionDesUtilisateurs
         Me.Button7.Location = New System.Drawing.Point(499, 19)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(101, 23)
-        Me.Button7.TabIndex = 14
+        Me.Button7.TabIndex = 25
         Me.Button7.Text = "Sauvegarder"
         Me.Button7.UseVisualStyleBackColor = True
         '
@@ -332,7 +332,7 @@ Partial Class GestionDesUtilisateurs
         Me.Button6.Location = New System.Drawing.Point(499, 48)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(101, 23)
-        Me.Button6.TabIndex = 13
+        Me.Button6.TabIndex = 26
         Me.Button6.Text = "Annuler"
         Me.Button6.UseVisualStyleBackColor = True
         '
@@ -340,25 +340,22 @@ Partial Class GestionDesUtilisateurs
         '
         Me.TextBoxDetailNom.Location = New System.Drawing.Point(72, 19)
         Me.TextBoxDetailNom.Name = "TextBoxDetailNom"
-        Me.TextBoxDetailNom.ReadOnly = True
         Me.TextBoxDetailNom.Size = New System.Drawing.Size(231, 20)
-        Me.TextBoxDetailNom.TabIndex = 3
+        Me.TextBoxDetailNom.TabIndex = 20
         '
         'TextBoxDetailPrenom
         '
         Me.TextBoxDetailPrenom.Location = New System.Drawing.Point(72, 45)
         Me.TextBoxDetailPrenom.Name = "TextBoxDetailPrenom"
-        Me.TextBoxDetailPrenom.ReadOnly = True
         Me.TextBoxDetailPrenom.Size = New System.Drawing.Size(231, 20)
-        Me.TextBoxDetailPrenom.TabIndex = 2
+        Me.TextBoxDetailPrenom.TabIndex = 21
         '
         'TextBoxDetailCouriel
         '
         Me.TextBoxDetailCouriel.Location = New System.Drawing.Point(72, 71)
         Me.TextBoxDetailCouriel.Name = "TextBoxDetailCouriel"
-        Me.TextBoxDetailCouriel.ReadOnly = True
         Me.TextBoxDetailCouriel.Size = New System.Drawing.Size(231, 20)
-        Me.TextBoxDetailCouriel.TabIndex = 1
+        Me.TextBoxDetailCouriel.TabIndex = 22
         '
         'REFTypeUtilisateurBindingSource1
         '

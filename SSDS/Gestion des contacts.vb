@@ -47,8 +47,11 @@
                 TextBoxCouriel.Text = dtContacts.Rows(0)("courielCON")
                 TextBoxTelephone.Text = dtContacts.Rows(0)("telephoneCON")
                 TextBoxDescription.Text = dtContacts.Rows(0)("noteCON")
+
                 dateCreation.Text = "Date de création : " + dtContacts.Rows(0)("dateCreation")
+
                 dateModif.Text = "Dernière Modification : " + dtContacts.Rows(0)("dateModification")
+
 
 
 
@@ -66,4 +69,6 @@
 
         End If
     End Sub
+
+    
 End Class

@@ -283,7 +283,7 @@ Partial Class GestionDesDemarches
         Me.BoutonDetailAnnuler.Location = New System.Drawing.Point(568, 46)
         Me.BoutonDetailAnnuler.Name = "BoutonDetailAnnuler"
         Me.BoutonDetailAnnuler.Size = New System.Drawing.Size(85, 23)
-        Me.BoutonDetailAnnuler.TabIndex = 20
+        Me.BoutonDetailAnnuler.TabIndex = 10
         Me.BoutonDetailAnnuler.Text = "Annuler"
         Me.BoutonDetailAnnuler.UseVisualStyleBackColor = True
         '
@@ -292,7 +292,7 @@ Partial Class GestionDesDemarches
         Me.BoutonDetailSauvegarder.Location = New System.Drawing.Point(568, 17)
         Me.BoutonDetailSauvegarder.Name = "BoutonDetailSauvegarder"
         Me.BoutonDetailSauvegarder.Size = New System.Drawing.Size(85, 23)
-        Me.BoutonDetailSauvegarder.TabIndex = 19
+        Me.BoutonDetailSauvegarder.TabIndex = 9
         Me.BoutonDetailSauvegarder.Text = "Sauvegarder"
         Me.BoutonDetailSauvegarder.UseVisualStyleBackColor = True
         '
@@ -323,7 +323,7 @@ Partial Class GestionDesDemarches
         Me.ComboBoxDetailStatutEntreprise.Location = New System.Drawing.Point(419, 19)
         Me.ComboBoxDetailStatutEntreprise.Name = "ComboBoxDetailStatutEntreprise"
         Me.ComboBoxDetailStatutEntreprise.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBoxDetailStatutEntreprise.TabIndex = 16
+        Me.ComboBoxDetailStatutEntreprise.TabIndex = 6
         Me.ComboBoxDetailStatutEntreprise.ValueMember = "noSTAENT"
         '
         'SelectionStatutENTBindingSource
@@ -407,40 +407,35 @@ Partial Class GestionDesDemarches
         '
         Me.TextBoxDetailDescriptionEntreprise.Location = New System.Drawing.Point(90, 123)
         Me.TextBoxDetailDescriptionEntreprise.Name = "TextBoxDetailDescriptionEntreprise"
-        Me.TextBoxDetailDescriptionEntreprise.ReadOnly = True
         Me.TextBoxDetailDescriptionEntreprise.Size = New System.Drawing.Size(448, 42)
-        Me.TextBoxDetailDescriptionEntreprise.TabIndex = 2
+        Me.TextBoxDetailDescriptionEntreprise.TabIndex = 5
         Me.TextBoxDetailDescriptionEntreprise.Text = ""
         '
         'TextBoxDetailCourielEntreprise
         '
         Me.TextBoxDetailCourielEntreprise.Location = New System.Drawing.Point(419, 71)
         Me.TextBoxDetailCourielEntreprise.Name = "TextBoxDetailCourielEntreprise"
-        Me.TextBoxDetailCourielEntreprise.ReadOnly = True
         Me.TextBoxDetailCourielEntreprise.Size = New System.Drawing.Size(119, 20)
-        Me.TextBoxDetailCourielEntreprise.TabIndex = 6
+        Me.TextBoxDetailCourielEntreprise.TabIndex = 8
         '
         'TextBoxDetailTelephoneEntreprise
         '
         Me.TextBoxDetailTelephoneEntreprise.Location = New System.Drawing.Point(419, 45)
         Me.TextBoxDetailTelephoneEntreprise.Name = "TextBoxDetailTelephoneEntreprise"
-        Me.TextBoxDetailTelephoneEntreprise.ReadOnly = True
         Me.TextBoxDetailTelephoneEntreprise.Size = New System.Drawing.Size(119, 20)
-        Me.TextBoxDetailTelephoneEntreprise.TabIndex = 5
+        Me.TextBoxDetailTelephoneEntreprise.TabIndex = 7
         '
         'TextBoxDetailAdresseEntreprise
         '
         Me.TextBoxDetailAdresseEntreprise.Location = New System.Drawing.Point(91, 45)
         Me.TextBoxDetailAdresseEntreprise.Name = "TextBoxDetailAdresseEntreprise"
-        Me.TextBoxDetailAdresseEntreprise.ReadOnly = True
         Me.TextBoxDetailAdresseEntreprise.Size = New System.Drawing.Size(255, 20)
-        Me.TextBoxDetailAdresseEntreprise.TabIndex = 4
+        Me.TextBoxDetailAdresseEntreprise.TabIndex = 2
         '
         'TextBoxDetailVilleEntreprise
         '
         Me.TextBoxDetailVilleEntreprise.Location = New System.Drawing.Point(91, 71)
         Me.TextBoxDetailVilleEntreprise.Name = "TextBoxDetailVilleEntreprise"
-        Me.TextBoxDetailVilleEntreprise.ReadOnly = True
         Me.TextBoxDetailVilleEntreprise.Size = New System.Drawing.Size(255, 20)
         Me.TextBoxDetailVilleEntreprise.TabIndex = 3
         '
@@ -448,17 +443,15 @@ Partial Class GestionDesDemarches
         '
         Me.TextBoxDetailCodePEntreprise.Location = New System.Drawing.Point(91, 97)
         Me.TextBoxDetailCodePEntreprise.Name = "TextBoxDetailCodePEntreprise"
-        Me.TextBoxDetailCodePEntreprise.ReadOnly = True
         Me.TextBoxDetailCodePEntreprise.Size = New System.Drawing.Size(255, 20)
-        Me.TextBoxDetailCodePEntreprise.TabIndex = 2
+        Me.TextBoxDetailCodePEntreprise.TabIndex = 4
         '
         'TextBoxDetailNomEntreprise
         '
         Me.TextBoxDetailNomEntreprise.Location = New System.Drawing.Point(91, 19)
         Me.TextBoxDetailNomEntreprise.Name = "TextBoxDetailNomEntreprise"
-        Me.TextBoxDetailNomEntreprise.ReadOnly = True
         Me.TextBoxDetailNomEntreprise.Size = New System.Drawing.Size(255, 20)
-        Me.TextBoxDetailNomEntreprise.TabIndex = 0
+        Me.TextBoxDetailNomEntreprise.TabIndex = 1
         '
         'GroupBoxDemarches
         '
@@ -609,7 +602,6 @@ Partial Class GestionDesDemarches
         '
         Me.DescriptionDem.Location = New System.Drawing.Point(6, 85)
         Me.DescriptionDem.Name = "DescriptionDem"
-        Me.DescriptionDem.ReadOnly = True
         Me.DescriptionDem.Size = New System.Drawing.Size(534, 42)
         Me.DescriptionDem.TabIndex = 23
         Me.DescriptionDem.Text = ""
@@ -619,7 +611,7 @@ Partial Class GestionDesDemarches
         Me.AnnulerDemarche.Location = New System.Drawing.Point(568, 47)
         Me.AnnulerDemarche.Name = "AnnulerDemarche"
         Me.AnnulerDemarche.Size = New System.Drawing.Size(85, 23)
-        Me.AnnulerDemarche.TabIndex = 22
+        Me.AnnulerDemarche.TabIndex = 25
         Me.AnnulerDemarche.Text = "Annuler"
         Me.AnnulerDemarche.UseVisualStyleBackColor = True
         '
@@ -628,7 +620,7 @@ Partial Class GestionDesDemarches
         Me.SauvegarderDemarche.Location = New System.Drawing.Point(568, 18)
         Me.SauvegarderDemarche.Name = "SauvegarderDemarche"
         Me.SauvegarderDemarche.Size = New System.Drawing.Size(85, 23)
-        Me.SauvegarderDemarche.TabIndex = 21
+        Me.SauvegarderDemarche.TabIndex = 24
         Me.SauvegarderDemarche.Text = "Sauvegarder"
         Me.SauvegarderDemarche.UseVisualStyleBackColor = True
         '
@@ -650,7 +642,7 @@ Partial Class GestionDesDemarches
         Me.TypeDem.Location = New System.Drawing.Point(343, 49)
         Me.TypeDem.Name = "TypeDem"
         Me.TypeDem.Size = New System.Drawing.Size(121, 21)
-        Me.TypeDem.TabIndex = 4
+        Me.TypeDem.TabIndex = 22
         Me.TypeDem.ValueMember = "noTYPDEM"
         '
         'SelectionTypeDEMBindingSource
@@ -672,7 +664,7 @@ Partial Class GestionDesDemarches
         Me.ContactDem.Location = New System.Drawing.Point(343, 22)
         Me.ContactDem.Name = "ContactDem"
         Me.ContactDem.Size = New System.Drawing.Size(121, 21)
-        Me.ContactDem.TabIndex = 3
+        Me.ContactDem.TabIndex = 21
         Me.ContactDem.ValueMember = "noCON"
         '
         'SelectionContactBindingSource
@@ -694,7 +686,7 @@ Partial Class GestionDesDemarches
         Me.DateDem.Location = New System.Drawing.Point(43, 22)
         Me.DateDem.Name = "DateDem"
         Me.DateDem.Size = New System.Drawing.Size(200, 20)
-        Me.DateDem.TabIndex = 1
+        Me.DateDem.TabIndex = 20
         '
         'Label11
         '
