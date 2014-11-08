@@ -55,7 +55,7 @@ Public Class GestionDesDemarches
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: cette ligne de code charge les données dans la table 'SSDSDataSet.SelectionContact'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
-        Me.SelectionContactTableAdapter.Fill(Me.SSDSDataSet.SelectionContact)
+        'Me.SelectionContactTableAdapter.Fill(Me.SSDSDataSet.SelectionContact)
         'TODO: cette ligne de code charge les données dans la table 'SSDSDataSet1.SelectionTypeDEM'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
         Me.SelectionTypeDEMTableAdapter.Fill(Me.SSDSDataSet1.SelectionTypeDEM)
         'TODO: cette ligne de code charge les données dans la table 'SSDSDataSet.SelectionStatutENT'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
@@ -104,6 +104,7 @@ Public Class GestionDesDemarches
     Private Sub AnnulerDemarche_Click(sender As Object, e As EventArgs) Handles AnnulerDemarche.Click
         ActiverDetailsDemarche(False)
         remplirDetailDemarche()
+        ActionEnCoursDemarche = Intention.Aucune
     End Sub
 
 
@@ -148,6 +149,12 @@ Public Class GestionDesDemarches
         If DescriptionDem.Text = "" Then
             MsgBox("Veuillez spécifier une description à l'entreprise.")
             DescriptionDem.Focus()
+            Return False
+        End If
+
+        If ContactDem.SelectedValue Is Nothing Then
+            MsgBox("Veuillez sélectionner ou creer un contact.")
+            BoutonDetailContacts.Focus()
             Return False
         End If
 
@@ -207,6 +214,7 @@ Public Class GestionDesDemarches
         ActionEnCoursEntreprise = Intention.Aucune
         ActiverDetailsEntreprise(False)
         remplirDetailsEntreprises()
+        ActiverDetailsDemarche(False)
 
     End Sub
 
@@ -270,7 +278,7 @@ Public Class GestionDesDemarches
                 dgvDemarches.DataSource = SelectionDemarchesByIdTableAdapter.GetData(dgvEntreprises.SelectedRows(0).Cells(0).Value)
                 ComboBoxDetailStatutEntreprise.SelectedValue = dtEntreprises.Rows(0)("statut")
                 GroupBoxDemarches.Text = "Démarches (" + CStr(dgvEntreprises.SelectedRows(0).Cells(1).Value) + ") (" + CStr(dgvDemarches.Rows.Count) + ")"
-                ContactDem.DataSource = SelectionContactTableAdapter(dgvEntreprises.SelectedRows(0).Cells(0).Value)
+                ContactDem.DataSource = SelectionContactTableAdapter.GetData(dgvEntreprises.SelectedRows(0).Cells(0).Value)
             End If
         Else
             TextBoxDetailCourielEntreprise.Text = ""
@@ -322,6 +330,8 @@ Public Class GestionDesDemarches
             TextBoxDetailCourielEntreprise.Focus()
             Return False
         End If
+
+        
 
         If TextBoxDetailAdresseEntreprise.Text = "" Then
             MsgBox("Veuillez spécifier une adresse à l'entreprise.")

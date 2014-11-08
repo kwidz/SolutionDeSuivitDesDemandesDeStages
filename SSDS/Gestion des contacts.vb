@@ -28,6 +28,7 @@
         Me.Text = "Gestion des contacts (" + dtNomEntreprise.Rows(0)(0) + ")"
         dgvContacts.DataSource = SelectionContactPourGestionTableAdapter.GetData(noEntreprise)
         GbContacts.Text = "Contacts (" + CStr(dgvContacts.Rows.Count) + ")"
+        ActiverDetails(False)
     End Sub
 
     Private Sub BoutonFermer_Click(sender As Object, e As EventArgs) Handles BoutonFermer.Click
@@ -120,4 +121,7 @@
         ActiverDetails(False)
         afficherDetail()
     End Sub
+
+
+
 End Class

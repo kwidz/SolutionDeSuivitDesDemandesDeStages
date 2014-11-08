@@ -82,7 +82,6 @@ Partial Class GestionDesDemarches
         Me.SelectionTypeDEMBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SSDSDataSet1 = New SSDS.SSDSDataSet()
         Me.ContactDem = New System.Windows.Forms.ComboBox()
-        Me.SelectionContactBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label12 = New System.Windows.Forms.Label()
         Me.DateDem = New System.Windows.Forms.DateTimePicker()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -91,6 +90,7 @@ Partial Class GestionDesDemarches
         Me.SelectionDemarchesByIdTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionDemarchesByIdTableAdapter()
         Me.SelectionStatutENTTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionStatutENTTableAdapter()
         Me.SelectionTypeDEMTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionTypeDEMTableAdapter()
+        Me.SelectionContactBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SelectionContactTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionContactTableAdapter()
         Me.GroupBoxEntreprises.SuspendLayout()
         CType(Me.dgvEntreprises, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -658,7 +658,7 @@ Partial Class GestionDesDemarches
         'ContactDem
         '
         Me.ContactDem.DataSource = Me.SelectionContactBindingSource
-        Me.ContactDem.DisplayMember = "nomCON"
+        Me.ContactDem.DisplayMember = "Column1"
         Me.ContactDem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ContactDem.FormattingEnabled = True
         Me.ContactDem.Location = New System.Drawing.Point(343, 22)
@@ -666,11 +666,6 @@ Partial Class GestionDesDemarches
         Me.ContactDem.Size = New System.Drawing.Size(121, 21)
         Me.ContactDem.TabIndex = 21
         Me.ContactDem.ValueMember = "noCON"
-        '
-        'SelectionContactBindingSource
-        '
-        Me.SelectionContactBindingSource.DataMember = "SelectionContact"
-        Me.SelectionContactBindingSource.DataSource = Me.SSDSDataSet
         '
         'Label12
         '
@@ -721,6 +716,11 @@ Partial Class GestionDesDemarches
         'SelectionTypeDEMTableAdapter
         '
         Me.SelectionTypeDEMTableAdapter.ClearBeforeFill = True
+        '
+        'SelectionContactBindingSource
+        '
+        Me.SelectionContactBindingSource.DataMember = "SelectionContact"
+        Me.SelectionContactBindingSource.DataSource = Me.SSDSDataSet
         '
         'SelectionContactTableAdapter
         '
