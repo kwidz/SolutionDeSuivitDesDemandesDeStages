@@ -270,6 +270,7 @@ Public Class GestionDesDemarches
                 dgvDemarches.DataSource = SelectionDemarchesByIdTableAdapter.GetData(dgvEntreprises.SelectedRows(0).Cells(0).Value)
                 ComboBoxDetailStatutEntreprise.SelectedValue = dtEntreprises.Rows(0)("statut")
                 GroupBoxDemarches.Text = "Démarches (" + CStr(dgvEntreprises.SelectedRows(0).Cells(1).Value) + ") (" + CStr(dgvDemarches.Rows.Count) + ")"
+                ContactDem.DataSource = SelectionContactTableAdapter(dgvEntreprises.SelectedRows(0).Cells(0).Value)
             End If
         Else
             TextBoxDetailCourielEntreprise.Text = ""

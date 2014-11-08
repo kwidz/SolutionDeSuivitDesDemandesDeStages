@@ -1,5 +1,13 @@
 ﻿Public Class Gestion_des_contacts
 
+    Enum Intention
+        Ajouter
+        Aucune
+        Modifier
+    End Enum
+
+    Private ActionEnCours As Intention = Intention.Aucune
+
     Private noEntreprise As Integer
 
     Sub New(noE As Integer, nonEtudiant As Boolean)
@@ -35,6 +43,12 @@
 
 
     Private Sub dgvContacts_SelectionChanged(sender As Object, e As EventArgs) Handles dgvContacts.SelectionChanged
+        ActionEnCours = Intention.Aucune
+        ActiverDetails(False)
+        afficherDetail()
+    End Sub
+
+    Private Sub afficherDetail()
         Dim taContacts As New SSDSDataSetTableAdapters.SelectionContactPourGestionByIdTableAdapter
         Dim dtContacts As DataTable
 
@@ -57,7 +71,7 @@
 
             End If
         Else
-            
+
             TextBoxNom.Text = ""
             TextBoxPrenom.Text = ""
             TextTitre.Text = ""
@@ -70,5 +84,40 @@
         End If
     End Sub
 
-    
+    Private Sub ActiverDetails(ByVal blnEnabled As Boolean)
+        TextBoxNom.Enabled = blnEnabled
+        TextBoxPrenom.Enabled = blnEnabled
+        TextBoxCouriel.Enabled = blnEnabled
+        TextBoxDescription.Enabled = blnEnabled
+        TextBoxTelephone.Enabled = blnEnabled
+        TextTitre.Enabled = blnEnabled
+        SauvegarderContact.Enabled = blnEnabled
+        AnnulerContact.Enabled = blnEnabled
+        
+    End Sub
+
+    Private Sub AjouterContact_Click(sender As Object, e As EventArgs) Handles AjouterContact.Click
+        ActionEnCours = Intention.Ajouter
+        ActiverDetails(True)
+        TextBoxNom.Text = ""
+        TextBoxPrenom.Text = ""
+        TextTitre.Text = ""
+        TextBoxCouriel.Text = ""
+        TextBoxTelephone.Text = ""
+        TextBoxDescription.Text = ""
+        dateCreation.Text = "Date de création : "
+        dateModification.Text = "Dernière Modification : "
+    End Sub
+
+    Private Sub ModifierContact_Click(sender As Object, e As EventArgs) Handles ModifierContact.Click
+        ActionEnCours = Intention.Modifier
+        ActiverDetails(True)
+        afficherDetail()
+    End Sub
+
+    Private Sub AnnulerContact_Click(sender As Object, e As EventArgs) Handles AnnulerContact.Click
+        ActionEnCours = Intention.Aucune
+        ActiverDetails(False)
+        afficherDetail()
+    End Sub
 End Class
