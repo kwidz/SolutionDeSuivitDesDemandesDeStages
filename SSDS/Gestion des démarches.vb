@@ -144,6 +144,57 @@ Public Class GestionDesDemarches
     End Sub
 
 
+    Private Function validerLesDonneesDemarche() As Boolean
+        If DescriptionDem.Text = "" Then
+            MsgBox("Veuillez spécifier une description à l'entreprise.")
+            DescriptionDem.Focus()
+            Return False
+        End If
+
+        Return True
+    End Function
+
+    Private Sub SauvegarderDemarche_Click(sender As Object, e As EventArgs) Handles SauvegarderDemarche.Click
+        If validerLesDonneesDemarche() Then
+            Dim monDataset As New QueriesTableAdapter
+            Dim demarcheId As Integer
+            Dim noEntreprise As Integer
+            noEntreprise = dgvEntreprises.SelectedRows(0).Cells(0).Value
+            Select Case ActionEnCoursDemarche
+                Case Intention.Ajouter
+
+                    monDataset.InsertDemarche(DateDem.Text, DescriptionDem.Text, TypeDem.SelectedValue, noEntreprise, ContactDem.SelectedValue)
+
+                Case Intention.Modifier
+
+                    demarcheId = dgvDemarches.SelectedRows(0).Cells(0).Value
+
+                    monDataset.UpdateDemarche(DateDem.Text, DescriptionDem.Text, TypeDem.SelectedValue, noEntreprise, ContactDem.SelectedValue, demarcheId)
+            End Select
+
+            ActionEnCoursDemarche = Intention.Aucune
+            ActiverDetailsDemarche(False)
+            rafraichirDemarche()
+        End If
+    End Sub
+
+    Private Sub SupprimerDemarche_Click(sender As Object, e As EventArgs) Handles SupprimerDemarche.Click
+        If MsgBox("Désirez-vous supprimer cette Demarche ?", MsgBoxStyle.YesNo, _
+               "Attention!") = vbYes Then
+            ' supprimer l'enregistrement
+            Dim monDataset As New QueriesTableAdapter
+            monDataset.SupprimerDemarche(dgvDemarches.SelectedRows(0).Cells(0).Value)
+            ActionEnCoursDemarche = Intention.Aucune
+            ActiverDetailsDemarche(False)
+            rafraichirDemarche()
+        End If
+    End Sub
+
+    Private Sub rafraichirDemarche()
+        dgvDemarches.DataSource = SelectionDemarchesByIdTableAdapter.GetData(dgvEntreprises.SelectedRows(0).Cells(0).Value)
+        GroupBoxDemarches.Text = "Démarches (" + CStr(dgvEntreprises.SelectedRows(0).Cells(1).Value) + ") (" + CStr(dgvDemarches.Rows.Count) + ")"
+    End Sub
+
     '
     '
     'GESTION DES ENTREPRISES
@@ -319,6 +370,11 @@ Public Class GestionDesDemarches
             rafraichirEntreprises()
         End If
     End Sub
+
+    
+
+    
+    
 End Class
 
         
