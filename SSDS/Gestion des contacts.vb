@@ -1,4 +1,6 @@
-﻿Public Class Gestion_des_contacts
+﻿Imports SSDS.SSDSDataSetTableAdapters
+
+Public Class Gestion_des_contacts
 
     Enum Intention
         Ajouter
@@ -7,6 +9,16 @@
     End Enum
 
     Private ActionEnCours As Intention = Intention.Aucune
+
+    Private Sub frmGestionProduits_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        If (ActionEnCours <> Intention.Aucune) Then
+            If MsgBox("Les données en cours de modification seront perdues.  Désirez-vous fermer le formulaire?", MsgBoxStyle.YesNo, _
+                    "Attention!") = vbNo Then
+                ' interrompre la fermeture du formulaire
+                e.Cancel = True
+            End If
+        End If
+    End Sub
 
     Private noEntreprise As Integer
 
@@ -50,6 +62,7 @@
     End Sub
 
     Private Sub afficherDetail()
+
         Dim taContacts As New SSDSDataSetTableAdapters.SelectionContactPourGestionByIdTableAdapter
         Dim dtContacts As DataTable
 
@@ -94,7 +107,7 @@
         TextTitre.Enabled = blnEnabled
         SauvegarderContact.Enabled = blnEnabled
         AnnulerContact.Enabled = blnEnabled
-        
+
     End Sub
 
     Private Sub AjouterContact_Click(sender As Object, e As EventArgs) Handles AjouterContact.Click
@@ -114,6 +127,7 @@
         ActionEnCours = Intention.Modifier
         ActiverDetails(True)
         afficherDetail()
+
     End Sub
 
     Private Sub AnnulerContact_Click(sender As Object, e As EventArgs) Handles AnnulerContact.Click
@@ -124,4 +138,75 @@
 
 
 
+    Private Sub SauvegarderContact_Click(sender As Object, e As EventArgs) Handles SauvegarderContact.Click
+        If validerLesDonnees() Then
+            Dim monDataset As New QueriesTableAdapter
+
+            Select Case ActionEnCours
+                Case Intention.Ajouter
+
+                    monDataset.InsertContact(TextBoxNom.Text, TextBoxPrenom.Text, TextTitre.Text, TextBoxDescription.Text, TextBoxTelephone.Text, TextBoxCouriel.Text, noEntreprise)
+
+                Case Intention.Modifier
+                    Dim noContact As Integer = dgvContacts.SelectedRows(0).Cells(0).Value
+                    monDataset.UpdateContact(TextBoxNom.Text, TextBoxPrenom.Text, TextTitre.Text, TextBoxDescription.Text, TextBoxTelephone.Text, TextBoxCouriel.Text, noContact)
+            End Select
+
+            ActionEnCours = Intention.Aucune
+            ActiverDetails(False)
+            rafraichirContacts()
+            afficherDetail()
+        End If
+    End Sub
+
+    Private Function validerLesDonnees() As Boolean
+        If TextBoxCouriel.Text = "" Then
+            MsgBox("Veuillez spécifier un couriel au contact")
+            TextBoxCouriel.Focus()
+            Return False
+        End If
+        If TextBoxNom.Text = "" Then
+            MsgBox("Veuillez spécifier un nom au contact")
+            TextBoxNom.Focus()
+            Return False
+        End If
+        If TextBoxPrenom.Text = "" Then
+            MsgBox("Veuillez spécifier un prenom au contact")
+            TextBoxPrenom.Focus()
+            Return False
+        End If
+        If TextBoxDescription.Text = "" Then
+            MsgBox("Veuillez spécifier une description au contact")
+            TextBoxDescription.Focus()
+            Return False
+        End If
+        If TextTitre.Text = "" Then
+            MsgBox("Veuillez spécifier un titre au contact.")
+            TextTitre.Focus()
+            Return False
+        End If
+        If TextBoxTelephone.Text = "" Then
+            MsgBox("Veuillez spécifier un numéro de telephone au contact")
+            TextBoxTelephone.Focus()
+            Return False
+        End If
+        Return True
+    End Function
+
+    Private Sub SupprimerContact_Click(sender As Object, e As EventArgs) Handles SupprimerContact.Click
+        If MsgBox("Désirez-vous supprimer ce contact ?", MsgBoxStyle.YesNo, _
+               "Attention!") = vbYes Then
+            ' supprimer l'enregistrement
+            Dim monDataset As New QueriesTableAdapter
+            monDataset.supprimerContact(dgvContacts.SelectedRows(0).Cells(0).Value)
+            ActionEnCours = Intention.Aucune
+            ActiverDetails(False)
+            afficherDetail()
+            rafraichirContacts()
+        End If
+    End Sub
+    Private Sub rafraichirContacts()
+        dgvContacts.DataSource = SelectionContactPourGestionTableAdapter.GetData(noEntreprise)
+        GbContacts.Text = "Contacts (" + CStr(dgvContacts.Rows.Count) + ")"
+    End Sub
 End Class

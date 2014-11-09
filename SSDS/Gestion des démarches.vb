@@ -8,6 +8,16 @@ Public Class GestionDesDemarches
         Modifier
     End Enum
 
+    Private Sub frmGestionProduits_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        If ((ActionEnCoursEntreprise <> Intention.Aucune) Or (ActionEnCoursDemarche <> Intention.Aucune)) Then
+            If MsgBox("Les données en cours de modification seront perdues.  Désirez-vous fermer le formulaire?", MsgBoxStyle.YesNo, _
+                    "Attention!") = vbNo Then
+                ' interrompre la fermeture du formulaire
+                e.Cancel = True
+            End If
+        End If
+    End Sub
+
     Private ActionEnCoursEntreprise As Intention = Intention.Aucune
     Private ActionEnCoursDemarche As Intention = Intention.Aucune
 
@@ -147,7 +157,7 @@ Public Class GestionDesDemarches
 
     Private Function validerLesDonneesDemarche() As Boolean
         If DescriptionDem.Text = "" Then
-            MsgBox("Veuillez spécifier une description à l'entreprise.")
+            MsgBox("Veuillez spécifier une description à la demarche.")
             DescriptionDem.Focus()
             Return False
         End If
@@ -331,8 +341,6 @@ Public Class GestionDesDemarches
             Return False
         End If
 
-        
-
         If TextBoxDetailAdresseEntreprise.Text = "" Then
             MsgBox("Veuillez spécifier une adresse à l'entreprise.")
             TextBoxDetailCourielEntreprise.Focus()
@@ -340,23 +348,23 @@ Public Class GestionDesDemarches
         End If
 
         If TextBoxDetailVilleEntreprise.Text = "" Then
-            MsgBox("Veuillez spécifier une adresse à l'entreprise.")
+            MsgBox("Veuillez spécifier une ville à l'entreprise.")
             TextBoxDetailCourielEntreprise.Focus()
             Return False
         End If
 
         If TextBoxDetailCodePEntreprise.Text = "" Then
-            MsgBox("Veuillez spécifier une adresse à l'entreprise.")
+            MsgBox("Veuillez spécifier un code postal à l'entreprise.")
             TextBoxDetailCourielEntreprise.Focus()
             Return False
         End If
         If TextBoxDetailDescriptionEntreprise.Text = "" Then
-            MsgBox("Veuillez spécifier une adresse à l'entreprise.")
+            MsgBox("Veuillez spécifier une description à l'entreprise.")
             TextBoxDetailCourielEntreprise.Focus()
             Return False
         End If
         If TextBoxDetailTelephoneEntreprise.Text = "" Then
-            MsgBox("Veuillez spécifier une adresse à l'entreprise.")
+            MsgBox("Veuillez spécifier un Telephone à l'entreprise.")
             TextBoxDetailCourielEntreprise.Focus()
             Return False
         End If

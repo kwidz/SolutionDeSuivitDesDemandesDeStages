@@ -48,16 +48,16 @@ Partial Class GestionDesUtilisateurs
         Me.ComboBoxDetailType = New System.Windows.Forms.ComboBox()
         Me.REFTypeUtilisateurBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SSDSDataSet2 = New SSDS.SSDSDataSet()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.btnSauvegarder = New System.Windows.Forms.Button()
+        Me.btnAnnuler = New System.Windows.Forms.Button()
         Me.TextBoxDetailNom = New System.Windows.Forms.TextBox()
         Me.TextBoxDetailPrenom = New System.Windows.Forms.TextBox()
         Me.TextBoxDetailCouriel = New System.Windows.Forms.TextBox()
         Me.REFTypeUtilisateurBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.gbResultats = New System.Windows.Forms.GroupBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnAjouter = New System.Windows.Forms.Button()
+        Me.btnModifier = New System.Windows.Forms.Button()
+        Me.btnSupprimer = New System.Windows.Forms.Button()
         Me.dgvEtudiants = New System.Windows.Forms.DataGridView()
         Me.NoUTILDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NomPrenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -220,8 +220,8 @@ Partial Class GestionDesUtilisateurs
         Me.GroupBox2.Controls.Add(Me.DateCreation)
         Me.GroupBox2.Controls.Add(Me.DerniereModification)
         Me.GroupBox2.Controls.Add(Me.ComboBoxDetailType)
-        Me.GroupBox2.Controls.Add(Me.Button7)
-        Me.GroupBox2.Controls.Add(Me.Button6)
+        Me.GroupBox2.Controls.Add(Me.btnSauvegarder)
+        Me.GroupBox2.Controls.Add(Me.btnAnnuler)
         Me.GroupBox2.Controls.Add(Me.TextBoxDetailNom)
         Me.GroupBox2.Controls.Add(Me.TextBoxDetailPrenom)
         Me.GroupBox2.Controls.Add(Me.TextBoxDetailCouriel)
@@ -318,23 +318,23 @@ Partial Class GestionDesUtilisateurs
         Me.SSDSDataSet2.DataSetName = "SSDSDataSet"
         Me.SSDSDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Button7
+        'btnSauvegarder
         '
-        Me.Button7.Location = New System.Drawing.Point(499, 19)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(101, 23)
-        Me.Button7.TabIndex = 25
-        Me.Button7.Text = "Sauvegarder"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.btnSauvegarder.Location = New System.Drawing.Point(499, 19)
+        Me.btnSauvegarder.Name = "btnSauvegarder"
+        Me.btnSauvegarder.Size = New System.Drawing.Size(101, 23)
+        Me.btnSauvegarder.TabIndex = 25
+        Me.btnSauvegarder.Text = "Sauvegarder"
+        Me.btnSauvegarder.UseVisualStyleBackColor = True
         '
-        'Button6
+        'btnAnnuler
         '
-        Me.Button6.Location = New System.Drawing.Point(499, 48)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(101, 23)
-        Me.Button6.TabIndex = 26
-        Me.Button6.Text = "Annuler"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.btnAnnuler.Location = New System.Drawing.Point(499, 48)
+        Me.btnAnnuler.Name = "btnAnnuler"
+        Me.btnAnnuler.Size = New System.Drawing.Size(101, 23)
+        Me.btnAnnuler.TabIndex = 26
+        Me.btnAnnuler.Text = "Annuler"
+        Me.btnAnnuler.UseVisualStyleBackColor = True
         '
         'TextBoxDetailNom
         '
@@ -364,9 +364,9 @@ Partial Class GestionDesUtilisateurs
         '
         'gbResultats
         '
-        Me.gbResultats.Controls.Add(Me.Button5)
-        Me.gbResultats.Controls.Add(Me.Button4)
-        Me.gbResultats.Controls.Add(Me.Button3)
+        Me.gbResultats.Controls.Add(Me.btnAjouter)
+        Me.gbResultats.Controls.Add(Me.btnModifier)
+        Me.gbResultats.Controls.Add(Me.btnSupprimer)
         Me.gbResultats.Controls.Add(Me.dgvEtudiants)
         Me.gbResultats.Location = New System.Drawing.Point(12, 98)
         Me.gbResultats.Name = "gbResultats"
@@ -375,32 +375,32 @@ Partial Class GestionDesUtilisateurs
         Me.gbResultats.TabStop = False
         Me.gbResultats.Text = "Résultats"
         '
-        'Button5
+        'btnAjouter
         '
-        Me.Button5.Location = New System.Drawing.Point(499, 19)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(101, 23)
-        Me.Button5.TabIndex = 13
-        Me.Button5.Text = "Ajouter"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.btnAjouter.Location = New System.Drawing.Point(499, 19)
+        Me.btnAjouter.Name = "btnAjouter"
+        Me.btnAjouter.Size = New System.Drawing.Size(101, 23)
+        Me.btnAjouter.TabIndex = 13
+        Me.btnAjouter.Text = "Ajouter"
+        Me.btnAjouter.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnModifier
         '
-        Me.Button4.Location = New System.Drawing.Point(499, 48)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(101, 23)
-        Me.Button4.TabIndex = 12
-        Me.Button4.Text = "Modifier"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnModifier.Location = New System.Drawing.Point(499, 48)
+        Me.btnModifier.Name = "btnModifier"
+        Me.btnModifier.Size = New System.Drawing.Size(101, 23)
+        Me.btnModifier.TabIndex = 12
+        Me.btnModifier.Text = "Modifier"
+        Me.btnModifier.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnSupprimer
         '
-        Me.Button3.Location = New System.Drawing.Point(499, 77)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(101, 23)
-        Me.Button3.TabIndex = 11
-        Me.Button3.Text = "Supprimer"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnSupprimer.Location = New System.Drawing.Point(499, 77)
+        Me.btnSupprimer.Name = "btnSupprimer"
+        Me.btnSupprimer.Size = New System.Drawing.Size(101, 23)
+        Me.btnSupprimer.TabIndex = 11
+        Me.btnSupprimer.Text = "Supprimer"
+        Me.btnSupprimer.UseVisualStyleBackColor = True
         '
         'dgvEtudiants
         '
@@ -520,9 +520,9 @@ Partial Class GestionDesUtilisateurs
     Friend WithEvents TextBoxNom As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents gbResultats As System.Windows.Forms.GroupBox
-    Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents btnAjouter As System.Windows.Forms.Button
+    Friend WithEvents btnModifier As System.Windows.Forms.Button
+    Friend WithEvents btnSupprimer As System.Windows.Forms.Button
     Friend WithEvents dgvEtudiants As System.Windows.Forms.DataGridView
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents CheckBoxDetailActif As System.Windows.Forms.CheckBox
@@ -533,8 +533,8 @@ Partial Class GestionDesUtilisateurs
     Friend WithEvents DateCreation As System.Windows.Forms.Label
     Friend WithEvents DerniereModification As System.Windows.Forms.Label
     Friend WithEvents ComboBoxDetailType As System.Windows.Forms.ComboBox
-    Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents btnSauvegarder As System.Windows.Forms.Button
+    Friend WithEvents btnAnnuler As System.Windows.Forms.Button
     Friend WithEvents TextBoxDetailNom As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxDetailPrenom As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxDetailCouriel As System.Windows.Forms.TextBox
