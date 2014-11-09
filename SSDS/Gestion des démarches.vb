@@ -152,6 +152,13 @@ Public Class GestionDesDemarches
         DescriptionDem.Enabled = blnEnabled
         SauvegarderDemarche.Enabled = blnEnabled
         AnnulerDemarche.Enabled = blnEnabled
+        If dgvDemarches.RowCount > 0 Then
+            ModifierDemarche.Enabled = True
+            SupprimerDemarche.Enabled = True
+        Else
+            ModifierDemarche.Enabled = False
+            SupprimerDemarche.Enabled = False
+        End If
     End Sub
 
 
@@ -202,8 +209,8 @@ Public Class GestionDesDemarches
             Dim monDataset As New QueriesTableAdapter
             monDataset.SupprimerDemarche(dgvDemarches.SelectedRows(0).Cells(0).Value)
             ActionEnCoursDemarche = Intention.Aucune
-            ActiverDetailsDemarche(False)
             rafraichirDemarche()
+            ActiverDetailsDemarche(False)
         End If
     End Sub
 
@@ -240,6 +247,13 @@ Public Class GestionDesDemarches
         TextBoxDetailCourielEntreprise.Enabled = blnEnabled
         BoutonDetailSauvegarder.Enabled = blnEnabled
         BoutonDetailAnnuler.Enabled = blnEnabled
+        If dgvEntreprises.RowCount > 0 Then
+            BoutonModifier.Enabled = True
+            BoutonSupprimer.Enabled = True
+        Else
+            BoutonModifier.Enabled = False
+            BoutonSupprimer.Enabled = False
+        End If
     End Sub
 
     Private Sub BoutonAjouter_Click(sender As Object, e As EventArgs) Handles BoutonAjouter.Click
@@ -385,8 +399,8 @@ Public Class GestionDesDemarches
             Dim monDataset As New QueriesTableAdapter
             monDataset.SupprimerEntreprise(dgvEntreprises.SelectedRows(0).Cells(0).Value)
             ActionEnCoursEntreprise = Intention.Aucune
-            ActiverDetailsEntreprise(False)
             rafraichirEntreprises()
+            ActiverDetailsEntreprise(False)
         End If
     End Sub
 

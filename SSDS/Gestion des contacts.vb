@@ -107,6 +107,13 @@ Public Class Gestion_des_contacts
         TextTitre.Enabled = blnEnabled
         SauvegarderContact.Enabled = blnEnabled
         AnnulerContact.Enabled = blnEnabled
+        If dgvContacts.RowCount > 0 Then
+            ModifierContact.Enabled = True
+            SupprimerContact.Enabled = True
+        Else
+            ModifierContact.Enabled = False
+            SupprimerContact.Enabled = False
+        End If
 
     End Sub
 
@@ -200,9 +207,11 @@ Public Class Gestion_des_contacts
             Dim monDataset As New QueriesTableAdapter
             monDataset.supprimerContact(dgvContacts.SelectedRows(0).Cells(0).Value)
             ActionEnCours = Intention.Aucune
+            rafraichirContacts()
             ActiverDetails(False)
             afficherDetail()
-            rafraichirContacts()
+
+
         End If
     End Sub
     Private Sub rafraichirContacts()
