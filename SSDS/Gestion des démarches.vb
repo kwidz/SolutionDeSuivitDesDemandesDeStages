@@ -70,7 +70,7 @@ Public Class GestionDesDemarches
         Me.SelectionTypeDEMTableAdapter.Fill(Me.SSDSDataSet1.SelectionTypeDEM)
         'TODO: cette ligne de code charge les données dans la table 'SSDSDataSet.SelectionStatutENT'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
         Me.SelectionStatutENTTableAdapter.Fill(Me.SSDSDataSet.SelectionStatutENT)
-
+        ActiverDetailsEntreprise(False)
     End Sub
 
 
@@ -229,8 +229,8 @@ Public Class GestionDesDemarches
 
     Private Sub dgvEntreprises_SelectionChanged(sender As Object, e As EventArgs) Handles dgvEntreprises.SelectionChanged
         ActionEnCoursEntreprise = Intention.Aucune
-        ActiverDetailsEntreprise(False)
         remplirDetailsEntreprises()
+        ActiverDetailsEntreprise(False)
         ActiverDetailsDemarche(False)
 
     End Sub
@@ -318,6 +318,7 @@ Public Class GestionDesDemarches
 
 
         End If
+
     End Sub
 
     
@@ -407,7 +408,11 @@ Public Class GestionDesDemarches
     
 
     
-    
+    '
+    'rafraichirDemarche()
+    '    ActiverDetailsDemarche(False)
+    '    MsgBox("ok !!!")
+    '
 End Class
 
         
