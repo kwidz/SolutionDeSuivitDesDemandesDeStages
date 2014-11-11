@@ -92,6 +92,7 @@ Partial Class GestionDesDemarches
         Me.SelectionStatutENTTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionStatutENTTableAdapter()
         Me.SelectionTypeDEMTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionTypeDEMTableAdapter()
         Me.SelectionContactTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionContactTableAdapter()
+        Me.SuppressionPhysique = New System.Windows.Forms.Button()
         Me.GroupBoxEntreprises.SuspendLayout()
         CType(Me.dgvEntreprises, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SelectionEntrepriseBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,13 +111,14 @@ Partial Class GestionDesDemarches
         '
         'GroupBoxEntreprises
         '
+        Me.GroupBoxEntreprises.Controls.Add(Me.SuppressionPhysique)
         Me.GroupBoxEntreprises.Controls.Add(Me.dgvEntreprises)
         Me.GroupBoxEntreprises.Controls.Add(Me.BoutonSupprimer)
         Me.GroupBoxEntreprises.Controls.Add(Me.BoutonModifier)
         Me.GroupBoxEntreprises.Controls.Add(Me.BoutonAjouter)
         Me.GroupBoxEntreprises.Location = New System.Drawing.Point(12, 12)
         Me.GroupBoxEntreprises.Name = "GroupBoxEntreprises"
-        Me.GroupBoxEntreprises.Size = New System.Drawing.Size(675, 120)
+        Me.GroupBoxEntreprises.Size = New System.Drawing.Size(675, 137)
         Me.GroupBoxEntreprises.TabIndex = 0
         Me.GroupBoxEntreprises.TabStop = False
         Me.GroupBoxEntreprises.Text = "Entreprises"
@@ -137,7 +139,7 @@ Partial Class GestionDesDemarches
         Me.dgvEntreprises.ReadOnly = True
         Me.dgvEntreprises.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvEntreprises.ShowCellErrors = False
-        Me.dgvEntreprises.Size = New System.Drawing.Size(535, 95)
+        Me.dgvEntreprises.Size = New System.Drawing.Size(499, 95)
         Me.dgvEntreprises.TabIndex = 4
         '
         'NoENTDataGridViewTextBoxColumn
@@ -202,27 +204,27 @@ Partial Class GestionDesDemarches
         '
         'BoutonSupprimer
         '
-        Me.BoutonSupprimer.Location = New System.Drawing.Point(568, 77)
+        Me.BoutonSupprimer.Location = New System.Drawing.Point(523, 68)
         Me.BoutonSupprimer.Name = "BoutonSupprimer"
-        Me.BoutonSupprimer.Size = New System.Drawing.Size(85, 23)
+        Me.BoutonSupprimer.Size = New System.Drawing.Size(130, 23)
         Me.BoutonSupprimer.TabIndex = 3
         Me.BoutonSupprimer.Text = "Supprimer"
         Me.BoutonSupprimer.UseVisualStyleBackColor = True
         '
         'BoutonModifier
         '
-        Me.BoutonModifier.Location = New System.Drawing.Point(568, 48)
+        Me.BoutonModifier.Location = New System.Drawing.Point(523, 39)
         Me.BoutonModifier.Name = "BoutonModifier"
-        Me.BoutonModifier.Size = New System.Drawing.Size(85, 23)
+        Me.BoutonModifier.Size = New System.Drawing.Size(130, 23)
         Me.BoutonModifier.TabIndex = 2
         Me.BoutonModifier.Text = "Modifier"
         Me.BoutonModifier.UseVisualStyleBackColor = True
         '
         'BoutonAjouter
         '
-        Me.BoutonAjouter.Location = New System.Drawing.Point(568, 19)
+        Me.BoutonAjouter.Location = New System.Drawing.Point(523, 10)
         Me.BoutonAjouter.Name = "BoutonAjouter"
-        Me.BoutonAjouter.Size = New System.Drawing.Size(85, 23)
+        Me.BoutonAjouter.Size = New System.Drawing.Size(130, 23)
         Me.BoutonAjouter.TabIndex = 1
         Me.BoutonAjouter.Text = "Ajouter"
         Me.BoutonAjouter.UseVisualStyleBackColor = True
@@ -726,6 +728,15 @@ Partial Class GestionDesDemarches
         '
         Me.SelectionContactTableAdapter.ClearBeforeFill = True
         '
+        'SuppressionPhysique
+        '
+        Me.SuppressionPhysique.Location = New System.Drawing.Point(523, 97)
+        Me.SuppressionPhysique.Name = "SuppressionPhysique"
+        Me.SuppressionPhysique.Size = New System.Drawing.Size(130, 23)
+        Me.SuppressionPhysique.TabIndex = 5
+        Me.SuppressionPhysique.Text = "Supprimer physiquement"
+        Me.SuppressionPhysique.UseVisualStyleBackColor = True
+        '
         'GestionDesDemarches
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -826,5 +837,6 @@ Partial Class GestionDesDemarches
     Friend WithEvents SelectionTypeDEMTableAdapter As SSDS.SSDSDataSetTableAdapters.SelectionTypeDEMTableAdapter
     Friend WithEvents SelectionContactBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SelectionContactTableAdapter As SSDS.SSDSDataSetTableAdapters.SelectionContactTableAdapter
+    Friend WithEvents SuppressionPhysique As System.Windows.Forms.Button
 
 End Class

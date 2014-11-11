@@ -34,6 +34,7 @@ Public Class GestionDesDemarches
             BoutonAjouter.Hide()
             BoutonModifier.Hide()
             BoutonSupprimer.Hide()
+            SuppressionPhysique.Hide()
             BoutonDetailAnnuler.Hide()
             BoutonDetailSauvegarder.Hide()
             AjouterDemarche.Hide()
@@ -250,9 +251,11 @@ Public Class GestionDesDemarches
         If dgvEntreprises.RowCount > 0 Then
             BoutonModifier.Enabled = True
             BoutonSupprimer.Enabled = True
+            SuppressionPhysique.Enabled = True
         Else
             BoutonModifier.Enabled = False
             BoutonSupprimer.Enabled = False
+            SuppressionPhysique.Enabled = False
         End If
     End Sub
 
@@ -321,7 +324,7 @@ Public Class GestionDesDemarches
 
     End Sub
 
-    
+
     Private Sub BoutonDetailSauvegarder_Click(sender As Object, e As EventArgs) Handles BoutonDetailSauvegarder.Click
         If validerLesDonneesEntreprises() Then
             Dim monDataset As New QueriesTableAdapter
@@ -383,7 +386,7 @@ Public Class GestionDesDemarches
             TextBoxDetailCourielEntreprise.Focus()
             Return False
         End If
-        
+
 
         Return True
     End Function
@@ -405,9 +408,21 @@ Public Class GestionDesDemarches
         End If
     End Sub
 
-    
+    Private Sub SuppressionPhysique_Click(sender As Object, e As EventArgs) Handles SuppressionPhysique.Click
+        If MsgBox("Désirez-vous supprimer cette Entreprise ?", MsgBoxStyle.YesNo, _
+               "Attention!") = vbYes Then
+            ' supprimer l'enregistrement
+            Dim monDataset As New QueriesTableAdapter
+            monDataset.SupprimerEntreprisePhy(dgvEntreprises.SelectedRows(0).Cells(0).Value)
+            ActionEnCoursEntreprise = Intention.Aucune
+            rafraichirEntreprises()
+            ActiverDetailsEntreprise(False)
+        End If
+    End Sub
 
-    
+
+
+
     '
     'rafraichirDemarche()
     '    ActiverDetailsDemarche(False)
