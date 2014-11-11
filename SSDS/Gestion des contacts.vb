@@ -21,8 +21,9 @@ Public Class Gestion_des_contacts
     End Sub
 
     Private noEntreprise As Integer
+    Private par As GestionDesDemarches
 
-    Sub New(noE As Integer, nonEtudiant As Boolean)
+    Sub New(noE As Integer, nonEtudiant As Boolean, ByRef p As GestionDesDemarches)
         InitializeComponent()
         If (nonEtudiant) Then
             AjouterContact.Hide()
@@ -32,7 +33,7 @@ Public Class Gestion_des_contacts
             SupprimerContact.Hide()
 
         End If
-
+        par = p
         noEntreprise = noE
         Dim taNomEntreprise As New SSDSDataSetTableAdapters.SelectionNomEntrepriseByIdTableAdapter
         Dim dtNomEntreprise As DataTable
@@ -217,5 +218,6 @@ Public Class Gestion_des_contacts
     Private Sub rafraichirContacts()
         dgvContacts.DataSource = SelectionContactPourGestionTableAdapter.GetData(noEntreprise)
         GbContacts.Text = "Contacts (" + CStr(dgvContacts.Rows.Count) + ")"
+        par.rafraichir()
     End Sub
 End Class

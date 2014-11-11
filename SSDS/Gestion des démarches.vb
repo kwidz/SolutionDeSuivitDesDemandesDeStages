@@ -84,7 +84,7 @@ Public Class GestionDesDemarches
     '
     Private Sub BoutonDetailContacts_Click(sender As Object, e As EventArgs) Handles BoutonDetailContacts.Click
         Try
-            Dim dial As New Gestion_des_contacts(dgvEntreprises.SelectedRows(0).Cells(0).Value, nonEtudiant)
+            Dim dial As New Gestion_des_contacts(dgvEntreprises.SelectedRows(0).Cells(0).Value, nonEtudiant, Me)
             dial.Show()
         Catch
             MsgBox("Il n'y a pas d'entreprise de séléctionnée")
@@ -421,13 +421,14 @@ Public Class GestionDesDemarches
     End Sub
 
 
+    Public Sub rafraichir()
+
+        ContactDem.DataSource = SelectionContactTableAdapter.GetData(dgvEntreprises.SelectedRows(0).Cells(0).Value)
 
 
-    '
-    'rafraichirDemarche()
-    '    ActiverDetailsDemarche(False)
-    '    MsgBox("ok !!!")
-    '
+    End Sub
+
+    
 End Class
 
         

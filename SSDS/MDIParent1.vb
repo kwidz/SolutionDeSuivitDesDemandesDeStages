@@ -47,20 +47,20 @@ Public Class MDIParent1
 
     End Sub
 
-    Private Sub GestionDesContacts_Click(sender As Object, e As EventArgs)
-        For Each f As Form In Application.OpenForms
-            If TypeOf f Is Gestion_des_contacts Then
-                f.Activate()
-                Return
-            End If
-        Next
+    'Private Sub GestionDesContacts_Click(sender As Object, e As EventArgs)
+    '    For Each f As Form In Application.OpenForms
+    '        If TypeOf f Is Gestion_des_contacts Then
+    '            f.Activate()
+    '            Return
+    '        End If
+    '    Next
 
-        Dim ChildForm As New Gestion_des_contacts(user, nonEtudiant)
-        ChildForm.MdiParent = Me
-        ChildForm.Show()
+    '    Dim ChildForm As New Gestion_des_contacts(user, nonEtudiant)
+    '    ChildForm.MdiParent = Me
+    '    ChildForm.Show()
 
 
-    End Sub
+    'End Sub
 
     Private Sub GestionDesDémarchesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionDesDémarchesToolStripMenuItem.Click
         For Each f As Form In Application.OpenForms
