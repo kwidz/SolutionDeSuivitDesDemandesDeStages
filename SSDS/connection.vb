@@ -37,7 +37,7 @@ Public Class Connection
             Dim cc As New List(Of String)
             envoyerCourriel("Votre mot de passe SSDS", "Votre mot de passe SSDS a bien été modifié voici le nouveau : " & nouveauPass, adresses, cc, cc)
             MsgBox("Un couriel vient de vous être envoyé avec votre nouveau courriel !")
-            'uyyutgfyt
+
 
         End If
 
