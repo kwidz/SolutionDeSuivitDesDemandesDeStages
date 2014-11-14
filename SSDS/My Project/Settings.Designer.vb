@@ -57,10 +57,38 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=TI-GLANGINEG;Initial Catalog=SSDS;Integrated Security=True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=nt-sqltechinfo;Initial Catalog=SSDS_Geoffrey;User Id=Glangine.Geoffre"& _ 
+            "y;Password=1441039")>  _
         Public ReadOnly Property SSDSConnectionString() As String
             Get
                 Return CType(Me("SSDSConnectionString"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("mail.cgmatane.qc.ca")>  _
+        Public ReadOnly Property SMTPHost() As String
+            Get
+                Return CType(Me("SMTPHost"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("25")>  _
+        Public ReadOnly Property SMTPPort() As String
+            Get
+                Return CType(Me("SMTPPort"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("noreply@cgmatane.qc.ca")>  _
+        Public ReadOnly Property SMTPAccount() As String
+            Get
+                Return CType(Me("SMTPAccount"),String)
             End Get
         End Property
     End Class

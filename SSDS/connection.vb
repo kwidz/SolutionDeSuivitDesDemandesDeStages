@@ -20,6 +20,16 @@ Public Class Connection
         msgb = New mdpOublie()
         msgb.ShowDialog()
         Dim adresse As String = ""
+        Dim taUser As New SSDSDataSetTableAdapters.compterUserByMailTableAdapter
+        Dim dtUser As DataTable
+        adresse = msgb.User.Text
+        dtUser = taUser.GetData(adresse)
+        If (dtUser.Rows.Count = 0) Then
+            MsgBox("Mauvais nom d'utilisateur !")
+        Else
+            MsgBox("envoyer email ici !")
+        End If
+
 
     End Sub
 End Class

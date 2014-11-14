@@ -121,8 +121,8 @@ Public Class GestionDesUtilisateurs
         btnAjouter.Enabled = blnEnabled
 
         If dgvEtudiants.RowCount > 0 Then
-            btnModifier.Enabled = blnEnabled
-            btnSupprimer.Enabled = blnEnabled
+            btnModifier.Enabled = True
+            btnSupprimer.Enabled = True
         Else
             btnModifier.Enabled = False
             btnSupprimer.Enabled = False
@@ -186,8 +186,16 @@ Public Class GestionDesUtilisateurs
             
             Select Case ActionEnCours
                 Case Intention.Ajouter
-                    MsgBox(Type.SelectedValue)
-                    monDataset.InsertUtilisateur(TextBoxDetailCouriel.Text, TextBoxDetailNom.Text, TextBoxDetailPrenom.Text, CheckBoxDetailActif.Checked, ComboBoxDetailType.SelectedValue)
+                    'MsgBox(Type.SelectedValue)
+                    Dim pass As String = ""
+                    pass = generateRandomPassword()
+                    Dim passEncrypt As String = ""
+                    passEncrypt = getSha1Hash(pass)
+                    monDataset.InsertUtilisateur(TextBoxDetailCouriel.Text, TextBoxDetailNom.Text, TextBoxDetailPrenom.Text, CheckBoxDetailActif.Checked, ComboBoxDetailType.SelectedValue, passEncrypt)
+                    Dim adresses As New List(Of String)
+                    adresses.Add(TextBoxDetailCouriel.Text)
+                    Dim cc As New List(Of String)
+                    envoyerCourriel("Votre mot de passe SSDS", "Voici votre mot de passe : " & pass, adresses, cc, cc)
 
                 Case Intention.Modifier
 

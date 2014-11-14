@@ -111,6 +111,7 @@ Public Class MDIParent1
             InputConnect = New Connection
             InputConnect.ShowDialog()
             pass = InputConnect.Pass.Text
+            pass = getSha1Hash(pass)
             Utilisateur = InputConnect.User.Text
             dtUser = taUser.GetData(Utilisateur, pass)
             If (dtUser.Rows.Count = 0) Then
