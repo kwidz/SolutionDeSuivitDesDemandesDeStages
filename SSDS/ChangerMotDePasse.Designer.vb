@@ -78,6 +78,7 @@ Partial Class ChangerMotDePasse
         '
         Me.confirm.Location = New System.Drawing.Point(9, 64)
         Me.confirm.Name = "confirm"
+        Me.confirm.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.confirm.Size = New System.Drawing.Size(185, 20)
         Me.confirm.TabIndex = 2
         '

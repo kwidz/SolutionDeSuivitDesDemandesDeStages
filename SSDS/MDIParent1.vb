@@ -153,14 +153,16 @@ Public Class MDIParent1
         Dim changePass As New ChangerMotDePasse
 
         changePass.ShowDialog()
-        Dim pass As String = changePass.passwd.Text
-        Dim confirm As String = changePass.confirm.Text
-        If (pass = confirm) Then
-            Dim monDataset As New QueriesTableAdapter
-            monDataset.UpdateMdpUtilisateur(user, getSha1Hash(pass))
-            MsgBox("Votre mot de passe a été modifié avec succès !")
-        Else
-            MsgBox("Les deux mots de passes ne sont pas identiques, veillez recommencer.")
+        If (changePass.DialogResult = System.Windows.Forms.DialogResult.OK) Then
+            Dim pass As String = changePass.passwd.Text
+            Dim confirm As String = changePass.confirm.Text
+            If (pass = confirm) Then
+                Dim monDataset As New QueriesTableAdapter
+                monDataset.UpdateMdpUtilisateur(user, getSha1Hash(pass))
+                MsgBox("Votre mot de passe a été modifié avec succès !")
+            Else
+                MsgBox("Les deux mots de passes ne sont pas identiques, veillez recommencer.")
+            End If
         End If
     End Sub
 End Class
