@@ -76,6 +76,12 @@
     <Compile Include="AboutBox1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ChangerMotDePasse.Designer.vb">
+      <DependentUpon>ChangerMotDePasse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChangerMotDePasse.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Connection.Designer.vb">
       <DependentUpon>Connection.vb</DependentUpon>
     </Compile>
@@ -145,6 +151,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangerMotDePasse.resx">
+      <DependentUpon>ChangerMotDePasse.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Connection.resx">
       <DependentUpon>Connection.vb</DependentUpon>

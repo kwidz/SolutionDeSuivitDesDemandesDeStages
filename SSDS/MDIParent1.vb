@@ -1,4 +1,5 @@
 ﻿Imports System.Windows.Forms
+Imports SSDS.SSDSDataSetTableAdapters
 
 Public Class MDIParent1
 
@@ -146,5 +147,20 @@ Public Class MDIParent1
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         End
+    End Sub
+
+    Private Sub ChangerDeMotDePasseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangerDeMotDePasseToolStripMenuItem.Click
+        Dim changePass As New ChangerMotDePasse
+
+        changePass.ShowDialog()
+        Dim pass As String = changePass.passwd.Text
+        Dim confirm As String = changePass.confirm.Text
+        If (pass = confirm) Then
+            Dim monDataset As New QueriesTableAdapter
+            monDataset.UpdateMdpUtilisateur(user, getSha1Hash(pass))
+            MsgBox("Votre mot de passe a été modifié avec succès !")
+        Else
+            MsgBox("Les deux mots de passes ne sont pas identiques, veillez recommencer.")
+        End If
     End Sub
 End Class
