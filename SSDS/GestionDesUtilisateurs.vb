@@ -203,13 +203,13 @@ Public Class GestionDesUtilisateurs
             End Select
 
             ActionEnCours = Intention.Aucune
-
+            RafraichirResultats()
             ActiverRecherche(True)
             ActiverResultats(True)
             ActiverDetails(False)
 
             ' rafraichir les données
-            RafraichirResultats()
+
         End If
     End Sub
 

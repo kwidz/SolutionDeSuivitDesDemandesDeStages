@@ -31,7 +31,6 @@ Partial Class MDIParent1
         Me.GestionDesDémarchesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultationDesDémarchesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestionDesUtilisateursToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ChangerVotreMotDePassToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowsMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CascadeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -51,7 +50,7 @@ Partial Class MDIParent1
         '
         'MenuStrip
         '
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.EditMenu, Me.WindowsMenu, Me.ChangerDeMotDePasseToolStripMenuItem, Me.HelpMenu})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.EditMenu, Me.ChangerDeMotDePasseToolStripMenuItem, Me.WindowsMenu, Me.HelpMenu})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
@@ -75,7 +74,7 @@ Partial Class MDIParent1
         '
         'EditMenu
         '
-        Me.EditMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GestionDesDémarchesToolStripMenuItem, Me.ConsultationDesDémarchesToolStripMenuItem, Me.GestionDesUtilisateursToolStripMenuItem, Me.ChangerVotreMotDePassToolStripMenuItem})
+        Me.EditMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GestionDesDémarchesToolStripMenuItem, Me.ConsultationDesDémarchesToolStripMenuItem, Me.GestionDesUtilisateursToolStripMenuItem})
         Me.EditMenu.Name = "EditMenu"
         Me.EditMenu.Size = New System.Drawing.Size(81, 20)
         Me.EditMenu.Text = "&Formulaires"
@@ -97,12 +96,6 @@ Partial Class MDIParent1
         Me.GestionDesUtilisateursToolStripMenuItem.Name = "GestionDesUtilisateursToolStripMenuItem"
         Me.GestionDesUtilisateursToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
         Me.GestionDesUtilisateursToolStripMenuItem.Text = "Gestion des Utilisateurs"
-        '
-        'ChangerVotreMotDePassToolStripMenuItem
-        '
-        Me.ChangerVotreMotDePassToolStripMenuItem.Name = "ChangerVotreMotDePassToolStripMenuItem"
-        Me.ChangerVotreMotDePassToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
-        Me.ChangerVotreMotDePassToolStripMenuItem.Text = "Changer votre mot de passe"
         '
         'WindowsMenu
         '
@@ -220,7 +213,6 @@ Partial Class MDIParent1
     Friend WithEvents GestionDesDémarchesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GestionDesUtilisateursToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultationDesDémarchesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ChangerVotreMotDePassToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ChangerDeMotDePasseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
