@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Connection
+Partial Class mdpOublie
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
@@ -25,11 +25,8 @@ Partial Class Connection
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
-        Me.Pass = New System.Windows.Forms.TextBox()
-        Me.User = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.mdpForgot = New System.Windows.Forms.LinkLabel()
+        Me.User = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -41,7 +38,7 @@ Partial Class Connection
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(68, 172)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(48, 98)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -54,7 +51,7 @@ Partial Class Connection
         Me.OK_Button.Location = New System.Drawing.Point(3, 3)
         Me.OK_Button.Name = "OK_Button"
         Me.OK_Button.Size = New System.Drawing.Size(67, 23)
-        Me.OK_Button.TabIndex = 3
+        Me.OK_Button.TabIndex = 0
         Me.OK_Button.Text = "OK"
         '
         'Cancel_Button
@@ -64,72 +61,42 @@ Partial Class Connection
         Me.Cancel_Button.Location = New System.Drawing.Point(76, 3)
         Me.Cancel_Button.Name = "Cancel_Button"
         Me.Cancel_Button.Size = New System.Drawing.Size(67, 23)
-        Me.Cancel_Button.TabIndex = 4
+        Me.Cancel_Button.TabIndex = 1
         Me.Cancel_Button.Text = "Annuler"
-        '
-        'Pass
-        '
-        Me.Pass.Location = New System.Drawing.Point(36, 121)
-        Me.Pass.Name = "Pass"
-        Me.Pass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.Pass.Size = New System.Drawing.Size(213, 20)
-        Me.Pass.TabIndex = 2
-        '
-        'User
-        '
-        Me.User.Location = New System.Drawing.Point(36, 52)
-        Me.User.Name = "User"
-        Me.User.Size = New System.Drawing.Size(213, 20)
-        Me.User.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(33, 36)
+        Me.Label1.Location = New System.Drawing.Point(12, 35)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(90, 13)
-        Me.Label1.TabIndex = 3
+        Me.Label1.TabIndex = 5
         Me.Label1.Text = "Nom d'utilisateur :"
         '
-        'Label2
+        'User
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(33, 105)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(77, 13)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Mot de passe :"
+        Me.User.Location = New System.Drawing.Point(15, 51)
+        Me.User.Name = "User"
+        Me.User.Size = New System.Drawing.Size(213, 20)
+        Me.User.TabIndex = 4
         '
-        'mdpForgot
-        '
-        Me.mdpForgot.AutoSize = True
-        Me.mdpForgot.Location = New System.Drawing.Point(165, 216)
-        Me.mdpForgot.Name = "mdpForgot"
-        Me.mdpForgot.Size = New System.Drawing.Size(111, 13)
-        Me.mdpForgot.TabIndex = 5
-        Me.mdpForgot.TabStop = True
-        Me.mdpForgot.Text = "Mot de passe oublié ?"
-        '
-        'Connection
+        'mdpOublie
         '
         Me.AcceptButton = Me.OK_Button
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
-        Me.ClientSize = New System.Drawing.Size(288, 238)
-        Me.Controls.Add(Me.mdpForgot)
-        Me.Controls.Add(Me.Label2)
+        Me.ClientSize = New System.Drawing.Size(248, 151)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.User)
-        Me.Controls.Add(Me.Pass)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "Connection"
+        Me.Name = "mdpOublie"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Connection"
+        Me.Text = "Réinitialisation de mot de passe"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -138,10 +105,7 @@ Partial Class Connection
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents OK_Button As System.Windows.Forms.Button
     Friend WithEvents Cancel_Button As System.Windows.Forms.Button
-    Friend WithEvents Pass As System.Windows.Forms.TextBox
-    Friend WithEvents User As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents mdpForgot As System.Windows.Forms.LinkLabel
+    Friend WithEvents User As System.Windows.Forms.TextBox
 
 End Class
