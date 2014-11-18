@@ -1,4 +1,7 @@
-﻿Public Class AffichageDocuments
+﻿Imports System.IO
+Imports SSDS.SSDSDataSetTableAdapters
+
+Public Class AffichageDocuments
 
     Private _user As Integer
     Private _nonEtudiant As Boolean
@@ -18,7 +21,7 @@
         dtCount = taCount.GetData(_user)
         nbCV = dtCount.Rows(0)(0)
     End Sub
-    
+
 
 
     Private Sub SelectionerFichier_Click(sender As Object, e As EventArgs) Handles SelectionerFichier.Click
@@ -38,7 +41,34 @@
             End If
         Else
             MsgBox("Vous n'avez pas encore de CV")
+        End If
+        Dim taCount As New SSDSDataSetTableAdapters.CompterFichierListeTableAdapter
+        Dim dtCount As New DataTable
+        dtCount = taCount.GetData(_user)
+        nbCV = dtCount.Rows(0)(0)
+    End Sub
+
+    Private Sub AjouterFichier_Click(sender As Object, e As EventArgs) Handles AjouterFichier.Click
+        Dim selectionnerFichier As New OpenFileDialog()
+        If selectionnerFichier.ShowDialog() = Windows.Forms.DialogResult.OK Then
+
+            Dim fstream As New FileStream(selectionnerFichier.FileName, FileMode.Open)
+            Dim byteArr(fstream.Length) As Byte
+
+            fstream.Read(byteArr, 0, fstream.Length)
+            fstream.Close()
+
+            Dim ta As New QueriesTableAdapter
+            If (nbCV > 0) Then
+                ta.ModifierFichierListe(_user, byteArr)
+            Else
+                ta.InsererFichierListe(_user, byteArr)
+            End If
 
         End If
+        Dim taCount As New SSDSDataSetTableAdapters.CompterFichierListeTableAdapter
+        Dim dtCount As New DataTable
+        dtCount = taCount.GetData(_user)
+        nbCV = dtCount.Rows(0)(0)
     End Sub
 End Class
