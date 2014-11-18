@@ -26,7 +26,26 @@ Public Class AffichageDocuments
 
     Private Sub SelectionerFichier_Click(sender As Object, e As EventArgs) Handles SelectionerFichier.Click
         If (nbCV > 0) Then
-            MsgBox("faire le traitement")
+            'afficher le fichier contenu dans la bdd
+            Dim nomFichier As String = "c:\cv.pdf"
+
+            Dim ta As New SSDSDataSetTableAdapters.SelectionDesFichierListeTableAdapter
+            Dim byteArr() As Byte
+
+            'on récupère la première colonne du premier enregistrement retourné par la procédure stockée
+            byteArr = ta.GetData(_user)(0)(0)
+
+            Dim fstream As New FileStream(nomFichier, FileMode.Create, FileAccess.ReadWrite)
+
+            Dim binaryWriter As New BinaryWriter(fstream)
+            binaryWriter.Write(byteArr)
+            binaryWriter.Close()
+
+            'affiche le fichier
+            AxAcroPDF1.src = nomFichier
+
+            'supprime le fichier
+            File.Delete(nomFichier)
         Else
             MsgBox("Vous n'avez pas encore de CV")
 
@@ -37,7 +56,8 @@ Public Class AffichageDocuments
         If (nbCV > 0) Then
             If MsgBox("Désirez-vous supprimer définitivement votre CV ?", MsgBoxStyle.YesNo, _
                "Attention!") = vbYes Then
-                MsgBox("Suppression")
+                Dim monDataset As New QueriesTableAdapter
+                monDataset.SupprimerFichierListe(_user)
             End If
         Else
             MsgBox("Vous n'avez pas encore de CV")
