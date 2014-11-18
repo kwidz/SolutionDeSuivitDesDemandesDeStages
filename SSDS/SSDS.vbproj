@@ -94,6 +94,12 @@
     <Compile Include="Consultation des démarches.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AffichageDocuments.Designer.vb">
+      <DependentUpon>AffichageDocuments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AffichageDocuments.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="mdpOublie.Designer.vb">
       <DependentUpon>mdpOublie.vb</DependentUpon>
     </Compile>
@@ -161,6 +167,9 @@
     <EmbeddedResource Include="Consultation des démarches.resx">
       <DependentUpon>Consultation des démarches.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AffichageDocuments.resx">
+      <DependentUpon>AffichageDocuments.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mdpOublie.resx">
       <DependentUpon>mdpOublie.vb</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +216,25 @@
     <None Include="SSDSDataSet.xss">
       <DependentUpon>SSDSDataSet.xsd</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

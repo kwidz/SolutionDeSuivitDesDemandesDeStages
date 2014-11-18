@@ -429,6 +429,11 @@ Public Class GestionDesDemarches
     End Sub
 
     
+    Private Sub Fichiers_Click(sender As Object, e As EventArgs) Handles Fichiers.Click
+        Dim ChildForm As New AffichageDocuments(user, nonEtudiant)
+        ChildForm.Show()
+
+    End Sub
 End Class
 
         

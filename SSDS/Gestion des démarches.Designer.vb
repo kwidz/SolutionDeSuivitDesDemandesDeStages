@@ -24,6 +24,7 @@ Partial Class GestionDesDemarches
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBoxEntreprises = New System.Windows.Forms.GroupBox()
+        Me.SuppressionPhysique = New System.Windows.Forms.Button()
         Me.dgvEntreprises = New System.Windows.Forms.DataGridView()
         Me.NoENTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NomENTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -92,7 +93,7 @@ Partial Class GestionDesDemarches
         Me.SelectionStatutENTTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionStatutENTTableAdapter()
         Me.SelectionTypeDEMTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionTypeDEMTableAdapter()
         Me.SelectionContactTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionContactTableAdapter()
-        Me.SuppressionPhysique = New System.Windows.Forms.Button()
+        Me.Fichiers = New System.Windows.Forms.Button()
         Me.GroupBoxEntreprises.SuspendLayout()
         CType(Me.dgvEntreprises, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SelectionEntrepriseBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -122,6 +123,15 @@ Partial Class GestionDesDemarches
         Me.GroupBoxEntreprises.TabIndex = 0
         Me.GroupBoxEntreprises.TabStop = False
         Me.GroupBoxEntreprises.Text = "Entreprises"
+        '
+        'SuppressionPhysique
+        '
+        Me.SuppressionPhysique.Location = New System.Drawing.Point(523, 97)
+        Me.SuppressionPhysique.Name = "SuppressionPhysique"
+        Me.SuppressionPhysique.Size = New System.Drawing.Size(130, 23)
+        Me.SuppressionPhysique.TabIndex = 5
+        Me.SuppressionPhysique.Text = "Supprimer physiquement"
+        Me.SuppressionPhysique.UseVisualStyleBackColor = True
         '
         'dgvEntreprises
         '
@@ -728,20 +738,21 @@ Partial Class GestionDesDemarches
         '
         Me.SelectionContactTableAdapter.ClearBeforeFill = True
         '
-        'SuppressionPhysique
+        'Fichiers
         '
-        Me.SuppressionPhysique.Location = New System.Drawing.Point(523, 97)
-        Me.SuppressionPhysique.Name = "SuppressionPhysique"
-        Me.SuppressionPhysique.Size = New System.Drawing.Size(130, 23)
-        Me.SuppressionPhysique.TabIndex = 5
-        Me.SuppressionPhysique.Text = "Supprimer physiquement"
-        Me.SuppressionPhysique.UseVisualStyleBackColor = True
+        Me.Fichiers.Location = New System.Drawing.Point(500, 639)
+        Me.Fichiers.Name = "Fichiers"
+        Me.Fichiers.Size = New System.Drawing.Size(106, 23)
+        Me.Fichiers.TabIndex = 6
+        Me.Fichiers.Text = "Ajouter/voir CV"
+        Me.Fichiers.UseVisualStyleBackColor = True
         '
         'GestionDesDemarches
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(699, 668)
+        Me.Controls.Add(Me.Fichiers)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBoxDemarches)
@@ -838,5 +849,6 @@ Partial Class GestionDesDemarches
     Friend WithEvents SelectionContactBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SelectionContactTableAdapter As SSDS.SSDSDataSetTableAdapters.SelectionContactTableAdapter
     Friend WithEvents SuppressionPhysique As System.Windows.Forms.Button
+    Friend WithEvents Fichiers As System.Windows.Forms.Button
 
 End Class
