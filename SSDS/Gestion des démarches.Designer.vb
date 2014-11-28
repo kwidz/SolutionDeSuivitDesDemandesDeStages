@@ -26,11 +26,6 @@ Partial Class GestionDesDemarches
         Me.GroupBoxEntreprises = New System.Windows.Forms.GroupBox()
         Me.SuppressionPhysique = New System.Windows.Forms.Button()
         Me.dgvEntreprises = New System.Windows.Forms.DataGridView()
-        Me.NoENTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NomENTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VilleENTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.StatutDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateCreationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SelectionEntrepriseBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SSDSDataSet = New SSDS.SSDSDataSet()
         Me.BoutonSupprimer = New System.Windows.Forms.Button()
@@ -65,11 +60,6 @@ Partial Class GestionDesDemarches
         Me.ModifierDemarche = New System.Windows.Forms.Button()
         Me.AjouterDemarche = New System.Windows.Forms.Button()
         Me.dgvDemarches = New System.Windows.Forms.DataGridView()
-        Me.NoDEMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateDEMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NomTYPDEMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NomCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NoteDEMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SelectionDemarchesByIdBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.DateCreationDem = New System.Windows.Forms.Label()
@@ -94,6 +84,16 @@ Partial Class GestionDesDemarches
         Me.SelectionTypeDEMTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionTypeDEMTableAdapter()
         Me.SelectionContactTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionContactTableAdapter()
         Me.Fichiers = New System.Windows.Forms.Button()
+        Me.NoENTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NomENTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VilleENTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StatutDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DateCreationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NoDEMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DateDEMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NomTYPDEMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NomCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NoteDEMDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBoxEntreprises.SuspendLayout()
         CType(Me.dgvEntreprises, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SelectionEntrepriseBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -151,56 +151,6 @@ Partial Class GestionDesDemarches
         Me.dgvEntreprises.ShowCellErrors = False
         Me.dgvEntreprises.Size = New System.Drawing.Size(499, 95)
         Me.dgvEntreprises.TabIndex = 4
-        '
-        'NoENTDataGridViewTextBoxColumn
-        '
-        Me.NoENTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.NoENTDataGridViewTextBoxColumn.DataPropertyName = "noENT"
-        Me.NoENTDataGridViewTextBoxColumn.HeaderText = "noENT"
-        Me.NoENTDataGridViewTextBoxColumn.Name = "NoENTDataGridViewTextBoxColumn"
-        Me.NoENTDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NoENTDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.NoENTDataGridViewTextBoxColumn.Visible = False
-        '
-        'NomENTDataGridViewTextBoxColumn
-        '
-        Me.NomENTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.NomENTDataGridViewTextBoxColumn.DataPropertyName = "nomENT"
-        Me.NomENTDataGridViewTextBoxColumn.HeaderText = "Nom"
-        Me.NomENTDataGridViewTextBoxColumn.Name = "NomENTDataGridViewTextBoxColumn"
-        Me.NomENTDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NomENTDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.NomENTDataGridViewTextBoxColumn.Width = 54
-        '
-        'VilleENTDataGridViewTextBoxColumn
-        '
-        Me.VilleENTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.VilleENTDataGridViewTextBoxColumn.DataPropertyName = "villeENT"
-        Me.VilleENTDataGridViewTextBoxColumn.HeaderText = "Ville"
-        Me.VilleENTDataGridViewTextBoxColumn.Name = "VilleENTDataGridViewTextBoxColumn"
-        Me.VilleENTDataGridViewTextBoxColumn.ReadOnly = True
-        Me.VilleENTDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.VilleENTDataGridViewTextBoxColumn.Width = 51
-        '
-        'StatutDataGridViewTextBoxColumn
-        '
-        Me.StatutDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.StatutDataGridViewTextBoxColumn.DataPropertyName = "Statut"
-        Me.StatutDataGridViewTextBoxColumn.HeaderText = "Statut"
-        Me.StatutDataGridViewTextBoxColumn.Name = "StatutDataGridViewTextBoxColumn"
-        Me.StatutDataGridViewTextBoxColumn.ReadOnly = True
-        Me.StatutDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.StatutDataGridViewTextBoxColumn.Width = 60
-        '
-        'DateCreationDataGridViewTextBoxColumn
-        '
-        Me.DateCreationDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DateCreationDataGridViewTextBoxColumn.DataPropertyName = "dateCreation"
-        Me.DateCreationDataGridViewTextBoxColumn.HeaderText = "dateCreation"
-        Me.DateCreationDataGridViewTextBoxColumn.Name = "DateCreationDataGridViewTextBoxColumn"
-        Me.DateCreationDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DateCreationDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DateCreationDataGridViewTextBoxColumn.Width = 92
         '
         'SelectionEntrepriseBindingSource
         '
@@ -520,43 +470,6 @@ Partial Class GestionDesDemarches
         Me.dgvDemarches.Size = New System.Drawing.Size(535, 80)
         Me.dgvDemarches.TabIndex = 0
         '
-        'NoDEMDataGridViewTextBoxColumn
-        '
-        Me.NoDEMDataGridViewTextBoxColumn.DataPropertyName = "noDEM"
-        Me.NoDEMDataGridViewTextBoxColumn.HeaderText = "noDEM"
-        Me.NoDEMDataGridViewTextBoxColumn.Name = "NoDEMDataGridViewTextBoxColumn"
-        Me.NoDEMDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NoDEMDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.NoDEMDataGridViewTextBoxColumn.Visible = False
-        '
-        'DateDEMDataGridViewTextBoxColumn
-        '
-        Me.DateDEMDataGridViewTextBoxColumn.DataPropertyName = "dateDEM"
-        Me.DateDEMDataGridViewTextBoxColumn.HeaderText = "dateDEM"
-        Me.DateDEMDataGridViewTextBoxColumn.Name = "DateDEMDataGridViewTextBoxColumn"
-        Me.DateDEMDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NomTYPDEMDataGridViewTextBoxColumn
-        '
-        Me.NomTYPDEMDataGridViewTextBoxColumn.DataPropertyName = "nomTYPDEM"
-        Me.NomTYPDEMDataGridViewTextBoxColumn.HeaderText = "nomTYPDEM"
-        Me.NomTYPDEMDataGridViewTextBoxColumn.Name = "NomTYPDEMDataGridViewTextBoxColumn"
-        Me.NomTYPDEMDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NomCONDataGridViewTextBoxColumn
-        '
-        Me.NomCONDataGridViewTextBoxColumn.DataPropertyName = "nomCON"
-        Me.NomCONDataGridViewTextBoxColumn.HeaderText = "nomCON"
-        Me.NomCONDataGridViewTextBoxColumn.Name = "NomCONDataGridViewTextBoxColumn"
-        Me.NomCONDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NoteDEMDataGridViewTextBoxColumn
-        '
-        Me.NoteDEMDataGridViewTextBoxColumn.DataPropertyName = "noteDEM"
-        Me.NoteDEMDataGridViewTextBoxColumn.HeaderText = "noteDEM"
-        Me.NoteDEMDataGridViewTextBoxColumn.Name = "NoteDEMDataGridViewTextBoxColumn"
-        Me.NoteDEMDataGridViewTextBoxColumn.ReadOnly = True
-        '
         'SelectionDemarchesByIdBindingSource
         '
         Me.SelectionDemarchesByIdBindingSource.DataMember = "SelectionDemarchesById"
@@ -747,6 +660,99 @@ Partial Class GestionDesDemarches
         Me.Fichiers.Text = "Ajouter/voir CV"
         Me.Fichiers.UseVisualStyleBackColor = True
         '
+        'NoENTDataGridViewTextBoxColumn
+        '
+        Me.NoENTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.NoENTDataGridViewTextBoxColumn.DataPropertyName = "noENT"
+        Me.NoENTDataGridViewTextBoxColumn.HeaderText = "noENT"
+        Me.NoENTDataGridViewTextBoxColumn.Name = "NoENTDataGridViewTextBoxColumn"
+        Me.NoENTDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NoENTDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.NoENTDataGridViewTextBoxColumn.Visible = False
+        '
+        'NomENTDataGridViewTextBoxColumn
+        '
+        Me.NomENTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.NomENTDataGridViewTextBoxColumn.DataPropertyName = "nomENT"
+        Me.NomENTDataGridViewTextBoxColumn.HeaderText = "Nom"
+        Me.NomENTDataGridViewTextBoxColumn.Name = "NomENTDataGridViewTextBoxColumn"
+        Me.NomENTDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NomENTDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'VilleENTDataGridViewTextBoxColumn
+        '
+        Me.VilleENTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.VilleENTDataGridViewTextBoxColumn.DataPropertyName = "villeENT"
+        Me.VilleENTDataGridViewTextBoxColumn.HeaderText = "Ville"
+        Me.VilleENTDataGridViewTextBoxColumn.Name = "VilleENTDataGridViewTextBoxColumn"
+        Me.VilleENTDataGridViewTextBoxColumn.ReadOnly = True
+        Me.VilleENTDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.VilleENTDataGridViewTextBoxColumn.Width = 51
+        '
+        'StatutDataGridViewTextBoxColumn
+        '
+        Me.StatutDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.StatutDataGridViewTextBoxColumn.DataPropertyName = "Statut"
+        Me.StatutDataGridViewTextBoxColumn.HeaderText = "Statut"
+        Me.StatutDataGridViewTextBoxColumn.Name = "StatutDataGridViewTextBoxColumn"
+        Me.StatutDataGridViewTextBoxColumn.ReadOnly = True
+        Me.StatutDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.StatutDataGridViewTextBoxColumn.Width = 60
+        '
+        'DateCreationDataGridViewTextBoxColumn
+        '
+        Me.DateCreationDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DateCreationDataGridViewTextBoxColumn.DataPropertyName = "dateCreation"
+        Me.DateCreationDataGridViewTextBoxColumn.HeaderText = "date de Creation"
+        Me.DateCreationDataGridViewTextBoxColumn.Name = "DateCreationDataGridViewTextBoxColumn"
+        Me.DateCreationDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DateCreationDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DateCreationDataGridViewTextBoxColumn.Width = 101
+        '
+        'NoDEMDataGridViewTextBoxColumn
+        '
+        Me.NoDEMDataGridViewTextBoxColumn.DataPropertyName = "noDEM"
+        Me.NoDEMDataGridViewTextBoxColumn.HeaderText = "noDEM"
+        Me.NoDEMDataGridViewTextBoxColumn.Name = "NoDEMDataGridViewTextBoxColumn"
+        Me.NoDEMDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NoDEMDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.NoDEMDataGridViewTextBoxColumn.Visible = False
+        '
+        'DateDEMDataGridViewTextBoxColumn
+        '
+        Me.DateDEMDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DateDEMDataGridViewTextBoxColumn.DataPropertyName = "dateDEM"
+        Me.DateDEMDataGridViewTextBoxColumn.HeaderText = "date"
+        Me.DateDEMDataGridViewTextBoxColumn.Name = "DateDEMDataGridViewTextBoxColumn"
+        Me.DateDEMDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DateDEMDataGridViewTextBoxColumn.Width = 53
+        '
+        'NomTYPDEMDataGridViewTextBoxColumn
+        '
+        Me.NomTYPDEMDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.NomTYPDEMDataGridViewTextBoxColumn.DataPropertyName = "nomTYPDEM"
+        Me.NomTYPDEMDataGridViewTextBoxColumn.HeaderText = "Type"
+        Me.NomTYPDEMDataGridViewTextBoxColumn.Name = "NomTYPDEMDataGridViewTextBoxColumn"
+        Me.NomTYPDEMDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NomTYPDEMDataGridViewTextBoxColumn.Width = 56
+        '
+        'NomCONDataGridViewTextBoxColumn
+        '
+        Me.NomCONDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.NomCONDataGridViewTextBoxColumn.DataPropertyName = "nomCON"
+        Me.NomCONDataGridViewTextBoxColumn.HeaderText = "nom du contact"
+        Me.NomCONDataGridViewTextBoxColumn.Name = "NomCONDataGridViewTextBoxColumn"
+        Me.NomCONDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NomCONDataGridViewTextBoxColumn.Width = 97
+        '
+        'NoteDEMDataGridViewTextBoxColumn
+        '
+        Me.NoteDEMDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.NoteDEMDataGridViewTextBoxColumn.DataPropertyName = "noteDEM"
+        Me.NoteDEMDataGridViewTextBoxColumn.HeaderText = "note"
+        Me.NoteDEMDataGridViewTextBoxColumn.Name = "NoteDEMDataGridViewTextBoxColumn"
+        Me.NoteDEMDataGridViewTextBoxColumn.ReadOnly = True
+        '
         'GestionDesDemarches
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -829,16 +835,6 @@ Partial Class GestionDesDemarches
     Friend WithEvents SSDSDataSet As SSDS.SSDSDataSet
     Friend WithEvents SelectionEntrepriseBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SelectionEntrepriseTableAdapter As SSDS.SSDSDataSetTableAdapters.SelectionEntrepriseTableAdapter
-    Friend WithEvents NoENTDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NomENTDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents VilleENTDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents StatutDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DateCreationDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NoDEMDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DateDEMDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NomTYPDEMDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NomCONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NoteDEMDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents SelectionDemarchesByIdBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SelectionDemarchesByIdTableAdapter As SSDS.SSDSDataSetTableAdapters.SelectionDemarchesByIdTableAdapter
     Friend WithEvents SelectionStatutENTBindingSource As System.Windows.Forms.BindingSource
@@ -850,5 +846,15 @@ Partial Class GestionDesDemarches
     Friend WithEvents SelectionContactTableAdapter As SSDS.SSDSDataSetTableAdapters.SelectionContactTableAdapter
     Friend WithEvents SuppressionPhysique As System.Windows.Forms.Button
     Friend WithEvents Fichiers As System.Windows.Forms.Button
+    Friend WithEvents NoENTDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NomENTDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents VilleENTDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents StatutDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DateCreationDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NoDEMDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DateDEMDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NomTYPDEMDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NomCONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NoteDEMDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
 
 End Class

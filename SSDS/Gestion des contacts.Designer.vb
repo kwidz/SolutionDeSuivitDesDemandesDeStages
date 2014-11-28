@@ -28,6 +28,8 @@ Partial Class Gestion_des_contacts
         Me.SupprimerContact = New System.Windows.Forms.Button()
         Me.AjouterContact = New System.Windows.Forms.Button()
         Me.dgvContacts = New System.Windows.Forms.DataGridView()
+        Me.SelectionContactPourGestionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SSDSDataSet = New SSDS.SSDSDataSet()
         Me.dateModification = New System.Windows.Forms.GroupBox()
         Me.AnnulerContact = New System.Windows.Forms.Button()
         Me.SauvegarderContact = New System.Windows.Forms.Button()
@@ -46,19 +48,17 @@ Partial Class Gestion_des_contacts
         Me.TextBoxNom = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BoutonFermer = New System.Windows.Forms.Button()
+        Me.SelectionContactPourGestionTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionContactPourGestionTableAdapter()
         Me.NoCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NomCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrenomCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TitreCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TelephoneCONDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SelectionContactPourGestionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SSDSDataSet = New SSDS.SSDSDataSet()
-        Me.SelectionContactPourGestionTableAdapter = New SSDS.SSDSDataSetTableAdapters.SelectionContactPourGestionTableAdapter()
         Me.GbContacts.SuspendLayout()
         CType(Me.dgvContacts, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.dateModification.SuspendLayout()
         CType(Me.SelectionContactPourGestionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dateModification.SuspendLayout()
         Me.SuspendLayout()
         '
         'GbContacts
@@ -115,6 +115,16 @@ Partial Class Gestion_des_contacts
         Me.dgvContacts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvContacts.Size = New System.Drawing.Size(524, 128)
         Me.dgvContacts.TabIndex = 0
+        '
+        'SelectionContactPourGestionBindingSource
+        '
+        Me.SelectionContactPourGestionBindingSource.DataMember = "SelectionContactPourGestion"
+        Me.SelectionContactPourGestionBindingSource.DataSource = Me.SSDSDataSet
+        '
+        'SSDSDataSet
+        '
+        Me.SSDSDataSet.DataSetName = "SSDSDataSet"
+        Me.SSDSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'dateModification
         '
@@ -283,6 +293,10 @@ Partial Class Gestion_des_contacts
         Me.BoutonFermer.Text = "Fermer"
         Me.BoutonFermer.UseVisualStyleBackColor = True
         '
+        'SelectionContactPourGestionTableAdapter
+        '
+        Me.SelectionContactPourGestionTableAdapter.ClearBeforeFill = True
+        '
         'NoCONDataGridViewTextBoxColumn
         '
         Me.NoCONDataGridViewTextBoxColumn.DataPropertyName = "noCON"
@@ -293,45 +307,38 @@ Partial Class Gestion_des_contacts
         '
         'NomCONDataGridViewTextBoxColumn
         '
+        Me.NomCONDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.NomCONDataGridViewTextBoxColumn.DataPropertyName = "nomCON"
-        Me.NomCONDataGridViewTextBoxColumn.HeaderText = "nomCON"
+        Me.NomCONDataGridViewTextBoxColumn.HeaderText = "nom"
         Me.NomCONDataGridViewTextBoxColumn.Name = "NomCONDataGridViewTextBoxColumn"
         Me.NomCONDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PrenomCONDataGridViewTextBoxColumn
         '
+        Me.PrenomCONDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.PrenomCONDataGridViewTextBoxColumn.DataPropertyName = "prenomCON"
-        Me.PrenomCONDataGridViewTextBoxColumn.HeaderText = "prenomCON"
+        Me.PrenomCONDataGridViewTextBoxColumn.HeaderText = "prénom"
         Me.PrenomCONDataGridViewTextBoxColumn.Name = "PrenomCONDataGridViewTextBoxColumn"
         Me.PrenomCONDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PrenomCONDataGridViewTextBoxColumn.Width = 67
         '
         'TitreCONDataGridViewTextBoxColumn
         '
+        Me.TitreCONDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.TitreCONDataGridViewTextBoxColumn.DataPropertyName = "titreCON"
-        Me.TitreCONDataGridViewTextBoxColumn.HeaderText = "titreCON"
+        Me.TitreCONDataGridViewTextBoxColumn.HeaderText = "titre"
         Me.TitreCONDataGridViewTextBoxColumn.Name = "TitreCONDataGridViewTextBoxColumn"
         Me.TitreCONDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TitreCONDataGridViewTextBoxColumn.Width = 49
         '
         'TelephoneCONDataGridViewTextBoxColumn
         '
+        Me.TelephoneCONDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.TelephoneCONDataGridViewTextBoxColumn.DataPropertyName = "telephoneCON"
-        Me.TelephoneCONDataGridViewTextBoxColumn.HeaderText = "telephoneCON"
+        Me.TelephoneCONDataGridViewTextBoxColumn.HeaderText = "téléphone"
         Me.TelephoneCONDataGridViewTextBoxColumn.Name = "TelephoneCONDataGridViewTextBoxColumn"
         Me.TelephoneCONDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SelectionContactPourGestionBindingSource
-        '
-        Me.SelectionContactPourGestionBindingSource.DataMember = "SelectionContactPourGestion"
-        Me.SelectionContactPourGestionBindingSource.DataSource = Me.SSDSDataSet
-        '
-        'SSDSDataSet
-        '
-        Me.SSDSDataSet.DataSetName = "SSDSDataSet"
-        Me.SSDSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'SelectionContactPourGestionTableAdapter
-        '
-        Me.SelectionContactPourGestionTableAdapter.ClearBeforeFill = True
+        Me.TelephoneCONDataGridViewTextBoxColumn.Width = 79
         '
         'Gestion_des_contacts
         '
@@ -345,10 +352,10 @@ Partial Class Gestion_des_contacts
         Me.Text = "Gestion_des_contacts"
         Me.GbContacts.ResumeLayout(False)
         CType(Me.dgvContacts, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.dateModification.ResumeLayout(False)
-        Me.dateModification.PerformLayout()
         CType(Me.SelectionContactPourGestionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.dateModification.ResumeLayout(False)
+        Me.dateModification.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -376,11 +383,11 @@ Partial Class Gestion_des_contacts
     Friend WithEvents SSDSDataSet As SSDS.SSDSDataSet
     Friend WithEvents SelectionContactPourGestionBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SelectionContactPourGestionTableAdapter As SSDS.SSDSDataSetTableAdapters.SelectionContactPourGestionTableAdapter
+    Friend WithEvents AnnulerContact As System.Windows.Forms.Button
+    Friend WithEvents SauvegarderContact As System.Windows.Forms.Button
     Friend WithEvents NoCONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NomCONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PrenomCONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TitreCONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TelephoneCONDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents AnnulerContact As System.Windows.Forms.Button
-    Friend WithEvents SauvegarderContact As System.Windows.Forms.Button
 End Class

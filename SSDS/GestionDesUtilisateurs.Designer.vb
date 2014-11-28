@@ -59,16 +59,16 @@ Partial Class GestionDesUtilisateurs
         Me.btnModifier = New System.Windows.Forms.Button()
         Me.btnSupprimer = New System.Windows.Forms.Button()
         Me.dgvEtudiants = New System.Windows.Forms.DataGridView()
-        Me.NoUTILDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NomPrenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NomTYPUTILlDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstActifDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DateCreationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ListerUserByAllNPAWithTypeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ListerUserByAllNPAWithTypeTableAdapter = New SSDS.SSDSDataSetTableAdapters.ListerUserByAllNPAWithTypeTableAdapter()
         Me.SelectionRefTypUtilWithTousTableAdapter = New SSDS.SSDSDataSetTableAdapters.selectionRefTypUtilWithTousTableAdapter()
         Me.REF_TypeUtilisateurTableAdapter = New SSDS.SSDSDataSetTableAdapters.REF_TypeUtilisateurTableAdapter()
+        Me.NoUTILDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NomPrenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NomTYPUTILlDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstActifDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DateCreationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.SelectionRefTypUtilWithTousBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SSDSDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -418,42 +418,6 @@ Partial Class GestionDesUtilisateurs
         Me.dgvEtudiants.Size = New System.Drawing.Size(487, 143)
         Me.dgvEtudiants.TabIndex = 0
         '
-        'NoUTILDataGridViewTextBoxColumn
-        '
-        Me.NoUTILDataGridViewTextBoxColumn.DataPropertyName = "noUTIL"
-        Me.NoUTILDataGridViewTextBoxColumn.HeaderText = "noUTIL"
-        Me.NoUTILDataGridViewTextBoxColumn.Name = "NoUTILDataGridViewTextBoxColumn"
-        Me.NoUTILDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NoUTILDataGridViewTextBoxColumn.Visible = False
-        '
-        'NomPrenomDataGridViewTextBoxColumn
-        '
-        Me.NomPrenomDataGridViewTextBoxColumn.DataPropertyName = "nomPrenom"
-        Me.NomPrenomDataGridViewTextBoxColumn.HeaderText = "nomPrenom"
-        Me.NomPrenomDataGridViewTextBoxColumn.Name = "NomPrenomDataGridViewTextBoxColumn"
-        Me.NomPrenomDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NomTYPUTILlDataGridViewTextBoxColumn
-        '
-        Me.NomTYPUTILlDataGridViewTextBoxColumn.DataPropertyName = "nomTYPUTILl"
-        Me.NomTYPUTILlDataGridViewTextBoxColumn.HeaderText = "nomTYPUTILl"
-        Me.NomTYPUTILlDataGridViewTextBoxColumn.Name = "NomTYPUTILlDataGridViewTextBoxColumn"
-        Me.NomTYPUTILlDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EstActifDataGridViewCheckBoxColumn
-        '
-        Me.EstActifDataGridViewCheckBoxColumn.DataPropertyName = "estActif"
-        Me.EstActifDataGridViewCheckBoxColumn.HeaderText = "estActif"
-        Me.EstActifDataGridViewCheckBoxColumn.Name = "EstActifDataGridViewCheckBoxColumn"
-        Me.EstActifDataGridViewCheckBoxColumn.ReadOnly = True
-        '
-        'DateCreationDataGridViewTextBoxColumn
-        '
-        Me.DateCreationDataGridViewTextBoxColumn.DataPropertyName = "dateCreation"
-        Me.DateCreationDataGridViewTextBoxColumn.HeaderText = "dateCreation"
-        Me.DateCreationDataGridViewTextBoxColumn.Name = "DateCreationDataGridViewTextBoxColumn"
-        Me.DateCreationDataGridViewTextBoxColumn.ReadOnly = True
-        '
         'ListerUserByAllNPAWithTypeBindingSource
         '
         Me.ListerUserByAllNPAWithTypeBindingSource.DataMember = "ListerUserByAllNPAWithType"
@@ -479,6 +443,48 @@ Partial Class GestionDesUtilisateurs
         'REF_TypeUtilisateurTableAdapter
         '
         Me.REF_TypeUtilisateurTableAdapter.ClearBeforeFill = True
+        '
+        'NoUTILDataGridViewTextBoxColumn
+        '
+        Me.NoUTILDataGridViewTextBoxColumn.DataPropertyName = "noUTIL"
+        Me.NoUTILDataGridViewTextBoxColumn.HeaderText = "noUTIL"
+        Me.NoUTILDataGridViewTextBoxColumn.Name = "NoUTILDataGridViewTextBoxColumn"
+        Me.NoUTILDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NoUTILDataGridViewTextBoxColumn.Visible = False
+        '
+        'NomPrenomDataGridViewTextBoxColumn
+        '
+        Me.NomPrenomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.NomPrenomDataGridViewTextBoxColumn.DataPropertyName = "nomPrenom"
+        Me.NomPrenomDataGridViewTextBoxColumn.HeaderText = "Nom et prénom"
+        Me.NomPrenomDataGridViewTextBoxColumn.Name = "NomPrenomDataGridViewTextBoxColumn"
+        Me.NomPrenomDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NomTYPUTILlDataGridViewTextBoxColumn
+        '
+        Me.NomTYPUTILlDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.NomTYPUTILlDataGridViewTextBoxColumn.DataPropertyName = "nomTYPUTILl"
+        Me.NomTYPUTILlDataGridViewTextBoxColumn.HeaderText = "Type d'utilisateur"
+        Me.NomTYPUTILlDataGridViewTextBoxColumn.Name = "NomTYPUTILlDataGridViewTextBoxColumn"
+        Me.NomTYPUTILlDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NomTYPUTILlDataGridViewTextBoxColumn.Width = 102
+        '
+        'EstActifDataGridViewCheckBoxColumn
+        '
+        Me.EstActifDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.EstActifDataGridViewCheckBoxColumn.DataPropertyName = "estActif"
+        Me.EstActifDataGridViewCheckBoxColumn.HeaderText = "est actif ?"
+        Me.EstActifDataGridViewCheckBoxColumn.Name = "EstActifDataGridViewCheckBoxColumn"
+        Me.EstActifDataGridViewCheckBoxColumn.ReadOnly = True
+        Me.EstActifDataGridViewCheckBoxColumn.Width = 48
+        '
+        'DateCreationDataGridViewTextBoxColumn
+        '
+        Me.DateCreationDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DateCreationDataGridViewTextBoxColumn.DataPropertyName = "dateCreation"
+        Me.DateCreationDataGridViewTextBoxColumn.HeaderText = "date de création"
+        Me.DateCreationDataGridViewTextBoxColumn.Name = "DateCreationDataGridViewTextBoxColumn"
+        Me.DateCreationDataGridViewTextBoxColumn.ReadOnly = True
         '
         'GestionDesUtilisateurs
         '
@@ -539,11 +545,6 @@ Partial Class GestionDesUtilisateurs
     Friend WithEvents TextBoxDetailPrenom As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxDetailCouriel As System.Windows.Forms.TextBox
     Friend WithEvents SSDSDataSet As SSDS.SSDSDataSet
-    Friend WithEvents NoUTILDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NomPrenomDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NomTYPUTILlDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents EstActifDataGridViewCheckBoxColumn As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents DateCreationDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ListerUserByAllNPAWithTypeBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ListerUserByAllNPAWithTypeTableAdapter As SSDS.SSDSDataSetTableAdapters.ListerUserByAllNPAWithTypeTableAdapter
     Friend WithEvents REFTypeUtilisateurBindingSource1 As System.Windows.Forms.BindingSource
@@ -553,4 +554,9 @@ Partial Class GestionDesUtilisateurs
     Friend WithEvents SSDSDataSet2 As SSDS.SSDSDataSet
     Friend WithEvents REFTypeUtilisateurBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents REF_TypeUtilisateurTableAdapter As SSDS.SSDSDataSetTableAdapters.REF_TypeUtilisateurTableAdapter
+    Friend WithEvents NoUTILDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NomPrenomDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents NomTYPUTILlDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents EstActifDataGridViewCheckBoxColumn As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents DateCreationDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
