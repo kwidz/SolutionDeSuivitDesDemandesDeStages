@@ -7,7 +7,7 @@ Public Class MDIParent1
     Private prof As Boolean = False
     Private coordinateur As Boolean = False
     Private nonEtudiant = False
-    Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewWindowToolStripMenuItem.Click
+    Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs)
         ' Créez une nouvelle instance du formulaire enfant.
         Dim ChildForm As New System.Windows.Forms.Form
         ' Configurez-la en tant qu'enfant de ce formulaire MDI avant de l'afficher.
@@ -19,19 +19,19 @@ Public Class MDIParent1
         ChildForm.Show()
     End Sub
 
-    Private Sub CascadeToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CascadeToolStripMenuItem.Click
+    Private Sub CascadeToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         Me.LayoutMdi(MdiLayout.Cascade)
     End Sub
 
-    Private Sub TileVerticalToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles TileVerticalToolStripMenuItem.Click
+    Private Sub TileVerticalToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         Me.LayoutMdi(MdiLayout.TileVertical)
     End Sub
 
-    Private Sub TileHorizontalToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles TileHorizontalToolStripMenuItem.Click
+    Private Sub TileHorizontalToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         Me.LayoutMdi(MdiLayout.TileHorizontal)
     End Sub
 
-    Private Sub ArrangeIconsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ArrangeIconsToolStripMenuItem.Click
+    Private Sub ArrangeIconsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         Me.LayoutMdi(MdiLayout.ArrangeIcons)
     End Sub
 
@@ -138,6 +138,10 @@ Public Class MDIParent1
             GestionDesUtilisateursToolStripMenuItem.Visible = False
             ConsultationDesDémarchesToolStripMenuItem.Visible = False
         End If
+        If nonEtudiant = False Then
+            RapportsToolStripMenuItem.Visible = False
+        End If
+
     End Sub
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
@@ -164,5 +168,11 @@ Public Class MDIParent1
                 MsgBox("Les deux mots de passes ne sont pas identiques, veillez recommencer.")
             End If
         End If
+    End Sub
+
+    Private Sub ListeDesEntreprisesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListeDesEntreprisesToolStripMenuItem.Click
+        Dim ChildForm As New RaportNbDemarches
+        ChildForm.MdiParent = Me
+        ChildForm.Show()
     End Sub
 End Class

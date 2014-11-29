@@ -31,16 +31,14 @@ Partial Class MDIParent1
         Me.GestionDesDémarchesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultationDesDémarchesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestionDesUtilisateursToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChangerDeMotDePasseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RapportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListeDesEntreprisesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListeDesDémarchesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowsMenu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CascadeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TileVerticalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TileHorizontalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ArrangeIconsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ChangerDeMotDePasseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
@@ -50,7 +48,7 @@ Partial Class MDIParent1
         '
         'MenuStrip
         '
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.EditMenu, Me.ChangerDeMotDePasseToolStripMenuItem, Me.WindowsMenu, Me.HelpMenu})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.EditMenu, Me.ChangerDeMotDePasseToolStripMenuItem, Me.RapportsToolStripMenuItem, Me.WindowsMenu, Me.HelpMenu})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
@@ -97,48 +95,43 @@ Partial Class MDIParent1
         Me.GestionDesUtilisateursToolStripMenuItem.Size = New System.Drawing.Size(227, 22)
         Me.GestionDesUtilisateursToolStripMenuItem.Text = "Gestion des Utilisateurs"
         '
+        'ChangerDeMotDePasseToolStripMenuItem
+        '
+        Me.ChangerDeMotDePasseToolStripMenuItem.Name = "ChangerDeMotDePasseToolStripMenuItem"
+        Me.ChangerDeMotDePasseToolStripMenuItem.Size = New System.Drawing.Size(153, 20)
+        Me.ChangerDeMotDePasseToolStripMenuItem.Text = "Changer de mot de passe"
+        '
+        'RapportsToolStripMenuItem
+        '
+        Me.RapportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListeDesEntreprisesToolStripMenuItem, Me.ListeDesDémarchesToolStripMenuItem})
+        Me.RapportsToolStripMenuItem.Name = "RapportsToolStripMenuItem"
+        Me.RapportsToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
+        Me.RapportsToolStripMenuItem.Text = "Rapports"
+        '
+        'ListeDesEntreprisesToolStripMenuItem
+        '
+        Me.ListeDesEntreprisesToolStripMenuItem.Name = "ListeDesEntreprisesToolStripMenuItem"
+        Me.ListeDesEntreprisesToolStripMenuItem.Size = New System.Drawing.Size(262, 22)
+        Me.ListeDesEntreprisesToolStripMenuItem.Text = "Nombre de contacts par entreprises"
+        '
+        'ListeDesDémarchesToolStripMenuItem
+        '
+        Me.ListeDesDémarchesToolStripMenuItem.Name = "ListeDesDémarchesToolStripMenuItem"
+        Me.ListeDesDémarchesToolStripMenuItem.Size = New System.Drawing.Size(262, 22)
+        Me.ListeDesDémarchesToolStripMenuItem.Text = "Liste des contacts par entreprises"
+        '
         'WindowsMenu
         '
-        Me.WindowsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewWindowToolStripMenuItem, Me.CascadeToolStripMenuItem, Me.TileVerticalToolStripMenuItem, Me.TileHorizontalToolStripMenuItem, Me.CloseAllToolStripMenuItem, Me.ArrangeIconsToolStripMenuItem})
+        Me.WindowsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseAllToolStripMenuItem})
         Me.WindowsMenu.Name = "WindowsMenu"
         Me.WindowsMenu.Size = New System.Drawing.Size(63, 20)
         Me.WindowsMenu.Text = "F&enêtres"
         '
-        'NewWindowToolStripMenuItem
-        '
-        Me.NewWindowToolStripMenuItem.Name = "NewWindowToolStripMenuItem"
-        Me.NewWindowToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
-        Me.NewWindowToolStripMenuItem.Text = "&Nouvelle fenêtre"
-        '
-        'CascadeToolStripMenuItem
-        '
-        Me.CascadeToolStripMenuItem.Name = "CascadeToolStripMenuItem"
-        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
-        Me.CascadeToolStripMenuItem.Text = "&Cascade"
-        '
-        'TileVerticalToolStripMenuItem
-        '
-        Me.TileVerticalToolStripMenuItem.Name = "TileVerticalToolStripMenuItem"
-        Me.TileVerticalToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
-        Me.TileVerticalToolStripMenuItem.Text = "Mosaïque &verticale"
-        '
-        'TileHorizontalToolStripMenuItem
-        '
-        Me.TileHorizontalToolStripMenuItem.Name = "TileHorizontalToolStripMenuItem"
-        Me.TileHorizontalToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
-        Me.TileHorizontalToolStripMenuItem.Text = "Mosaïque &horizontale"
-        '
         'CloseAllToolStripMenuItem
         '
         Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.CloseAllToolStripMenuItem.Text = "&Fermer tout"
-        '
-        'ArrangeIconsToolStripMenuItem
-        '
-        Me.ArrangeIconsToolStripMenuItem.Name = "ArrangeIconsToolStripMenuItem"
-        Me.ArrangeIconsToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
-        Me.ArrangeIconsToolStripMenuItem.Text = "&Réorganiser les icônes"
         '
         'HelpMenu
         '
@@ -152,12 +145,6 @@ Partial Class MDIParent1
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.AboutToolStripMenuItem.Text = "À pr&opos de..."
-        '
-        'ChangerDeMotDePasseToolStripMenuItem
-        '
-        Me.ChangerDeMotDePasseToolStripMenuItem.Name = "ChangerDeMotDePasseToolStripMenuItem"
-        Me.ChangerDeMotDePasseToolStripMenuItem.Size = New System.Drawing.Size(153, 20)
-        Me.ChangerDeMotDePasseToolStripMenuItem.Text = "Changer de mot de passe"
         '
         'StatusStrip
         '
@@ -196,13 +183,8 @@ Partial Class MDIParent1
     End Sub
     Friend WithEvents HelpMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ArrangeIconsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CloseAllToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents NewWindowToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents WindowsMenu As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents CascadeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TileVerticalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TileHorizontalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolTip As System.Windows.Forms.ToolTip
     Friend WithEvents ToolStripStatusLabel As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents StatusStrip As System.Windows.Forms.StatusStrip
@@ -214,5 +196,8 @@ Partial Class MDIParent1
     Friend WithEvents GestionDesUtilisateursToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultationDesDémarchesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ChangerDeMotDePasseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RapportsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ListeDesEntreprisesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ListeDesDémarchesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
