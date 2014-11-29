@@ -175,4 +175,10 @@ Public Class MDIParent1
         ChildForm.MdiParent = Me
         ChildForm.Show()
     End Sub
+
+    Private Sub ListeDesDémarchesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListeDesDémarchesToolStripMenuItem.Click
+        Dim ChildForm As New RapportListeContact
+        ChildForm.MdiParent = Me
+        ChildForm.Show()
+    End Sub
 End Class
