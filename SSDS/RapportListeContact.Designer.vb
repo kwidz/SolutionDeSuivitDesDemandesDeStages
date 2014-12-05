@@ -23,24 +23,35 @@ Partial Class RapportListeContact
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.rapportListeContactParEntrepriseBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SSDSDataSet = New SSDS.SSDSDataSet()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SelectionUsersWithTousBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SSDSDataSet = New SSDS.SSDSDataSet()
         Me.SelectionUsersWithTousTableAdapter = New SSDS.SSDSDataSetTableAdapters.selectionUsersWithTousTableAdapter()
-        Me.rapportListeContactParEntrepriseBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.rapportListeContactParEntrepriseTableAdapter = New SSDS.SSDSDataSetTableAdapters.rapportListeContactParEntrepriseTableAdapter()
-        CType(Me.SelectionUsersWithTousBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.rapportListeContactParEntrepriseBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SelectionUsersWithTousBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'rapportListeContactParEntrepriseBindingSource
+        '
+        Me.rapportListeContactParEntrepriseBindingSource.DataMember = "rapportListeContactParEntreprise"
+        Me.rapportListeContactParEntrepriseBindingSource.DataSource = Me.SSDSDataSet
+        '
+        'SSDSDataSet
+        '
+        Me.SSDSDataSet.DataSetName = "SSDSDataSet"
+        Me.SSDSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Button2
         '
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Location = New System.Drawing.Point(615, 429)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
@@ -50,9 +61,12 @@ Partial Class RapportListeContact
         '
         'ReportViewer1
         '
-        ReportDataSource1.Name = "DataSet1"
-        ReportDataSource1.Value = Me.rapportListeContactParEntrepriseBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        ReportDataSource2.Name = "DataSet1"
+        ReportDataSource2.Value = Me.rapportListeContactParEntrepriseBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "SSDS.ListeContacts.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(12, 46)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -94,19 +108,9 @@ Partial Class RapportListeContact
         Me.SelectionUsersWithTousBindingSource.DataMember = "selectionUsersWithTous"
         Me.SelectionUsersWithTousBindingSource.DataSource = Me.SSDSDataSet
         '
-        'SSDSDataSet
-        '
-        Me.SSDSDataSet.DataSetName = "SSDSDataSet"
-        Me.SSDSDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'SelectionUsersWithTousTableAdapter
         '
         Me.SelectionUsersWithTousTableAdapter.ClearBeforeFill = True
-        '
-        'rapportListeContactParEntrepriseBindingSource
-        '
-        Me.rapportListeContactParEntrepriseBindingSource.DataMember = "rapportListeContactParEntreprise"
-        Me.rapportListeContactParEntrepriseBindingSource.DataSource = Me.SSDSDataSet
         '
         'rapportListeContactParEntrepriseTableAdapter
         '
@@ -124,9 +128,9 @@ Partial Class RapportListeContact
         Me.Controls.Add(Me.ComboBox1)
         Me.Name = "RapportListeContact"
         Me.Text = "Rapport liste des contacts par entreprise"
-        CType(Me.SelectionUsersWithTousBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.rapportListeContactParEntrepriseBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SSDSDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SelectionUsersWithTousBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

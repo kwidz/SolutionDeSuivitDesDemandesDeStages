@@ -25,6 +25,10 @@ Partial Class Consultation_des_démarches
         Me.components = New System.ComponentModel.Container()
         Me.GBEtudiants = New System.Windows.Forms.GroupBox()
         Me.dgvEtudiants = New System.Windows.Forms.DataGridView()
+        Me.NoUTILDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NomPrenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstActifDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.DateCreationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ListerUserByAllNPABindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SSDSDataSet = New SSDS.SSDSDataSet()
         Me.Fermer = New System.Windows.Forms.Button()
@@ -38,10 +42,6 @@ Partial Class Consultation_des_démarches
         Me.Inactif = New System.Windows.Forms.RadioButton()
         Me.Tous = New System.Windows.Forms.RadioButton()
         Me.ListerUserByAllNPATableAdapter = New SSDS.SSDSDataSetTableAdapters.ListerUserByAllNPATableAdapter()
-        Me.NoUTILDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NomPrenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstActifDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DateCreationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GBEtudiants.SuspendLayout()
         CType(Me.dgvEtudiants, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ListerUserByAllNPABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,6 +63,9 @@ Partial Class Consultation_des_démarches
         '
         Me.dgvEtudiants.AllowUserToAddRows = False
         Me.dgvEtudiants.AllowUserToDeleteRows = False
+        Me.dgvEtudiants.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvEtudiants.AutoGenerateColumns = False
         Me.dgvEtudiants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvEtudiants.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NoUTILDataGridViewTextBoxColumn, Me.NomPrenomDataGridViewTextBoxColumn, Me.EstActifDataGridViewCheckBoxColumn, Me.DateCreationDataGridViewTextBoxColumn})
@@ -74,6 +77,39 @@ Partial Class Consultation_des_démarches
         Me.dgvEtudiants.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvEtudiants.Size = New System.Drawing.Size(490, 228)
         Me.dgvEtudiants.TabIndex = 8
+        '
+        'NoUTILDataGridViewTextBoxColumn
+        '
+        Me.NoUTILDataGridViewTextBoxColumn.DataPropertyName = "noUTIL"
+        Me.NoUTILDataGridViewTextBoxColumn.HeaderText = "noUTIL"
+        Me.NoUTILDataGridViewTextBoxColumn.Name = "NoUTILDataGridViewTextBoxColumn"
+        Me.NoUTILDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NoUTILDataGridViewTextBoxColumn.Visible = False
+        '
+        'NomPrenomDataGridViewTextBoxColumn
+        '
+        Me.NomPrenomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.NomPrenomDataGridViewTextBoxColumn.DataPropertyName = "nomPrenom"
+        Me.NomPrenomDataGridViewTextBoxColumn.HeaderText = "nom et prénom"
+        Me.NomPrenomDataGridViewTextBoxColumn.Name = "NomPrenomDataGridViewTextBoxColumn"
+        Me.NomPrenomDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'EstActifDataGridViewCheckBoxColumn
+        '
+        Me.EstActifDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.EstActifDataGridViewCheckBoxColumn.DataPropertyName = "estActif"
+        Me.EstActifDataGridViewCheckBoxColumn.HeaderText = "est actif ?"
+        Me.EstActifDataGridViewCheckBoxColumn.Name = "EstActifDataGridViewCheckBoxColumn"
+        Me.EstActifDataGridViewCheckBoxColumn.ReadOnly = True
+        Me.EstActifDataGridViewCheckBoxColumn.Width = 48
+        '
+        'DateCreationDataGridViewTextBoxColumn
+        '
+        Me.DateCreationDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.DateCreationDataGridViewTextBoxColumn.DataPropertyName = "dateCreation"
+        Me.DateCreationDataGridViewTextBoxColumn.HeaderText = "date de création"
+        Me.DateCreationDataGridViewTextBoxColumn.Name = "DateCreationDataGridViewTextBoxColumn"
+        Me.DateCreationDataGridViewTextBoxColumn.ReadOnly = True
         '
         'ListerUserByAllNPABindingSource
         '
@@ -187,39 +223,6 @@ Partial Class Consultation_des_démarches
         'ListerUserByAllNPATableAdapter
         '
         Me.ListerUserByAllNPATableAdapter.ClearBeforeFill = True
-        '
-        'NoUTILDataGridViewTextBoxColumn
-        '
-        Me.NoUTILDataGridViewTextBoxColumn.DataPropertyName = "noUTIL"
-        Me.NoUTILDataGridViewTextBoxColumn.HeaderText = "noUTIL"
-        Me.NoUTILDataGridViewTextBoxColumn.Name = "NoUTILDataGridViewTextBoxColumn"
-        Me.NoUTILDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NoUTILDataGridViewTextBoxColumn.Visible = False
-        '
-        'NomPrenomDataGridViewTextBoxColumn
-        '
-        Me.NomPrenomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.NomPrenomDataGridViewTextBoxColumn.DataPropertyName = "nomPrenom"
-        Me.NomPrenomDataGridViewTextBoxColumn.HeaderText = "nom et prénom"
-        Me.NomPrenomDataGridViewTextBoxColumn.Name = "NomPrenomDataGridViewTextBoxColumn"
-        Me.NomPrenomDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EstActifDataGridViewCheckBoxColumn
-        '
-        Me.EstActifDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.EstActifDataGridViewCheckBoxColumn.DataPropertyName = "estActif"
-        Me.EstActifDataGridViewCheckBoxColumn.HeaderText = "est actif ?"
-        Me.EstActifDataGridViewCheckBoxColumn.Name = "EstActifDataGridViewCheckBoxColumn"
-        Me.EstActifDataGridViewCheckBoxColumn.ReadOnly = True
-        Me.EstActifDataGridViewCheckBoxColumn.Width = 59
-        '
-        'DateCreationDataGridViewTextBoxColumn
-        '
-        Me.DateCreationDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.DateCreationDataGridViewTextBoxColumn.DataPropertyName = "dateCreation"
-        Me.DateCreationDataGridViewTextBoxColumn.HeaderText = "date de création"
-        Me.DateCreationDataGridViewTextBoxColumn.Name = "DateCreationDataGridViewTextBoxColumn"
-        Me.DateCreationDataGridViewTextBoxColumn.ReadOnly = True
         '
         'Consultation_des_démarches
         '

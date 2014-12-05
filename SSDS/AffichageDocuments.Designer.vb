@@ -27,16 +27,20 @@ Partial Class AffichageDocuments
         Me.AjouterFichier = New System.Windows.Forms.Button()
         Me.SupprimerLeFichier = New System.Windows.Forms.Button()
         Me.SelectionerFichier = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.AxAcroPDF1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'AxAcroPDF1
         '
+        Me.AxAcroPDF1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.AxAcroPDF1.Enabled = True
         Me.AxAcroPDF1.Location = New System.Drawing.Point(12, 100)
         Me.AxAcroPDF1.Name = "AxAcroPDF1"
         Me.AxAcroPDF1.OcxState = CType(resources.GetObject("AxAcroPDF1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxAcroPDF1.Size = New System.Drawing.Size(599, 252)
+        Me.AxAcroPDF1.Size = New System.Drawing.Size(599, 313)
         Me.AxAcroPDF1.TabIndex = 0
         '
         'AjouterFichier
@@ -66,11 +70,22 @@ Partial Class AffichageDocuments
         Me.SelectionerFichier.Text = "Afficher le fichier"
         Me.SelectionerFichier.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.Location = New System.Drawing.Point(536, 420)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Fermer"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'AffichageDocuments
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(623, 364)
+        Me.ClientSize = New System.Drawing.Size(623, 455)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.SelectionerFichier)
         Me.Controls.Add(Me.SupprimerLeFichier)
         Me.Controls.Add(Me.AjouterFichier)
@@ -85,4 +100,5 @@ Partial Class AffichageDocuments
     Friend WithEvents AjouterFichier As System.Windows.Forms.Button
     Friend WithEvents SupprimerLeFichier As System.Windows.Forms.Button
     Friend WithEvents SelectionerFichier As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

@@ -23,7 +23,7 @@ Partial Class RaportNbDemarches
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.rapportNombreContactParEntrepriseBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SSDSDataSet = New SSDS.SSDSDataSet()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -90,9 +90,12 @@ Partial Class RaportNbDemarches
         '
         'ReportViewer1
         '
-        ReportDataSource1.Name = "DataSet1"
-        ReportDataSource1.Value = Me.rapportNombreContactParEntrepriseBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        ReportDataSource2.Name = "DataSet1"
+        ReportDataSource2.Value = Me.rapportNombreContactParEntrepriseBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "SSDS.NombreDemarches.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(12, 38)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -101,6 +104,7 @@ Partial Class RaportNbDemarches
         '
         'Button2
         '
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Location = New System.Drawing.Point(615, 387)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
