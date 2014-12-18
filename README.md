@@ -2,6 +2,7 @@ SolutionDeSuivitDesDemandesDeStages
 ===================================
 SSDS est un logiciel de suivit des demandes des stages.
 Il a été implémenté en VB.NET 
+Et dispose d'une base de données Microsoft SQL server
 
 Fonctionnalités
 ----------------------
