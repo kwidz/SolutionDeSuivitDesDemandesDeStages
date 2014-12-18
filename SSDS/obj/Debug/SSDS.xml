@@ -1,0 +1,496 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SSDS
+</name>
+</assembly>
+<members>
+<member name="T:SSDS.SSDSDataSet.REF_StatutEntrepriseDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.REF_TypeDemarcheDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.REF_TypeFichierDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.REF_TypeUtilisateurDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionEntrepriseDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionEntreprisesByIdDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionDemarchesByIdDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionStatutENTDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionTypeDEMDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionContactDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionDemarchesById2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionContactPourGestionDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionContactPourGestionByIdDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.ListerUserByAllNPADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.ListerUserByAllNPAWithTypeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.selectionnerUtilisateurByIdDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.selectionRefTypUtilWithTousDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.compterUsersDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionNomEntrepriseByIdDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.compterUserConsultationDemarchesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionNomPrenomEtudiantByIdDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.compterUserByMailDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionDesFichierListeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.CompterFichierListeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.rapportListeContactParEntrepriseDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.rapportNombreContactParEntrepriseDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.selectionUsersWithTousDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.REF_StatutEntrepriseRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.REF_TypeDemarcheRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.REF_TypeFichierRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.REF_TypeUtilisateurRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionEntrepriseRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionEntreprisesByIdRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionDemarchesByIdRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionStatutENTRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionTypeDEMRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionContactRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionDemarchesById2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionContactPourGestionRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionContactPourGestionByIdRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.ListerUserByAllNPARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.ListerUserByAllNPAWithTypeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.selectionnerUtilisateurByIdRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.selectionRefTypUtilWithTousRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.compterUsersRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionNomEntrepriseByIdRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.compterUserConsultationDemarchesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionNomPrenomEtudiantByIdRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.compterUserByMailRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionDesFichierListeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.CompterFichierListeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.rapportListeContactParEntrepriseRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.rapportNombreContactParEntrepriseRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.selectionUsersWithTousRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.REF_StatutEntrepriseRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.REF_TypeDemarcheRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.REF_TypeFichierRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.REF_TypeUtilisateurRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionEntrepriseRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionEntreprisesByIdRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionDemarchesByIdRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionStatutENTRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionTypeDEMRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionContactRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionDemarchesById2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionContactPourGestionRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionContactPourGestionByIdRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.ListerUserByAllNPARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.ListerUserByAllNPAWithTypeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.selectionnerUtilisateurByIdRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.selectionRefTypUtilWithTousRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.compterUsersRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionNomEntrepriseByIdRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.compterUserConsultationDemarchesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionNomPrenomEtudiantByIdRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.compterUserByMailRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.SelectionDesFichierListeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.CompterFichierListeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.rapportListeContactParEntrepriseRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.rapportNombreContactParEntrepriseRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet.selectionUsersWithTousRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SSDS.SSDSDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.REF_StatutEntrepriseTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.REF_TypeDemarcheTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.REF_TypeFichierTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.REF_TypeUtilisateurTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.SelectionEntrepriseTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.SelectionEntreprisesByIdTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.SelectionDemarchesByIdTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.SelectionStatutENTTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.SelectionTypeDEMTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.SelectionContactTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.SelectionDemarchesById2TableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.SelectionContactPourGestionTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.SelectionContactPourGestionByIdTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.ListerUserByAllNPATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.ListerUserByAllNPAWithTypeTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.selectionnerUtilisateurByIdTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.selectionRefTypUtilWithTousTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.compterUsersTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.SelectionNomEntrepriseByIdTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.compterUserConsultationDemarchesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.SelectionNomPrenomEtudiantByIdTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.compterUserByMailTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.SelectionDesFichierListeTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.CompterFichierListeTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.rapportListeContactParEntrepriseTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.rapportNombreContactParEntrepriseTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.selectionUsersWithTousTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.QueriesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:SSDS.SSDSDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(SSDS.SSDSDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:SSDS.SSDSDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(SSDS.SSDSDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:SSDS.SSDSDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(SSDS.SSDSDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:SSDS.SSDSDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:SSDS.SSDSDataSetTableAdapters.TableAdapterManager.UpdateAll(SSDS.SSDSDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:SSDS.SSDSDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:SSDS.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:SSDS.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:SSDS.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
